@@ -1,17 +1,17 @@
 import { getModules } from './arcgisApi'
 import config from './appConfig'
-import ExternalRendererLayer from '@/utils/esri/ExternalRendererLayer.js'
+import { tdtToken } from '@/config/onlineMapConfig'
 /**
- * @function 创建带流光道路的三维场景
+ * @function 创建三维场景
  * @param contentId 挂载的DOM元素ID（默认'#sceneView'）
  * @return void
  */
 export const create3dView = async (contentId: string = '#sceneView') => {
   // 异步加载ArcGIS API所需模块
-  const [Map, SceneView, externalRenderers] = await getModules([
+  const [Map, SceneView, WebTiledLayer] = await getModules([
     'esri/Map', // 地图模块
     'esri/views/SceneView', // 3D场景视图模块
-    'esri/views/3d/externalRenderers' // 外部渲染器（用于集成Three.js）
+    'esri/layers/WebTiledLayer'
   ])
 
   // 场景视图配置参数
@@ -24,42 +24,31 @@ export const create3dView = async (contentId: string = '#sceneView') => {
     },
     constraints: {
       rotationEnabled: false // 禁用视图旋转
-    },
-    scale: 1000, // 初始比例尺（1:5千万）
-    center: [113.2024691, 22.92555768] // 初始中心点坐标（经度, 纬度）
+    }
+    // scale: 1000, // 初始比例尺（1:5千万）
+    // center: [113.2024691, 22.92555768] // 初始中心点坐标（经度, 纬度）
   }
-
-  // 创建地图实例
   const map = new Map({
-    basemap: 'satellite', // 使用矢量地形底图
-    ground: 'world-elevation' // 启用全球高程地形
+    showLabels: true,
+    logo: false,
+    autoResize: true,
+    isPinchZoom: true,
+    operator: 1
   })
-
+  // 初始化默认底图
+  var layer = new WebTiledLayer(
+    'https://${subDomain}.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILECOL=${col}&TILEROW=${row}&TILEMATRIX=${level}' +
+      `&tk=${tdtToken}`,
+    {
+      subDomains: ['t0', 't1', 't2', 't3', 't4', 't5', 't6', 't7']
+    }
+  )
+  console.log('👉 ~ create3dView ~ map:', map)
   // 初始化3D场景视图
   const sceneView = new SceneView({
     ...mapConfig, // 展开配置参数
     map: map // 关联地图实例
   })
   // 将场景视图存入全局配置
-  config.scenView = sceneView
-  const threeRenderer = new ExternalRendererLayer({
-    externalRenderers,
-    view: sceneView
-  })
-  externalRenderers.add(sceneView, threeRenderer)
-  sceneView.when(function () {
-    sceneView.goTo({
-      fov: 55,
-      heading: 55.99495193816657,
-      position: {
-        x: 113.2024691,
-        y: 22.92555768,
-        z: 8574.5211164545,
-        spatialReference: {
-          wkid: 4490
-        }
-      },
-      tilt: 69.0179407311609
-    })
-  })
+  config.sceneView = sceneView
 }
