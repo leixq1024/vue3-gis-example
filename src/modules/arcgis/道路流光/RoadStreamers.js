@@ -100,7 +100,7 @@ export default class RoadStreamers {
     }
     if (this.textures.length > 0) {
       this.textures.forEach(texture => {
-        if (texture) texture.offset.x -= 0.01
+        if (texture) texture.offset.x -= 0.005
       })
       this.opts.externalRenderers.requestRender(this.view)
     }

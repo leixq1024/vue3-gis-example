@@ -10,9 +10,8 @@ export const create3dView = async (contentId: string = '#sceneView') => {
   // 异步加载ArcGIS API所需模块
   const [Map, SceneView] = await getModules([
     'esri/Map', // 地图模块
-    'esri/views/SceneView', // 3D场景视图模块
-    'esri/layers/CSVLayer'
-  ])
+    'esri/views/SceneView' // 3D场景视图模块
+    ])
 
   // 场景视图配置参数
   const mapConfig: any = {
@@ -32,9 +31,11 @@ export const create3dView = async (contentId: string = '#sceneView') => {
     isPinchZoom: true,
     operator: 1,
     ground: {
-      surfaceColor: '#021b2d',
+      surfaceColor: '#000',
       opacity: 1
-    }
+    },
+    layers: [],
+    basemap: []
   })
   // 初始化3D场景视图
   const sceneView = new SceneView({
