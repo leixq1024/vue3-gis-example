@@ -1,34 +1,5 @@
-## 🌟 项目名称
-> **mbs-cesium-example**  
-> cesium示例开源
+# Vue 3 + TypeScript + Vite
 
+This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
----
-
-## 📋 项目简介  
-**项目名称** 是一个开源项目，旨在提供：  
-- 🚀 快速解决 XXX 问题  
-- 🌈 易于使用的 XXX 功能  
-- 🔒 安全高效的 XXX 解决方案  
-
----
-
-## 🔧 功能列表  
-- ✅ 功能一：3dtiles区域高亮 
-- 🌐 功能二：真3d热力图 
-- 📊 功能三：漫游/飞行
-- ✅ 功能四：复刻threejs体渲染 
-- 🌐 功能五：迁移shadertoy 
-
-## 📦 安装和使用  
-### 环境要求  
-
-
-### 安装步骤  
-```bash
-# 克隆项目
-git clone https://gitee.com/mapbs/mbs-cesium-example.git
-
-
-使用vscode++ 打开项目
-使用live server打开一个动态地址直接访问根目录下的index.html
+Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
