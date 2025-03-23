@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports","./BufferRange"],function(b,c){class d extends c.BufferRange{constructor(a,e,f){super(e,f);this.geometry=a}get isVisible(){return this.geometry.visible}get hasHighlights(){return this.isVisible&&this.geometry.hasHighlights}foreachHighlightGroup(a){this.isVisible&&this.geometry.foreachHighlightGroup(a)}get hasOccludees(){return null!=this.geometry.occludees}}b.Instance=d;Object.defineProperty(b,Symbol.toStringTag,{value:"Module"})});

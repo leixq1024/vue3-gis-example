@@ -1,0 +1,6 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../chunks/SimpleGeometryCursor","../../../chunks/QuadraticBezier","../../../chunks/Geometry"],function(c,e,f,h){function g(a,b){b=f.calculate(a);return null===b?new f.Point({vd:a.getDescription()}):b}class k{getOperatorType(){return 10109}supportsCurves(){return!0}accelerateGeometry(a,b,m){return!1}canAccelerateGeometry(a){return!1}executeMany(a,b){return new l(a,b)}execute(a,b){return g(a)}}class l extends e.GeometryCursor{constructor(a,b){super();this.m_progressTracker=
+b;this.m_index=-1;this.m_bDone=!1;this.m_inputGeometryCursor=a}next(){if(!this.m_bDone){const a=this.m_inputGeometryCursor.next();if(null!==a)return h.throwIfMesh(a),this.m_index=this.m_inputGeometryCursor.getGeometryID(),g(a);this.m_bDone=!0}return null}getGeometryID(){return this.m_index}tock(){return!0}getRank(){return 1}}const d=new k;c.execute=function(a){return d.execute(a,null)};c.executeMany=function(a){a=d.executeMany(new e.SimpleGeometryCursor(a),null);return Array.from(a)};c.supportsCurves=
+function(){return d.supportsCurves()};Object.defineProperty(c,Symbol.toStringTag,{value:"Module"})});

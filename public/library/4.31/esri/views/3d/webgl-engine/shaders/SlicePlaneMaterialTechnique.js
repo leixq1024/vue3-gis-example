@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("require exports ../../../../core/libs/gl-matrix-2/factories/vec4f64 ../core/shaderModules/interfaces ../core/shaderTechnique/ReloadableShaderModule ../core/shaderTechnique/ShaderTechnique ../../../../chunks/SlicePlaneMaterial.glsl ../../../webgl/enums ../../../webgl/renderState".split(" "),function(d,a,c,e,f,g,h,k,b){class l extends e.NoParameters{constructor(){super(...arguments);this.backgroundColor=c.fromValues(1,0,0,.5);this.gridColor=c.fromValues(0,1,0,.5);this.gridWidth=4}}class m extends g.ShaderTechnique{constructor(n,
+p,q){super(n,p,new f.ReloadableShaderModule(h.SlicePlaneMaterial,()=>new Promise((r,t)=>d(["./SlicePlaneMaterial.glsl"],r,t))),q)}initializePipeline(){return b.makePipelineState({blending:b.blendWithPremultipliedAlpha,depthTest:{func:k.CompareFunction.LESS},colorWrite:b.defaultColorWrite})}}a.SlicePlaneMaterialPassParameters=l;a.SlicePlaneMaterialTechnique=m;Object.defineProperty(a,Symbol.toStringTag,{value:"Module"})});

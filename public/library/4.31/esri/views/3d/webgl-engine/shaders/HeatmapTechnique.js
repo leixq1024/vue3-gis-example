@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("require exports ../core/shaderModules/interfaces ../core/shaderTechnique/ReloadableShaderModule ../core/shaderTechnique/ShaderTechnique ../../../../chunks/Heatmap.glsl ../../../webgl/enums ../../../webgl/renderState".split(" "),function(c,a,d,e,f,g,h,b){class k extends d.NoParameters{constructor(){super(...arguments);this.densityMap=this.colorRamp=null;this.searchRadius=1;this.minDensity=this.fieldTotal=0;this.maxDensity=100}}class l extends f.ShaderTechnique{constructor(m,n,p){super(m,n,
+new e.ReloadableShaderModule(g.Heatmap,()=>new Promise((q,r)=>c(["./Heatmap.glsl"],q,r))),p);this.primitiveType=h.PrimitiveType.TRIANGLE_STRIP}initializePipeline(){return b.makePipelineState({blending:b.premultipliedAlphaToPremultipliedAlpha,colorWrite:b.defaultColorWrite,depthTest:null,depthWrite:null})}}a.HeatmapPassParameters=k;a.HeatmapTechnique=l;Object.defineProperty(a,Symbol.toStringTag,{value:"Module"})});

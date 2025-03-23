@@ -1,0 +1,5 @@
+/*
+All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+*/
+import{_ as r}from"./tslib.es6.js";import e from"../core/Collection.js";import{property as o}from"../core/accessorSupport/decorators/property.js";import"../core/lang.js";import"./Logger.js";import{subclass as t}from"../core/accessorSupport/decorators/subclass.js";const i=i=>{let a=class extends i{constructor(...r){super(...r),this.layerViews=new e}get dynamicGroupLayerView(){return this.layerViews.find((r=>r.layer===this.layer?.dynamicGroupLayer))}get footprintLayerView(){return this.layerViews.find((r=>r.layer===this.layer?.footprintLayer))}isUpdating(){return!this.dynamicGroupLayerView||!this.footprintLayerView||this.dynamicGroupLayerView.updating||this.footprintLayerView.updating}};return r([o()],a.prototype,"layer",void 0),r([o()],a.prototype,"layerViews",void 0),r([o({readOnly:!0})],a.prototype,"dynamicGroupLayerView",null),r([o({readOnly:!0})],a.prototype,"footprintLayerView",null),a=r([t("esri.views.layers.CatalogLayerView")],a),a};export{i as C};

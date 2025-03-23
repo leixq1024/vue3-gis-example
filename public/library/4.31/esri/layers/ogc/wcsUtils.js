@@ -1,0 +1,6 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("exports ../../request ../../core/Error ../../core/promiseUtils ../support/rasterDatasets/wcsCapabilitiesParser ../support/rasterDatasets/wcsCoverageParser".split(" "),function(f,k,l,m,n,p){f.describeCoverage=async function(g,a){const {coverageIds:d,version:c,customParameters:h,signal:b}=a;a=c.slice(0,3);a={service:"WCS",request:"DescribeCoverage",version:c,["1.0"===a?"coverage":"1.1"===a?"identifiers":"coverageId"]:d.join(","),...h};try{const {data:e}=await k(g,{query:a,responseType:"xml",
+signal:b});return p.parseCoverages(e,c)}catch(e){if(!m.isAbortError(e))throw new l("wcslayer:open","wcs coverage description is not valid or supported");throw e;}};f.getCapabilities=async function(g,a){const {version:d,customParameters:c,signal:h}=a??{};a={service:"WCS",request:"GetCapabilities",[d?.startsWith("1.0")?"version":"acceptVersions"]:d,...c};try{const {data:b}=await k(g,{query:a,responseType:"xml",signal:h});return n.parseCapabilities(b)}catch(b){if(!m.isAbortError(b))throw new l("wcslayer:open",
+"wcs capabilities is not valid or supported");throw b;}};Object.defineProperty(f,Symbol.toStringTag,{value:"Module"})});

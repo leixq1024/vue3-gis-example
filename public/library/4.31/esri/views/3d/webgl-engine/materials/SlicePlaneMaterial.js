@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("exports ../core/shaderLibrary/ShaderOutput ../core/shaderTechnique/ShaderTechniqueRepository ../lib/GLMaterial ../lib/Material ../lib/RenderSlot ./DefaultBufferWriter ./DefaultLayouts ./TriangleMaterial ../shaders/SlicePlaneMaterialTechnique".split(" "),function(b,e,f,g,h,k,l,m,n,c){class p extends n.TriangleMaterial{constructor(a){super(a,d);this.produces=new Map([[k.RenderSlot.TRANSPARENT_MATERIAL_WITHOUT_DEPTH,q=>q===e.ShaderOutput.Color]])}get visible(){return!0}createGLMaterial(a){return new r(a)}createBufferWriter(){return new l.DefaultBufferWriter(m.PositionUVLayout)}getConfiguration(){return f.NoConfiguration}}
+class r extends g{constructor(a){super(a)}beginSlot(a){return this.acquireTechnique(c.SlicePlaneMaterialTechnique,a)}}class d extends c.SlicePlaneMaterialPassParameters{constructor(){super(...arguments);this.renderOccluded=h.RenderOccludedFlag.Occlude;this.isDecoration=!1}}b.Parameters=d;b.SlicePlaneMaterial=p;Object.defineProperty(b,Symbol.toStringTag,{value:"Module"})});

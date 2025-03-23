@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../../../core/arrayUtils","../../../../../core/mathUtils","../../lib/screenSizePerspectiveUtils"],function(f,h,k,l){f.colorMixModes={multiply:1,ignore:2,replace:3,tint:4};f.updateParameters=function(a,e){let c=!1;for(const d in e){const b=e[d];void 0!==b&&(Array.isArray(b)?Array.isArray(a[d])&&h.equals(b,a[d])||(a[d]=b.slice(),c=!0):a[d]!==b&&(c=!0,a[d]=b))}return c};f.verticalOffsetAtDistance=function(a,e,c,d,b){let g=(c.screenLength||0)*a.pixelRatio;null!=b&&(g=l.scale(g,
+d,e,b));return k.clamp(g*Math.tan(.5*a.fovY)/(.5*a.fullHeight)*e,c.minWorldLength||0,null!=c.maxWorldLength?c.maxWorldLength:Infinity)};Object.defineProperty(f,Symbol.toStringTag,{value:"Module"})});

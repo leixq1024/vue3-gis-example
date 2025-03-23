@@ -1,0 +1,5 @@
+/*
+All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+*/
+import{d as e}from"./quantityUtils.js";import{c as t}from"./vec3f64.js";import{geodesicLength as r}from"../geometry/geometryEngine.js";import{inverseGeodeticSolver as n,geodesicLengths as s,InverseGeodeticSolverResult as i}from"../geometry/support/geodesicUtils.js";import{f as o}from"./unitUtils.js";import{g as a}from"./geodesicMeasurementUtils.js";function m(e){const{spatialReference:t}=e;return a(t,l,g,e)}function c(e,t){if(!o(e.spatialReference,t.spatialReference))return null;const{spatialReference:r}=e;return j[0]=e.x,j[1]=e.y,j[2]=e.hasZ?e.z:0,d[0]=t.x,d[1]=t.y,d[2]=t.hasZ?t.z:0,f(j,d,r)}function f(e,t,r){return a(r,u,p,e,t,r)}function u(t,r,s){return e(n(y,t,r,s).distance,"meters")}function p(t,n,s){return e(r(function(e,t,r){return{type:"polyline",spatialReference:r,paths:[[[...e],[...t]]]}}(t,n,s),"meters"),"meters")}function l(t){return e(s([t],"meters")[0],"meters")}function g(t){return e(r(t,"meters"),"meters")}const y=new i,j=t(),d=t();export{m as a,f as b,c as g};

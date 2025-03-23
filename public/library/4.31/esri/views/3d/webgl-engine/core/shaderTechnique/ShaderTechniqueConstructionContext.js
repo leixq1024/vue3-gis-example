@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../../ViewingMode"],function(a,b){class c{constructor(d,e,f,g,h){this.rctx=d;this.viewingMode=e;this.stippleTextures=f;this.waterTextures=g;this.markerTextures=h}get spherical(){return this.viewingMode===b.ViewingMode.Global}get doublePrecisionRequiresObfuscation(){return this.rctx.driverTest.doublePrecisionRequiresObfuscation.result}}a.ShaderTechniqueConstructionContext=c;Object.defineProperty(a,Symbol.toStringTag,{value:"Module"})});

@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports","./ellipsoidUtils","./SpatialReference","./support/spatialReferenceUtils"],function(d,e,h,k){const m=new h(e.SphericalECEFSpatialReferenceLike),f=new h(e.SphericalPCPFMarsLike),g=new h(e.SphericalPCPFMoonLike);e=new h(e.WGS84ECEFSpatialReferenceLike);const n=new Map,p=f.wkt.toUpperCase(),q=g.wkt.toUpperCase();d.SphericalECEFSpatialReference=m;d.SphericalPCPFMars=f;d.SphericalPCPFMoon=g;d.WGS84ECEFSpatialReference=e;d.getSphericalPCPF=function(b){var a=n.get(b);if(a)return a;a=m;
+if(b)if(b===f)a=f;else if(b===g)a=g;else{var c=b.wkid;const l=b.latestWkid;if(null!=c||null!=l)if(k.isWKIDFromMars(c)||k.isWKIDFromMars(l))a=f;else{if(k.isWKIDFromMoon(c)||k.isWKIDFromMoon(l))a=g}else if(c=b.wkt2??b.wkt)c=c.toUpperCase(),c===p?a=f:c===q&&(a=g)}n.set(b,a);return a};Object.defineProperty(d,Symbol.toStringTag,{value:"Module"})});

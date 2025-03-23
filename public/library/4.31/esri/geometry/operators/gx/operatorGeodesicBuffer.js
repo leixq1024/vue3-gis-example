@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("require exports ../../../chunks/SimpleGeometryCursor ../../../chunks/QuadraticBezier ../../../chunks/Geometry ../../../chunks/Transformation2D ../../../chunks/pe".split(" "),function(l,b,m,n,q,r,f){function k(){return!!c&&f.isLoaded()}let c;b.execute=function(a,d,e,g,h){return c.execute(a,d,e,g,h,!1,null)};b.executeMany=function(a,d,e,g,h,p){a=c.executeMany(new m.SimpleGeometryCursor(a),d,e,g,h,!1,p,null);return Array.from(a)};b.isLoaded=k;b.load=async function(){if(!k()){const [a]=await Promise.all([new Promise((d,
+e)=>l(["../../../chunks/OperatorGeodesicBuffer"],d,e)),f.load()]);c=new a.OperatorGeodesicBuffer;n.injectPe$1(f.pe)}};b.supportsCurves=function(){return c.supportsCurves()};Object.defineProperty(b,Symbol.toStringTag,{value:"Module"})});

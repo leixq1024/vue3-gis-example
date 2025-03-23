@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("../../chunks/tslib.es6 ../../core/Clonable ../../core/JSONSupport ../../core/accessorSupport/decorators/property ../../core/has ../../core/Logger ../../core/RandomLCG ../../core/accessorSupport/decorators/reader ../../core/accessorSupport/decorators/subclass ../../core/accessorSupport/decorators/writer ../../portal/PortalItem".split(" "),function(c,b,f,g,n,p,q,h,k,l,e){b=class extends b.ClonableMixin(f.JSONSupport){constructor(a){super(a);this.portalItem=null}readPortalItem(a,d,m){({itemId:a}=
+d);if(a)return new e({id:a,portal:m?.portal})}writePortalItem(a,d){a?.id&&(d.itemId=a.id)}};c.__decorate([g.property({type:e,json:{write:{isRequired:!0}}})],b.prototype,"portalItem",void 0);c.__decorate([h.reader("portalItem",["itemId"])],b.prototype,"readPortalItem",null);c.__decorate([l.writer("portalItem",{itemId:{type:String}})],b.prototype,"writePortalItem",null);return b=c.__decorate([k.subclass("esri.webdoc.ips.PositioningService")],b)});

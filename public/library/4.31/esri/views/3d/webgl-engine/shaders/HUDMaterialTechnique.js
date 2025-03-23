@@ -1,0 +1,6 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("require exports ../core/shaderLibrary/ShaderOutput ../core/shaderTechnique/ReloadableShaderModule ../core/shaderTechnique/ShaderTechnique ../lib/OITPass ../lib/OrderIndependentTransparency ../../../../chunks/HUDMaterial.glsl ../../../webgl/enums ../../../webgl/renderState".split(" "),function(q,k,l,r,t,m,n,u,f,d){class v extends t.ShaderTechnique{constructor(b,a,g){super(b,a,new r.ReloadableShaderModule(u.HUDMaterial,()=>new Promise((e,c)=>q(["./HUDMaterial.glsl"],e,c))),g);this.primitiveType=
+a.occlusionPass?f.PrimitiveType.POINTS:f.PrimitiveType.TRIANGLES}initializePipeline(b){const {oitPass:a,hasPolygonOffset:g,draped:e,output:c,depthTestEnabled:p}=b;b=a===m.OITPass.NONE;const x=g?w:null;var h=a===m.OITPass.ColorAlpha;h=e||!p||h||c===l.ShaderOutput.Highlight?null:d.defaultDepthWrite;return d.makePipelineState({blending:c===l.ShaderOutput.Color?b?d.blendWithPremultipliedAlpha:n.oitBlending(a):null,depthTest:p&&!e?{func:f.CompareFunction.LEQUAL}:null,depthWrite:h,drawBuffers:n.getDrawBuffers(a,
+c),colorWrite:d.defaultColorWrite,polygonOffset:x})}}const w={factor:0,units:-4};k.HUDMaterialTechnique=v;Object.defineProperty(k,Symbol.toStringTag,{value:"Module"})});

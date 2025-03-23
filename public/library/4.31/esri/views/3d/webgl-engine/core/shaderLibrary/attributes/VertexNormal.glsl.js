@@ -1,0 +1,8 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("exports ../../../../../../core/compilerUtils ../../../../../../core/libs/gl-matrix-2/factories/mat3f64 ../../../../../../core/libs/gl-matrix-2/factories/vec4f64 ./NormalAttribute.glsl ./VertexPosition.glsl ../../shaderModules/interfaces ../../shaderModules/Matrix3DrawUniform ../../shaderModules/Matrix3PassUniform".split(" "),function(c,k,f,l,b,g,h,m,n){class p extends g.VertexPositionPassParameters{constructor(){super(...arguments);this.transformNormalViewFromGlobal=f.create()}}class q extends g.VertexPositionDrawParameters{constructor(){super(...arguments);
+this.transformNormalGlobalFromModel=f.create();this.toMapSpace=l.create()}}c.VertexNormal=function(a,d){switch(d.normalType){case b.NormalType.Attribute:case b.NormalType.Compressed:a.include(b.NormalAttribute,d);a.varyings.add("vNormalWorld","vec3");a.varyings.add("vNormalView","vec3");a.vertex.uniforms.add(new m.Matrix3DrawUniform("transformNormalGlobalFromModel",e=>e.transformNormalGlobalFromModel),new n.Matrix3PassUniform("transformNormalViewFromGlobal",e=>e.transformNormalViewFromGlobal));a.vertex.code.add(h.glsl`void forwardNormal() {
+vNormalWorld = transformNormalGlobalFromModel * normalModel();
+vNormalView = transformNormalViewFromGlobal * vNormalWorld;
+}`);break;case b.NormalType.ScreenDerivative:a.vertex.code.add(h.glsl`void forwardNormal() {}`);break;default:k.neverReached(d.normalType);case b.NormalType.COUNT:}};c.VertexNormalDrawParameters=q;c.VertexNormalPassParameters=p;Object.defineProperty(c,Symbol.toStringTag,{value:"Module"})});

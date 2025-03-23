@@ -1,0 +1,6 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("exports ../../../chunks/tslib.es6 ../../../core/accessorSupport/decorators/property ../../../core/has ../../../core/Logger ../../../core/RandomLCG ../../../core/accessorSupport/decorators/subclass ./ElementTemplateBase".split(" "),function(a,b,c,g,h,k,d,e){a.FieldElementTemplate=class extends e.ElementTemplateBase{constructor(f){super(f);this.input=this.hint=this.domain=null;this.type="field"}get fieldName(){return this.field.name}};b.__decorate([c.property({clonable:"reference"})],a.FieldElementTemplate.prototype,
+"domain",void 0);b.__decorate([c.property({clonable:"reference",constructOnly:!0})],a.FieldElementTemplate.prototype,"field",void 0);b.__decorate([c.property()],a.FieldElementTemplate.prototype,"fieldName",null);b.__decorate([c.property()],a.FieldElementTemplate.prototype,"hint",void 0);b.__decorate([c.property()],a.FieldElementTemplate.prototype,"input",void 0);b.__decorate([c.property()],a.FieldElementTemplate.prototype,"type",void 0);a.FieldElementTemplate=b.__decorate([d.subclass("esri.widgets.BatchAttributeForm.templates.FieldElementTemplate")],
+a.FieldElementTemplate);Object.defineProperty(a,Symbol.toStringTag,{value:"Module"})});

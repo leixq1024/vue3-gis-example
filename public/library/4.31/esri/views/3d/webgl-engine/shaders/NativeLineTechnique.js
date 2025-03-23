@@ -1,0 +1,6 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("require exports ../core/shaderLibrary/ShaderOutput ../core/shaderTechnique/ReloadableShaderModule ../core/shaderTechnique/ShaderTechnique ../lib/StencilUtils ../../../../chunks/NativeLine.glsl ../../../webgl/enums ../../../webgl/renderState".split(" "),function(k,h,l,m,n,c,p,q,b){class r extends n.ShaderTechnique{constructor(a,d,f){super(a,d,new m.ReloadableShaderModule(p.NativeLine,()=>new Promise((e,g)=>k(["./NativeLine.glsl"],e,g))),f);this.primitiveType=q.PrimitiveType.LINES}initializePipeline(a){const {hasOccludees:d,
+output:f,transparent:e}=a;a=(g,t=null,u=null)=>b.makePipelineState({blending:t,depthTest:c.depthCompareLess,depthWrite:u,colorWrite:b.defaultColorWrite,stencilWrite:d?c.stencilWriteMaskOn:null,stencilTest:d?g?c.stencilToolMaskBaseParams:c.stencilBaseAllZerosParams:null});return f===l.ShaderOutput.Color?(this._occludeePipeline=a(!0,e?b.premultipliedAlphaToPremultipliedAlpha:null,b.defaultDepthWrite),a(!1,e?b.premultipliedAlphaToPremultipliedAlpha:null,b.defaultDepthWrite)):a(!1)}getPipeline(a){return a?
+this._occludeePipeline:super.getPipeline()}}h.NativeLineTechnique=r;Object.defineProperty(h,Symbol.toStringTag,{value:"Module"})});

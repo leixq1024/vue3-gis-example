@@ -1,0 +1,5 @@
+/*
+All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+*/
+import{c as t}from"./mathUtils.js";class n{constructor(t,n){this.min=t,this.max=n,this.range=n-t}normalize(t,n=0,o=!1){return i(this.range,this.min,this.max,t,n,o)}clamp(n,i=0){return t(n-i,this.min,this.max)+i}monotonic(t,n,i){return t<n?n:n+o(this.range,t-n,i)}minimalMonotonic(t,n,o){return i(this.range,t,t+this.range,n,o)}center(t,n,i){return n=this.monotonic(t,n,i),this.normalize((t+n)/2,i)}diff(t,n,i){return this.monotonic(t,n,i)-t}shortestSignedDiff(t,n){t=this.normalize(t);const i=(n=this.normalize(n))-t,o=n<t?this.minimalMonotonic(t,n)-t:n-this.minimalMonotonic(n,t);return Math.abs(i)<Math.abs(o)?i:o}contains(t,n,i){return n=this.minimalMonotonic(t,n),(i=this.minimalMonotonic(t,i))>t&&i<n}}function i(t,n,i,s,r=0,a=!1){return(s-=r)<n?s+=o(t,n-s):s>i&&(s-=o(t,s-i)),a&&s===i&&(s=n),s+r}function o(t,n,i=0){return Math.ceil((n-i)/t)*t+i}const s=new n(0,2*Math.PI),r=new n(-Math.PI,Math.PI),a=new n(0,360);export{n as C,r as a,s as b,a as c};

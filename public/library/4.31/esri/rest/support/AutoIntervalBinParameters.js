@@ -1,0 +1,6 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("../../chunks/tslib.es6 ../../core/object ../../core/accessorSupport/decorators/property ../../core/accessorSupport/ensureType ../../core/RandomLCG ../../core/has ../../core/accessorSupport/decorators/enumeration ../../core/accessorSupport/decorators/subclass ./BinParametersBase ./NormalizationBinParametersMixin".split(" "),function(b,f,d,g,a,q,h,k,l,m){function e(c,n,p){f.setDeepValue(p,c instanceof Date?c.getTime():c,n)}a=class extends m.NormalizationBinParametersMixin(l){constructor(c){super(c);
+this.start=this.end=this.bins=null;this.type="auto-interval"}};b.__decorate([d.property({type:Number,json:{name:"parameters.numberOfBins",write:!0}})],a.prototype,"bins",void 0);b.__decorate([d.property({json:{name:"parameters.end",write:{writer:e}}})],a.prototype,"end",void 0);b.__decorate([d.property({json:{name:"parameters.start",write:{writer:e}}})],a.prototype,"start",void 0);b.__decorate([h.enumeration({autoIntervalBin:"auto-interval"},{readOnly:!0})],a.prototype,"type",void 0);b=a=b.__decorate([k.subclass("esri.rest.support.AutoIntervalBinParameters")],
+a);a.from=g.ensureType(a);return b});

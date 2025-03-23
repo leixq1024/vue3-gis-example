@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports","./time-zones","./region"],function(g,l,m){const n=d=>d.map(b=>{var {label:a}=b;a=m.extractRegion(a);return{...b,continent:a}});g.groupByRegion=async function(){const d=[];var b=l.timeZones.map(a=>({label:a}));b=n(b);for(const a of b){const {label:c,continent:e}=a;if(a.visited)continue;a.visited=!0;const h={label:e,tzs:[{label:c}]};for(const k of b.filter(f=>!f.visited)){const {label:f,continent:p}=k;e===p&&(h.tzs.push({label:f}),k.visited=!0)}d.push(h)}return d.map(a=>{a.tzs=a.tzs.sort((c,
+e)=>c.label.localeCompare(e.label));return{label:a.label,tzs:a.tzs.map(c=>c.label)}}).sort((a,c)=>a.label.localeCompare(c.label))};Object.defineProperty(g,Symbol.toStringTag,{value:"Module"})});

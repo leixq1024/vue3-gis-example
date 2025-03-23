@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["require","exports"],function(e,l){const m=f=>Object.freeze(Object.defineProperty({__proto__:null,default:f},Symbol.toStringTag,{value:"Module"}));l.getBindParamsFromCypherQuery=async function(f){const {CharStream:n,CommonTokenStream:p,ParseTreeWalker:q}=await new Promise((a,b)=>e(["../../chunks/antlr4.web"],a,b));var {default:h}=await new Promise((a,b)=>e(["./antlr/BindParamsListener"],k=>a(m(k)),b)),{default:c}=await new Promise((a,b)=>e(["../../chunks/CypherLexer"],a,b)),{default:d}=await new Promise((a,
+b)=>e(["../../chunks/CypherParser"],a,b)),{default:g}=await new Promise((a,b)=>e(["./antlr/SimpleErrorListener"],k=>a(m(k)),b));g=new g;f=new n(f);c=new c(f);c.removeErrorListeners();c.addErrorListener(g);c=new p(c);d=new d(c);d.removeErrorListeners();d.addErrorListener(g);d=d.oC_Cypher();h=new h;(new q).walk(h,d);return{bindParameters:Array.from(new Set(h.bindParams)).map(a=>a.slice(1)),parseErrors:g.errors}};Object.defineProperty(l,Symbol.toStringTag,{value:"Module"})});

@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports"],function(c){class d{constructor(){this._storage=new Map;this._purgeInterval=5;this._sweep=()=>{this._timer=void 0;if(this._storage){var a=1E3*this._purgeInterval,b=performance.now()-a;for(const [e,f]of this._storage)if(f.time<b)this._storage.delete(e);else{0<this._storage.size&&(this._timer=setTimeout(this._sweep,a));break}}}}destroy(){this._storage?.clear();this._storage=null;clearTimeout(this._timer)}get size(){return this._storage?.size??0}put(a,b){this._storage?.set(a,new g(b));
+this._scheduleSweep()}get(a){if(this._storage){var b=this._storage?.get(a);if(b)return this._storage?.delete(a),b.time=performance.now(),this._storage?.set(a,b),b.items}}clear(){this._storage?.clear()}_scheduleSweep(){this._storage&&(this._timer??(this._timer=setTimeout(this._sweep,1E3*this._purgeInterval)))}}let h=0;class g{constructor(a){this.items=a;this.time=performance.now();this.id=h++}}c.QueryEngineCache=d;Object.defineProperty(c,Symbol.toStringTag,{value:"Module"})});

@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../../../../chunks/tslib.es6","../../shaderTechnique/ShaderTechniqueConfiguration"],function(c,d,a){class b extends a.ShaderTechniqueConfiguration{constructor(){super(...arguments);this.hasModelTransformation=this.instancedDoublePrecision=!1}}d.__decorate([a.parameter()],b.prototype,"instancedDoublePrecision",void 0);d.__decorate([a.parameter()],b.prototype,"hasModelTransformation",void 0);c.InstancedDoubleConfiguration=b;Object.defineProperty(c,Symbol.toStringTag,{value:"Module"})});

@@ -1,0 +1,6 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("require exports ../../../../../core/libs/gl-matrix-2/factories/vec4f64 ../../core/shaderLibrary/shading/ReadShadowMap.glsl ../../core/shaderTechnique/ReloadableShaderModule ../../core/shaderTechnique/ShaderTechnique ../../../../../chunks/ShadowHighlight.glsl ../../../../webgl/enums ../../../../webgl/renderState".split(" "),function(c,a,d,e,f,g,h,k,b){class l extends e.ReadShadowMapPassParameters{constructor(){super(...arguments);this.shadowColor=d.fromValues(1,0,1,1);this.shadowOpacity=.2;
+this.occludedShadowOpacity=.1;this.dayNightTerminator=this.opacityElevation=1}}class m extends g.ShaderTechnique{constructor(n,p,q){super(n,p,new f.ReloadableShaderModule(h.ShadowHighlight,()=>new Promise((r,t)=>c(["../../shaders/ShadowHighlight.glsl"],r,t))),q);this.primitiveType=k.PrimitiveType.TRIANGLE_STRIP}initializePipeline(){return b.makePipelineState({blending:b.premultipliedAlphaToPremultipliedAlpha,colorWrite:b.defaultColorWrite,depthTest:null,depthWrite:null})}}a.ShadowHighlightPassParameters=
+l;a.ShadowHighlightTechnique=m;Object.defineProperty(a,Symbol.toStringTag,{value:"Module"})});

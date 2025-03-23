@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports","../../core/arrayUtils","./gx/operatorIntersection","./support/converterAPI"],function(c,h,e,a){c.accelerateGeometry=function(b){const d=a.getSpatialReference(b);return e.accelerateGeometry(a.fromGeometry(b),a.fromSpatialReference(d))};c.execute=function(b,d){const f=a.getSpatialReference(b);return a.toGeometry(e.execute(a.fromGeometry(b),a.fromGeometry(d),a.fromSpatialReference(f)),f)};c.executeMany=function(b,d){const f=b.map(a.fromGeometry),g=a.getSpatialReference(b);return e.executeMany(f,
+a.fromGeometry(d),a.fromSpatialReference(g),7).map(k=>a.toGeometry(k,g)).filter(h.isSome)};c.supportsCurves=function(){return e.supportsCurves()};Object.defineProperty(c,Symbol.toStringTag,{value:"Module"})});

@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../chunks/SimpleGeometryCursor","../../../chunks/Geometry","../../../chunks/QuadraticBezier"],function(b,g,k,h){const c=new h.OperatorDensify;b.execute=function(a,d,e,f){return c.execute(a,d,e,f,null)};b.executeMany=function(a,d,e,f){a=c.executeMany(new g.SimpleGeometryCursor(a),d,e,f,null);return Array.from(a)};b.supportsCurves=function(){return c.supportsCurves()};Object.defineProperty(b,Symbol.toStringTag,{value:"Module"})});

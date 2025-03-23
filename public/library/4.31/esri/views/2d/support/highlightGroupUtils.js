@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../core/Collection","./HighlightGroup","./HighlightOptions","../../support/HighlightDefaults"],function(c,e,l,f,g){function h(){return new k([{name:g.defaultHighlightName,options:new f},{name:g.temporaryHighlightName,options:new f({color:g.temporaryHighlightColor})}])}const k=e.ofType(l.HighlightGroup);e=h().items.map(a=>a.name);c.admissibleHighlightGroupNames=e;c.createInitialHighlightGroups=h;c.getDefaultHighlightOptions=function(a){if(!a.highlights)return null;const b=
+a.highlights.findIndex(d=>"default"===d.name);return-1===b?null:a.highlights.items[b].options};c.setDefaultHighlightOptions=function(a,b){if(!a.highlights){if(!b)return;a.highlights=new k([{name:"default",options:new f}])}const d=a.highlights.findIndex(m=>"default"===m.name);b?a.highlights.items[d].options=b:a.highlights.removeAt(d)};Object.defineProperty(c,Symbol.toStringTag,{value:"Module"})});

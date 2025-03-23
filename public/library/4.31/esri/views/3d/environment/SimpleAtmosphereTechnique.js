@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("require exports ../../../chunks/SimpleAtmosphere.glsl ./SimpleAtmosphereTechniqueConfiguration ../webgl-engine/core/shaderTechnique/ReloadableShaderModule ../webgl-engine/core/shaderTechnique/ShaderTechnique ../../webgl/enums ../../webgl/renderState".split(" "),function(d,c,e,f,g,h,k,a){class l extends h.ShaderTechnique{constructor(b,m,n){super(b,m,new g.ReloadableShaderModule(e.SimpleAtmosphere,()=>new Promise((p,q)=>d(["./SimpleAtmosphere.glsl"],p,q))),n)}initializePipeline(b){return a.makePipelineState({blending:a.premultipliedAlphaToPremultipliedAlpha,
+culling:b.geometry===f.SimpleAtmosphereGeometry.Cylinder?a.backFaceCullingParams:void 0,depthTest:{func:k.CompareFunction.LEQUAL},colorWrite:a.defaultColorWrite})}}c.SimpleAtmosphereTechnique=l;Object.defineProperty(c,Symbol.toStringTag,{value:"Module"})});

@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../../../../core/promiseUtils","../../../Container","./TestDisplayObject"],function(c,d,e,f){class g extends e.Container{constructor(b,a){super();this.store=b;this.meshData=a}whenRender(){null==this._resolver&&(this._resolver=d.createResolver(),this.requestRender());return this._resolver.promise}doRender(b){const a=f.TestDisplayObject.fromMeshData(this.meshData,this._stage?.bufferPool,this.store);for(const [h,k]of this.store.entries())a.setActiveMesh(h),k.techniqueRef.render(b,
+a);a.destroy();this._resolver&&(this._resolver.resolve(),this._resolver=null)}}c.TechniqueDebugContainer=g;Object.defineProperty(c,Symbol.toStringTag,{value:"Module"})});

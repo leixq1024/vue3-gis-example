@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("require exports ../core/shaderTechnique/ReloadableShaderModule ../core/shaderTechnique/ShaderTechnique ../../../../chunks/AtmosphereCompositing.glsl ../../../webgl/enums ../../../webgl/renderState".split(" "),function(d,c,e,f,g,a,b){class h extends f.ShaderTechnique{constructor(k,l,m){super(k,l,new e.ReloadableShaderModule(g.AtmosphereCompositing,()=>new Promise((n,p)=>d(["./AtmosphereCompositing.glsl"],n,p))),m)}initializePipeline(){return b.makePipelineState({blending:b.simpleBlendingParams(a.BlendFactor.SRC_ALPHA,
+a.BlendFactor.ONE_MINUS_SRC_ALPHA),depthTest:{func:a.CompareFunction.ALWAYS},colorWrite:b.defaultColorWrite})}}c.AtmosphereCompositingTechnique=h;Object.defineProperty(c,Symbol.toStringTag,{value:"Module"})});

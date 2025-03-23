@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("../../chunks/tslib.es6 ../../core/Accessor ../../core/Identifiable ../../core/accessorSupport/decorators/property ../../core/has ../../core/Logger ../../core/RandomLCG ../../core/accessorSupport/decorators/subclass".split(" "),function(c,a,e,d,h,k,l,f){a=class extends e.IdentifiableMixin(a){constructor(b){super(b);this.allItems=[];this.label=this.filterFunction=null}get items(){const {filterFunction:b}=this;return null==b||b(this)?this.allItems:this.allItems.filter(b)}get id(){return this.label}reapplyFilter(){this.notifyChange("filterFunction")}findByTemplate(b){return this.items.find(g=>
+g.template===b)}};c.__decorate([d.property()],a.prototype,"allItems",void 0);c.__decorate([d.property()],a.prototype,"filterFunction",void 0);c.__decorate([d.property()],a.prototype,"items",null);c.__decorate([d.property()],a.prototype,"label",void 0);c.__decorate([d.property()],a.prototype,"id",null);return a=c.__decorate([f.subclass("esri.widgets.FeatureTemplates.TemplateItemGroup")],a)});

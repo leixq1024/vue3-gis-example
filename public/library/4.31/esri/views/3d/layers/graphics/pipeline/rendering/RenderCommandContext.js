@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../../../ViewingMode","./RenderCommandEncoder"],function(c,d,e){class f{constructor(a){this._idCounter=0;this._bufferWriters=new Map;this._dispatchRenderCommandsCallback=async()=>{};this.globalViewingMode=!1;this.globalViewingMode=a.viewingMode===d.ViewingMode.Global;this._dispatchRenderCommandsCallback=a.dispatchRenderCommandsCallback}generateId(a=""){return`${a}${this._idCounter++}`}createEncoder(){return new e.RenderCommandEncoder(this)}async dispatchRenderCommands(a,b){this._dispatchRenderCommandsCallback(a,
+b)}registerRenderGeometryBufferWriter(a,b){this._bufferWriters.set(a,b)}getRenderGeometryBufferWriter(a){return this._bufferWriters.get(a)}}c.RenderCommandContext=f;Object.defineProperty(c,Symbol.toStringTag,{value:"Module"})});

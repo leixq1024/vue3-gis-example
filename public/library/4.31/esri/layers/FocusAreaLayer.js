@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("../chunks/tslib.es6 ../core/Collection ../core/MultiOriginJSONSupport ../core/accessorSupport/decorators/property ../core/has ../core/Logger ../core/RandomLCG ../core/accessorSupport/decorators/subclass ./Layer ./mixins/OperationalLayer".split(" "),function(b,d,a,c,k,l,m,e,f,g){a=class extends g.OperationalLayer(a.MultiOriginJSONMixin(f)){constructor(h){super(h);this.type="focusArea";this.operationalLayerType="FocusAreaLayer";this.geometries=new d}initialize(){}};b.__decorate([c.property({json:{read:!1},
+readOnly:!0})],a.prototype,"type",void 0);b.__decorate([c.property({type:["FocusAreaLayer"]})],a.prototype,"operationalLayerType",void 0);b.__decorate([c.property()],a.prototype,"geometries",void 0);b.__decorate([c.property()],a.prototype,"tmpEffect",void 0);b.__decorate([c.property({type:["show","hide"]})],a.prototype,"listMode",void 0);return a=b.__decorate([e.subclass("esri.layers.FocusAreaLayer")],a)});

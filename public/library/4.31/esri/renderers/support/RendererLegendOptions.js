@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("../../chunks/tslib.es6 ../../core/Clonable ../../core/jsonMap ../../core/JSONSupport ../../core/accessorSupport/decorators/property ../../core/has ../../core/Logger ../../core/RandomLCG ../../core/accessorSupport/decorators/enumeration ../../core/accessorSupport/decorators/subclass".split(" "),function(b,a,c,d,e,k,l,m,f,g){c=c.strict()({ascendingValues:"ascending-values",descendingValues:"descending-values"});a=class extends a.ClonableMixin(d.JSONSupport){constructor(h){super(h);this.order=
+this.title=null}};b.__decorate([e.property({type:String,json:{write:!0}})],a.prototype,"title",void 0);b.__decorate([f.enumeration(c)],a.prototype,"order",void 0);return a=b.__decorate([g.subclass("esri.renderers.support.RendererLegendOptions")],a)});

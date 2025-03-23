@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../core/has","../../../core/Logger"],function(e,k,h){function g(a){return null==a||Infinity===a||-Infinity===a||"number"===typeof a&&isNaN(a)}e.callExpressionWithCursor=function(a,c,d){if(null==a)return null;const b=c.readArcadeFeature();c.contextTimeZone=d.$view?.timeZone;try{return a.evaluate({...d,$feature:b},a.services)}catch(f){return h.getLogger("esri.views.2d.support.arcadeOnDemand").warn("Feature arcade evaluation failed:",f),null}};e.callExpressionWithCursorWithDefault=
+function(a,c,d,b){if(null==a)return null!=b?b:null;const f=c.readArcadeFeature();c.contextTimeZone=d.$view?.timeZone;a=a.evaluate({...d,$feature:f},a.services);return g(a)?null!=b?b:null:a};e.isBadArcadeResult=g;Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

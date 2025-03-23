@@ -1,0 +1,6 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports","../../core/urlUtils","../../chunks/persistableUrlUtils"],function(f,g,h){function l(b,a,c){return a.imageData?g.makeData({mediaType:a.contentType||"image/png",isBase64:!0,data:a.imageData}):k(a.url,c)}function k(b,a){if(!g.isAbsolute(b)){if(a){var {origin:c,layer:e}=a;if("service"!==c&&"portal-item"!==c)var d=null;else d=e?.type,d="feature"===d||"stream"===d?e.parsedUrl?.path:"map-image"===d||"tile"===d?a.url?.path:null}else d=null;if(d)return g.join(d,"images",b)}return h.fromJSON(b,
+a)}function m(b,a,c,e){if(g.isDataProtocol(b)){if(b=g.dataComponents(b))a.contentType=b.mediaType,a.imageData=b.data,c&&c.imageData===a.imageData&&c.url&&h.write(c.url,a,"url",e)}else h.write(b,a,"url",e)}const n={json:{read:{source:["imageData","url"],reader:l},write:{writer(b,a,c,e){m(b,a,this.source,e)}}}};f.read=k;f.readImageDataOrUrl=l;f.sourcePropertyDefinition={readOnly:!0,json:{read:{source:["imageData","url"],reader(b,a,c){b={};a.imageData&&(b.imageData=a.imageData);a.contentType&&(b.contentType=
+a.contentType);a.url&&(b.url=k(a.url,c));return b}}}};f.urlPropertyDefinition=n;f.writeImageDataAndUrl=m;Object.defineProperty(f,Symbol.toStringTag,{value:"Module"})});

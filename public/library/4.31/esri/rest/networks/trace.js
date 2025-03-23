@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports","../../request","../utils","./support/TraceResult"],function(e,h,d,k){e.submitTraceJob=async function(b,a,f){b=d.parseUrl(b);const c=a.toJSON();c.traceLocations=JSON.stringify(a.traceLocations);a.resultTypes&&(c.resultTypes=JSON.stringify(a.resultTypes));a=d.asValidOptions(b.query,{query:d.encode({...c,async:!0,f:"json"}),...f});({data:a}=await h(`${b.path}/trace`,a));return a.statusUrl};e.trace=async function(b,a,f){b=d.parseUrl(b);const c=a.toJSON();c.traceLocations=JSON.stringify(a.traceLocations);
+a.resultTypes&&(c.resultTypes=JSON.stringify(a.resultTypes));a=d.asValidOptions(b.query,{query:d.encode({...c,f:"json"}),...f});return h(`${b.path}/trace`,a).then(g=>{({data:g}=g);return k.fromJSON(g.traceResults)})};Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

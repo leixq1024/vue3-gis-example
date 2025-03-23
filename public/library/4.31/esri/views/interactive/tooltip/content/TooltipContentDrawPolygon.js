@@ -1,0 +1,6 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("exports ../../../../chunks/tslib.es6 ../../../../core/Logger ../../../../core/has ../../../../core/RandomLCG ../../../../core/Error ../../../../core/accessorSupport/decorators/subclass ../components/DrawHeaderActions ./Fields ./TooltipContent ../../../../widgets/support/widgetUtils ../../../../widgets/support/jsxFactory".split(" "),function(c,f,p,q,r,t,g,h,k,l,u,e){c.TooltipContentDrawPolygon=class extends l.TooltipContent{_renderContent(){const {fieldContext:d,info:a,mode:m}=this,{xyMode:n,
+visibleElements:b}=a;return e.tsx(k.Fields,{context:d,fields:[...("direction-distance"===n?[b.direction?a.direction:void 0,b.distance?a.distance:void 0]:[b.coordinates?a.effectiveX:void 0,b.coordinates?a.effectiveY:void 0]),b.elevation?a.elevation:void 0,b.area?a.area:void 0],mode:m})}_renderActions(){const {xyMode:d,sketchOptions:a}=this.info;return e.tsx(h.DrawHeaderActions,{sketchOptions:a,visibleElements:{direction:"direction-distance"===d}})}};c.TooltipContentDrawPolygon=f.__decorate([g.subclass("esri.views.interactive.tooltip.content.TooltipContentDrawPolygon")],
+c.TooltipContentDrawPolygon);Object.defineProperty(c,Symbol.toStringTag,{value:"Module"})});

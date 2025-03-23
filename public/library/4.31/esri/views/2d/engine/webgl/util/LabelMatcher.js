@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports","./Matcher"],function(e,g){class f extends g.FeatureMatcher{static async fromLabelSchema(b,a){a=a.classes.map(async c=>{const d=await b.createMeshWriters(c.meshes);return{minScale:c.minScale,maxScale:c.maxScale,meshes:d,expression:null,where:await b.storage.createWhereClause(c.where)}});a=await Promise.all(a);return new f(a)}constructor(b){super();this._labels=b}match(b,a){if(!this._labels.length)return null;a=this._getLabels(a.$view.scale);const c=[];for(const d of a)d.where&&!d.where(b)||
+c.push(...d.meshes);return c}_getLabels(b){return this._labels.filter(a=>this._validForTileScale(a,b))}_validForTileScale(b,a){return(!b.minScale||b.minScale>=a-a/4)&&(!b.maxScale||b.maxScale<=a+a/2)}}e.LabelMatcher=f;Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

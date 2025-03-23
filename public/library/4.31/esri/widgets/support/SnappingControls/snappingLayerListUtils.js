@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports","../../LayerList/support/layerListUtils"],function(c,k){const g=a=>e(a)||f(a),e=a=>{if(!("type"in a))return!1;switch(a.type){case "feature":case "geojson":case "csv":case "graphics":case "wfs":case "map-notes":case "oriented-imagery":case "scene":case "building-scene":case "subtype-sublayer":return!0;default:return!1}},f=a=>{const b=k.getNormalizedChildLayerProperty(a);if(null!=b&&a.hasOwnProperty(b)&&null!=a[b])for(const d of a[b])if(g(d))return!0;return!1},h=(a,b)=>{if(null!=b&&
+null!=a){if(b.test(a.title))return"self";if(a.children.some(d=>!1!==h(d,b)))return"children"}return!1};c.isValidSnappingLayer=g;c.isValidSnappingLayerGroup=f;c.isValidSnappingLayerSource=e;c.itemTitleMatchesFilter=h;Object.defineProperty(c,Symbol.toStringTag,{value:"Module"})});

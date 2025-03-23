@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports"],function(b){class c{constructor(a){this._handles=this.accessed=void 0;this._observer=a}destroy(){this.accessed?.clear();this.clear()}onAccessed(a){null!=this._observer&&a!==this._observer&&(null==this.accessed&&(this.accessed=new Set),this.accessed.add(a))}onTrackingEnd(){null!=this._observer&&(this.clear(),null!=this.accessed&&(null==this._handles&&(this._handles=[]),this.accessed.forEach(a=>{this._handles.push(a.observe(this._observer))}),this.accessed.clear()))}clear(){if(null!=
+this._handles){for(let a=0;a<this._handles.length;++a)this._handles[a].remove();this._handles.length=0}}}b.TrackingTarget=c;Object.defineProperty(b,Symbol.toStringTag,{value:"Module"})});

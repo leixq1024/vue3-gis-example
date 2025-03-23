@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("../../chunks/tslib.es6 ../../core/object ../../core/accessorSupport/decorators/property ../../core/accessorSupport/ensureType ../../core/RandomLCG ../../core/has ../../core/accessorSupport/decorators/enumeration ../../core/accessorSupport/decorators/subclass ./BinParametersBase".split(" "),function(c,d,e,f,a,p,g,h,k){a=class extends k{constructor(b){super(b);this.boundaries=null;this.type="fixed-boundaries"}};c.__decorate([e.property({json:{name:"parameters.boundaries",write:{writer:function(b,
+l,m){d.setDeepValue(m,b&&b[0]instanceof Date?b.map(n=>n.getTime()):b,l)}}}})],a.prototype,"boundaries",void 0);c.__decorate([g.enumeration({fixedBoundariesBin:"fixed-boundaries"},{readOnly:!0})],a.prototype,"type",void 0);c=a=c.__decorate([h.subclass("esri.rest.support.FixedBoundariesBinParameters")],a);a.from=f.ensureType(a);return c});

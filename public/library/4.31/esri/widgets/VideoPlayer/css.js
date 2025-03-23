@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports"],function(a){a.css={base:"esri-video-player",color:"esri-video-player__color-block",colorActive:"esri-video-player__color-block__active",colorPicker:"esri-video-player__color-picker",playerActions:"esri-video-player__actions",playerControls:"esri-video-player__controls",playerTimecode:"esri-video-player__timecode",playerToolbar:"esri-video-player__toolbar",progress:"esri-video-player__progress",rangeSlider:"esri-video-player__range-slider",settings:"esri-video-player__settings",
+settingsFlow:"esri-video-player__settings-flow",slider:"esri-video-player__slider",sliderProgressContainer:"esri-video-player__slider-progress-container",videoView:"esri-video-player__video-view"};Object.defineProperty(a,Symbol.toStringTag,{value:"Module"})});

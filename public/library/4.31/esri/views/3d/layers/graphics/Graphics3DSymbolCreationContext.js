@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../ViewingMode"],function(a,b){class c{constructor(d,e){this.scheduler=d;this.schedule=e;this.featureExpressionInfoContext=this.localOriginFactory=this.graphicsCoreOwner=this.drapeSourceRenderer=this.layer=this.overlaySR=this.renderCoordsHelper=this.clippingExtent=this.stage=this.renderer=this.elevationProvider=this.streamDataRequester=this.sharedResources=null;this.screenSizePerspectiveEnabled=!0;this.isAsync=this.skipHighSymbolLods=this.physicalBasedRenderingEnabled=this.slicePlaneEnabled=
+!1}get spherical(){return this.stage.view.state.viewingMode===b.ViewingMode.Global}get doublePrecisionRequiresObfuscation(){return this.stage.renderView.renderingContext.driverTest.doublePrecisionRequiresObfuscation.result}}class f{constructor(){this.renderPriority=0;this.renderPriorityStep=1;this.ignoreDrivers=!1}}a.Graphics3DSymbolCreationContext=c;a.Graphics3DSymbolLayerCreationContext=f;Object.defineProperty(a,Symbol.toStringTag,{value:"Module"})});

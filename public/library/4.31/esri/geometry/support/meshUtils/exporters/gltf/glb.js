@@ -1,0 +1,6 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports"],function(f){var d;(function(a){a[a.JSON=1313821514]="JSON";a[a.BIN=5130562]="BIN"})(d||={});class c{constructor(a,b){if(!a)throw Error("GLB requires a JSON gltf chunk");this._length=c.HEADER_SIZE;this._length+=c.CHUNK_HEADER_SIZE;a=(new TextEncoder).encode(a).buffer;this._length+=4*Math.ceil(a.byteLength/4);if(b&&(this._length+=c.CHUNK_HEADER_SIZE,this._length+=b.byteLength,b.byteLength%4))throw Error("Expected BIN chunk length to be divisible by 4 at this point");this.buffer=new ArrayBuffer(this._length);
+this._outView=new DataView(this.buffer);this._writeHeader();a=this._writeChunk(a,12,d.JSON,32);b&&this._writeChunk(b,a,d.BIN)}_writeHeader(){this._outView.setUint32(0,c.MAGIC,!0);this._outView.setUint32(4,c.VERSION,!0);this._outView.setUint32(8,this._length,!0)}_writeChunk(a,b,e,g=0){this._outView.setUint32(b,4*Math.ceil(a.byteLength/4),!0);this._outView.setUint32(b+=4,e,!0);e=b+=4;var h=a.byteLength;(new Uint8Array(this._outView.buffer,e,h)).set(new Uint8Array(a,0,h),0);for(b+=a.byteLength;b%4;)g&&
+this._outView.setUint8(b,g),b++;return b}}c.HEADER_SIZE=12;c.CHUNK_HEADER_SIZE=8;c.MAGIC=1179937895;c.VERSION=2;f.GLB=c;Object.defineProperty(f,Symbol.toStringTag,{value:"Module"})});

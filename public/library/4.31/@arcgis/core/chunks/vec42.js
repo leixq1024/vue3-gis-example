@@ -1,0 +1,5 @@
+/*
+All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+*/
+import"../core/lang.js";import"./Logger.js";function t(t,f,r){e(t.typedBuffer,f.typedBuffer,r,t.typedBufferStride,f.typedBufferStride)}function e(t,e,f,r=4,n=r){if(t.length/r!=e.length/n)return;const o=t.length/r,u=f[0],d=f[1],i=f[2],c=f[3],p=f[4],s=f[5],y=f[6],B=f[7],a=f[8];let l=0,g=0;for(let f=0;f<o;f++){const f=e[l],o=e[l+1],h=e[l+2],S=e[l+3];t[g]=u*f+c*o+y*h,t[g+1]=d*f+p*o+B*h,t[g+2]=i*f+s*o+a*h,t[g+3]=S,l+=n,g+=r}}function f(t,e){const f=Math.min(t.count,e.count),r=t.typedBuffer,n=t.typedBufferStride,o=e.typedBuffer,u=e.typedBufferStride;for(let t=0;t<f;t++){const e=t*n,f=t*u,d=o[f],i=o[f+1],c=o[f+2],p=d*d+i*i+c*c;if(p>0){const t=1/Math.sqrt(p);r[e]=t*d,r[e+1]=t*i,r[e+2]=t*c}}}function r(t,e,f){n(t.typedBuffer,e,f,t.typedBufferStride)}function n(t,e,f,r=4){const n=Math.min(t.length/r,e.count),o=e.typedBuffer,u=e.typedBufferStride;let d=0,i=0;for(let e=0;e<n;e++)t[i]=f*o[d],t[i+1]=f*o[d+1],t[i+2]=f*o[d+2],t[i+3]=f*o[d+3],d+=u,i+=r}export{t as a,n as b,f as n,r as s,e as t};

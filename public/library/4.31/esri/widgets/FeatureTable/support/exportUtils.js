@@ -1,0 +1,6 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../core/Error","../../../core/urlUtils","../../../exports/csv","../../support/widgetUtils"],function(e,g,f,k,l){function h(){var a;if(a="showSaveFilePicker"in window)try{a=window.self===window.top}catch{a=!1}return a}e.downloadAttachmentInfo=async function(a){if(a?.url){var c=await f.blobUrlToBlob(`${a.url}/${a.name}`);f.downloadBlobAsFile(c,a.name)}};e.exportToCSV=async function(a){const {layer:c,includeGeometry:m,objectIds:n,outFields:p}=a;a=p??c.outFields??["*"];var b=
+c.createQuery();b.objectIds=n;b.outFields=a;b=await c.queryFeatures(b);a=await k.convertFeaturesToCSV(b,{includeGeometry:!c.isTable&&(m||"point"===b.geometryType),outFields:a});if(!a)throw new g("export-csv:no-output","Unable to generate a valid export string");a=new Blob([a],{type:"text/csv"});b=l.renderingSanitizer.sanitize(c.title);if(h())try{const d=await (await showSaveFilePicker({suggestedName:b,types:[{accept:{"text/csv":[".csv"]}}]})).createWritable();await d.write(a);await d.close()}catch(d){if(d instanceof
+g&&"AbortError"!==d.name)throw d;}else f.downloadBlobAsFile(a,`${b}.csv`)};e.supportsFileSystemAccess=h;Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

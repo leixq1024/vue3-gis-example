@@ -1,0 +1,7 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("exports ../views/3d/webgl-engine/core/shaderLibrary/ScreenSpacePass.glsl ../views/3d/webgl-engine/core/shaderModules/FloatPassUniform ../views/3d/webgl-engine/core/shaderModules/interfaces ../views/3d/webgl-engine/core/shaderModules/ShaderBuilder ../views/3d/webgl-engine/core/shaderModules/Texture2DPassUniform".split(" "),function(d,g,b,h,k,e){function f(l){const c=new k.ShaderBuilder;c.include(g.ScreenSpacePass);c.fragment.uniforms.add(new e.Texture2DPassUniform("densityMap",a=>a.densityMap),
+new e.Texture2DPassUniform("tex",a=>a.colorRamp),new b.FloatPassUniform("densityNormalizer",a=>1/(a.maxDensity-a.minDensity)),new b.FloatPassUniform("minDensity",a=>a.minDensity),new b.FloatPassUniform("densityMultiplier",a=>3/(a.searchRadius*a.searchRadius*Math.PI)*(l.usesHalfFloat?4:1))).main.add(h.glsl`float density = texture(densityMap, uv).r * densityMultiplier;
+float densityRatio = (density - minDensity) * densityNormalizer;
+fragColor = texture(tex, vec2(clamp(densityRatio, 0.0, 1.0), 0.5));`);return c}const m=Object.freeze(Object.defineProperty({__proto__:null,build:f},Symbol.toStringTag,{value:"Module"}));d.Heatmap=m;d.build=f});

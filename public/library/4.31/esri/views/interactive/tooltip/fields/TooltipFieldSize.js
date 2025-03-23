@@ -1,0 +1,6 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("exports ../../../../chunks/tslib.es6 ../../../../core/quantityUtils ../../../../core/accessorSupport/decorators/property ../../../../core/has ../../../../core/Logger ../../../../core/RandomLCG ../../../../core/accessorSupport/decorators/subclass ./parsingAndFormattingUtils ./TooltipField".split(" "),function(c,e,f,g,m,n,p,h,k,l){c.TooltipFieldSize=class extends l.TooltipField{constructor(d){super(d);this.precision=null}normalizeCtorArgs(d){return{name:"size",actual:null,parse:k.makeQuantityParser({createQuantity:(a,
+b)=>f.createLength(a,b.inputUnitInfos.length.unit)}),format:(a,b)=>b.formatters.length(a),formatForInputMode:(a,b)=>b.formatters.scalar(f.toUnit(a,b.inputUnitInfos.length.unit)),suffix:a=>a.inputUnitInfos.length.abbreviation,title:a=>a.messages.sketch.size,...d}}};e.__decorate([g.property()],c.TooltipFieldSize.prototype,"precision",void 0);c.TooltipFieldSize=e.__decorate([h.subclass("esri.views.interactive.tooltip.fields.TooltipFieldSize")],c.TooltipFieldSize);Object.defineProperty(c,Symbol.toStringTag,
+{value:"Module"})});

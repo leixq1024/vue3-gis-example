@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../../../chunks/tslib.es6","../../core/shaderTechnique/ShaderTechniqueConfiguration"],function(c,d,a){class b extends a.ShaderTechniqueConfiguration{constructor(){super(...arguments);this.spherical=this.contrastControlEnabled=!1}}d.__decorate([a.parameter()],b.prototype,"contrastControlEnabled",void 0);d.__decorate([a.parameter()],b.prototype,"spherical",void 0);c.LaserlinePathTechniqueConfiguration=b;Object.defineProperty(c,Symbol.toStringTag,{value:"Module"})});

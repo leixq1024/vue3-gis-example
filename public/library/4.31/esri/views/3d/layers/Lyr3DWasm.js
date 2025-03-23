@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["require","exports"],function(h,e){let f,g=null;const d=new Map;e.addLayerViewToWasm=async function(b){null==g&&(null==f&&(f=new Promise((k,l)=>h(["../../../layers/Lyr3DWasmPerSceneView"],m=>k(Object.freeze(Object.defineProperty({__proto__:null,default:m},Symbol.toStringTag,{value:"Module"}))),l))),g=await f);const c=b.view;let a=d.get(c);a||(a=new g.default({view:c}),d.set(c,a));await a.initializeWasm(!!c._stage.renderView.renderingContext.capabilities.compressedTextureS3TC);return a.add3DTilesLayerView(b)};
+e.getLyr3DWasm=function(b){return d.get(b)};e.removeLayerViewFromWasm=function(b){const c=b.view,a=d.get(c);a&&1>a.remove3DTilesLayerView(b)&&(d.delete(c),0===d.size&&(g=f=null))};Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

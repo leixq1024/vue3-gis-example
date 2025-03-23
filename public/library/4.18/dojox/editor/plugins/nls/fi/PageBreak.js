@@ -1,2 +1,0 @@
-//>>built
-define({pageBreak:"Sivunvaihto"});

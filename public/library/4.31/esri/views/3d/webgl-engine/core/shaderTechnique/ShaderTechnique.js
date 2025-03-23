@@ -1,0 +1,6 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("exports ../../../../../core/maybe ../../lib/DefaultVertexAttributeLocations ../../lib/Program ../../../../webgl/enums ../../../../webgl/renderState".split(" "),function(f,g,k,h,l,c){class m{constructor(b,a,d,n,e=k.Default3D){this.release=n;this.locations=e;this.primitiveType=l.PrimitiveType.TRIANGLES;this.key=a.key;this._program=new h.Program(b.rctx,d.get().build(a),e);this._pipeline=this.initializePipeline(a);this.reload=async p=>{p&&await d.reload();if(!this.key.equals(a.key))throw Error("Configuration was changed after construction, cannot reload shader");
+g.disposeMaybe(this._program);this._program=new h.Program(b.rctx,d.get().build(a),e);this._pipeline=this.initializePipeline(a)}}destroy(){this._program=g.disposeMaybe(this._program);this._pipeline=null}get program(){return this._program}get compiled(){return this.program.compiled}ensureAttributeLocations(b){this.program.assertCompatibleVertexAttributeLocations(b)}getPipeline(b,a){return this._pipeline}initializePipeline(b){return c.makePipelineState({blending:c.blendWithPremultipliedAlpha,colorWrite:c.defaultColorWrite})}}
+f.ShaderTechnique=m;Object.defineProperty(f,Symbol.toStringTag,{value:"Module"})});

@@ -1,0 +1,6 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(function(){class g{constructor(b=[],a=[]){this.lengths=b??[];this.coords=a??[]}static fromJSON(b){return new g(b.lengths,b.coords)}static fromRect(b){const [a,e,c,f]=b;b=c-a;const d=f-e;return new g([5],[a,e,b,0,0,d,-b,0,0,-d])}get isPoint(){return 0===this.lengths.length&&2<=this.coords.length}get maxLength(){return Math.max(...this.lengths)}get size(){return this.lengths.reduce((b,a)=>b+a)}forEachVertex(b){let a=0;this.lengths.length||b(this.coords[0],this.coords[1]);for(let e=0;e<this.lengths.length;e++){const c=
+this.lengths[e];for(let f=0;f<c;f++)b(this.coords[2*(f+a)],this.coords[2*(f+a)+1]);a+=c}}deltaDecode(){const b=this.clone(),{coords:a,lengths:e}=b;let c=0;for(const f of e){for(let d=1;d<f;d++)a[2*(c+d)]+=a[2*(c+d)-2],a[2*(c+d)+1]+=a[2*(c+d)-1];c+=f}return b}clone(b){if(0===this.lengths.length)return new g([],[this.coords[0],this.coords[1]]);var a=2*(0===this.lengths.length?1:this.lengths.reduce((e,c)=>e+c));a=this.coords.slice(0,a);return b?(b.set(a),new g(this.lengths,b)):new g(Array.from(this.lengths),
+Array.from(a))}}return g});

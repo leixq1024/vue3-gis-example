@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../../../../../chunks/tslib.es6","../../GraphShaderModule","../../graph/glsl"],function(h,b,a,c){class k extends a.VertexInput{}b.__decorate([a.location(0,c.Vec2)],k.prototype,"position",void 0);class l extends a.FragmentInput{}class g extends a.UniformGroup{}b.__decorate([a.uniform(c.Sampler2D)],g.prototype,"layerTexture",void 0);b.__decorate([a.uniform(c.Float)],g.prototype,"opacity",void 0);class e extends a.GraphShaderModule{vertex(d){const f=d.position;d=new c.Vec4(d.position.subtract(new c.Vec2(.5)).multiply(2),
+0,1);return{uv:f,glPosition:d}}fragment(d){const f=new a.FragmentOutput;f.glFragColor=c.texture2D(this.config.layerTexture,d.uv).multiply(this.config.opacity);return f}}b.__decorate([a.uniform(g)],e.prototype,"config",void 0);b.__decorate([b.__param(0,a.input(k))],e.prototype,"vertex",null);b.__decorate([b.__param(0,a.input(l))],e.prototype,"fragment",null);h.OpacityShader=e;Object.defineProperty(h,Symbol.toStringTag,{value:"Module"})});

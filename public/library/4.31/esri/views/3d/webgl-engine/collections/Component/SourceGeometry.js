@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../support/buffer/InterleavedLayout","../../core/shaderLibrary/attributes/TextureCoordinateAttribute.glsl","../../core/shaderModules/interfaces","../../lib/VertexAttribute"],function(d,f,e,g,b){class h extends g.NoParameters{constructor(c,a,k,l,m){super();this.colors=c;this.textureCoordinates=a;this.hasNormals=k;this.shadeNormals=l;this.applySSAO=m}}d.GeometryParameters=h;d.createVertexBufferLayout=function(c){const a=f.newLayout().vec3f(b.VertexAttribute.POSITION);c.hasNormals&&
+a.vec2i16(b.VertexAttribute.NORMALCOMPRESSED,{glNormalized:!0});c.textureCoordinates===e.TextureCoordinateType.Default?a.vec2f(b.VertexAttribute.UV0):c.textureCoordinates===e.TextureCoordinateType.Atlas&&(a.vec2f(b.VertexAttribute.UV0),a.vec4u16(b.VertexAttribute.UVREGION,{glNormalized:!0}));c.colors&&a.vec4u8(b.VertexAttribute.COLOR,{glNormalized:!0});return a};Object.defineProperty(d,Symbol.toStringTag,{value:"Module"})});

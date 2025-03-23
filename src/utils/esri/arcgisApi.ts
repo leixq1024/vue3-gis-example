@@ -8,8 +8,8 @@ const option: {
   css: string
   font: string
 } = {
-  api: '/library/4.18/dojo/dojo.js',
-  css: '/library/4.18/esri/css/main.css',
+  api: '/library/4.31/init.js',
+  css: '/library/4.31/esri/css/main.css',
   font: '/library/ArcGIS_pbf_Font'
 }
 // 初始化 arcgis api

@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../../chunks/languageUtils","../../../../core/Collection","../../../../core/handleUtils"],function(b,e,f,c){function d(a){return"number"===typeof a||"string"===typeof a}const g=[];c=c.makeHandle();b.emptyHighlightHandle=c;b.isObjectId=d;b.normalizeHighlightTargetExceptQuery=function(a){return d(a)||e.isGraphic(a)?[a]:f.isCollection(a)?a.toArray():Array.isArray(a)?a:g};Object.defineProperty(b,Symbol.toStringTag,{value:"Module"})});

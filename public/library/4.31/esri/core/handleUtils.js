@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports"],function(b){function c(a){return a?{remove(){a&&(a(),a=void 0)}}:k}function e(a){a.forEach(d=>d?.remove())}const k={remove:()=>{}};b.abortHandle=function(a){return c(()=>a?.abort())};b.asyncHandle=function(a,d){let g=!1,f=null;a.then(h=>{g?h.remove():f=h});return c(()=>{g=!0;null!=f?f.remove():null!=d&&(d.abort(),d=null)})};b.destroyHandle=function(a){return c(null!=a?()=>a.destroy():void 0)};b.disposable=function(a){return{[Symbol.dispose](){a.remove()}}};b.drainHandles=function(a){e(a);
+a.length=0};b.handlesGroup=function(a){return c(()=>e(a))};b.makeHandle=c;b.refHandle=function(a){return c(()=>a()?.remove())};b.removeHandles=e;Object.defineProperty(b,Symbol.toStringTag,{value:"Module"})});

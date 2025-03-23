@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("require exports ../../../../core/compilerUtils ../core/shaderTechnique/ReloadableShaderModule ../core/shaderTechnique/ShaderTechnique ../../../../chunks/Compositing.glsl ./CompositingTechniqueConfiguration ../../../webgl/renderState".split(" "),function(e,d,f,g,h,k,b,a){class l extends h.ShaderTechnique{constructor(c,m,n){super(c,m,new g.ReloadableShaderModule(k.Compositing,()=>new Promise((p,q)=>e(["./Compositing.glsl"],p,q))),n)}initializePipeline(c){switch(c.blitMode){case b.BlitMode.None:case b.BlitMode.Depth:return a.makePipelineState({colorWrite:a.defaultColorWrite});
+case b.BlitMode.Alpha:return a.makePipelineState({blending:a.premultipliedAlphaToPremultipliedAlpha,colorWrite:a.defaultColorWrite});default:f.neverReached(c.blitMode);case b.BlitMode.PremultipliedAlpha:case b.BlitMode.COUNT:return a.makePipelineState({blending:a.blendWithPremultipliedAlpha,colorWrite:a.defaultColorWrite})}}}d.CompositingTechnique=l;Object.defineProperty(d,Symbol.toStringTag,{value:"Module"})});

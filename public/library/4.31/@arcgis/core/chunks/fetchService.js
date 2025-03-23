@@ -1,0 +1,5 @@
+/*
+All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+*/
+import{f as e}from"./requestPresets.js";const a=new Set(["Catalog Layer","Feature Layer","Oriented Imagery Layer"]);async function t(a,t){const{loadContext:r,...n}=t||{},c=r?await r.fetchServiceMetadata(a,n):await e(a,n);i(c),s(c);const y={serviceJSON:c};if((c.currentVersion??0)<10.5)return y;const o=`${a}/layers`,u=r?await r.fetchServiceMetadata(o,n):await e(o,n);return i(u),s(u),y.layersJSON={layers:u.layers,tables:u.tables},y}function r(e){const{type:t}=e;return!!t&&a.has(t)}function n(e){return"Table"===e.type}function s(e){e.layers=e.layers?.filter(r),e.tables=e.tables?.filter(n)}function c(e){e.type||="Feature Layer"}function y(e){e.type||="Table"}function i(e){e.layers?.forEach(c),e.tables?.forEach(y)}function o(e){switch(e){case"Feature Layer":case"Table":return"FeatureLayer";case"Oriented Imagery Layer":return"OrientedImageryLayer";case"Catalog Layer":return"CatalogLayer"}return"FeatureLayer"}export{t as f,o as g};

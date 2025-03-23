@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("require exports ../../../core/libs/gl-matrix-2/factories/vec3f64 ../webgl-engine/core/shaderLibrary/terrain/TileComposite.glsl ../../../chunks/BlendLayers.glsl ../webgl-engine/core/shaderTechnique/ReloadableShaderModule ../webgl-engine/core/shaderTechnique/ShaderTechnique".split(" "),function(b,a,c,d,e,f,g){class h extends d.TileCompositePassParameters{constructor(){super(...arguments);this.baseOpacity=this.opacity=1;this.fboTexture=this.texture=null;this.backgroundColor=c.ZEROS}}class k extends g.ShaderTechnique{constructor(l,
+m,n){super(l,m,new f.ReloadableShaderModule(e.BlendLayers,()=>new Promise((p,q)=>b(["../webgl-engine/core/shaderLibrary/util/BlendLayers.glsl"],p,q))),n)}}a.BlendLayersPassParameters=h;a.BlendLayersTechnique=k;Object.defineProperty(a,Symbol.toStringTag,{value:"Module"})});

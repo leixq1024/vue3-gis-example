@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("require exports ../../../environment/ChapmanApproximation.glsl ../../core/shaderTechnique/ReloadableShaderModule ../../core/shaderTechnique/ShaderTechnique ../../../../../chunks/Haze.glsl ../../../../webgl/enums ../../../../webgl/renderState".split(" "),function(e,c,f,g,h,k,b,a){class l extends f.ChapmanApproximationParameters{constructor(){super(...arguments);this.hazeStrength=1}}class m extends h.ShaderTechnique{constructor(d,n,p){super(d,n,new g.ReloadableShaderModule(k.Haze,()=>new Promise((q,
+r)=>e(["./Haze.glsl"],q,r))),p)}initializePipeline(d){return d.reduced?a.makePipelineState({blending:a.keepSourceValues,depthTest:{func:b.CompareFunction.ALWAYS},colorWrite:a.defaultColorWrite}):a.makePipelineState({blending:a.separateBlendingParams(b.BlendFactor.ONE,b.BlendFactor.ZERO,b.BlendFactor.ONE_MINUS_SRC_COLOR,b.BlendFactor.ONE),colorWrite:a.defaultColorWrite})}}c.HazePassParameters=l;c.HazeTechnique=m;Object.defineProperty(c,Symbol.toStringTag,{value:"Module"})});

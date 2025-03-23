@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("require exports ./Clouds ../../../chunks/Clouds.glsl ../webgl-engine/core/shaderTechnique/ReloadableShaderModule ../webgl-engine/core/shaderTechnique/ShaderTechnique ../../webgl/enums ../../webgl/renderState".split(" "),function(e,d,f,g,h,k,a,b){class l extends k.ShaderTechnique{constructor(c,m,n){super(c,m,new h.ReloadableShaderModule(g.Clouds,()=>new Promise((p,q)=>e(["./Clouds.glsl"],p,q))),n)}initializePipeline(c){return b.makePipelineState({blending:b.simpleBlendingParams(a.BlendFactor.CONSTANT_COLOR,
+a.BlendFactor.ONE_MINUS_CONSTANT_COLOR,a.BlendOperation.ADD,c.writeTextureChannels===f.CloudsTextureChannels.RG?[1,1,0,0]:[0,0,1,1]),depthTest:{func:a.CompareFunction.LEQUAL},colorWrite:b.defaultColorWrite})}}d.CloudsTechnique=l;Object.defineProperty(d,Symbol.toStringTag,{value:"Module"})});

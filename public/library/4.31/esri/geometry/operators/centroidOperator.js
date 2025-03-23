@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports","../../chunks/Centroid-DZi-eb9F","./support/converterAPI"],function(b,f,c){class g{getOperatorType(){return 10205}accelerateGeometry(a,d,h){return!1}canAccelerateGeometry(a){return!1}supportsCurves(){return!0}execute(a,d){return f.calculateCentroid2D(a)}}const e=new g;b.execute=function(a){const d=e.execute(c.fromGeometry(a),null);return c.toPoint(d,c.getSpatialReference(a))};b.supportsCurves=function(){return e.supportsCurves()};Object.defineProperty(b,Symbol.toStringTag,{value:"Module"})});

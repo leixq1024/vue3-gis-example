@@ -1,0 +1,6 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("exports ../../Graphic ../../symbols ../../core/Collection ../../core/mathUtils ../../geometry/Mesh ../../geometry/support/MeshMaterial ../../geometry/support/MeshTexture ./constants ../../symbols/MeshSymbol3D ../../symbols/FillSymbol3DLayer".split(" "),function(d,h,r,k,g,l,m,n,e,p,q){d.createImageSphere=function(a,b=e.defaultImageSphereCenter,f=e.defaultImageSphereSize){b=b.clone();b.z=-e.defaultImageSphereSize/2;a=l.createSphere(b,{size:f,densificationFactor:2,vertexSpace:"georeferenced",
+material:new m({colorTexture:new n({data:a})})});a.components[0].trustSourceNormals=!0;if(a.vertexAttributes.uv){f=a.vertexAttributes.uv.length??0;for(let c=0;c<f;c++)a.vertexAttributes.uv[2*c]=1-a.vertexAttributes.uv[2*c],a.vertexAttributes.uv[2*c+1]=a.vertexAttributes.uv[2*c+1]}a.centerAt(b);return a};d.findDiagonalFOV=function(a,b){return 2*g.rad2deg(Math.atan(Math.tan(g.deg2rad(a/2))*Math.sqrt(b**2+1)))};d.meshToGraphic=function(a){return new h({geometry:a,symbol:new p({symbolLayers:new k([new q])})})};
+Object.defineProperty(d,Symbol.toStringTag,{value:"Module"})});

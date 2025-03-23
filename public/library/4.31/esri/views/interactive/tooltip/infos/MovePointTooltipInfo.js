@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("exports ../../../../chunks/tslib.es6 ../../../../core/accessorSupport/decorators/property ../../../../core/has ../../../../core/Logger ../../../../core/RandomLCG ../../../../core/accessorSupport/decorators/subclass ./SketchTooltipInfo ./TooltipInfoWithCoordinates".split(" "),function(a,b,d,k,l,m,e,f,g){a.MovePointTooltipInfo=class extends g.TooltipInfoWithCoordinates(f.SketchTooltipInfo){constructor(h){super(h);this.type="move-point";this.allFields.forEach(c=>{c.lockable=!1;c.setActual(null)})}get allFields(){return[this.longitude,
+this.latitude,this.x,this.y,this.elevation]}};b.__decorate([d.property()],a.MovePointTooltipInfo.prototype,"allFields",null);a.MovePointTooltipInfo=b.__decorate([e.subclass("esri.views.interactive.tooltip.infos.MovePointTooltipInfo")],a.MovePointTooltipInfo);Object.defineProperty(a,Symbol.toStringTag,{value:"Module"})});

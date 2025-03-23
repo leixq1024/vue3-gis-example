@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("../../chunks/tslib.es6 ../../core/accessorSupport/decorators/property ../../core/has ../../core/Logger ../../core/RandomLCG ../../core/accessorSupport/decorators/subclass ./AttributeTableElement".split(" "),function(b,d,a,h,k,e,f){var c;a=c=class extends f{constructor(g){super(g);this.displayType="auto";this.type="attachment"}clone(){return new c({description:this.description,displayType:this.displayType,label:this.label})}};b.__decorate([d.property({type:["auto"],json:{write:!0}})],a.prototype,
+"displayType",void 0);b.__decorate([d.property({type:["attachment"],readOnly:!0,json:{read:!1,write:!0}})],a.prototype,"type",void 0);return a=c=b.__decorate([e.subclass("esri.tables.elements.AttributeTableAttachmentElement")],a)});

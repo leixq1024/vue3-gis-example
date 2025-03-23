@@ -1,0 +1,6 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports","../../rest/knowledgeGraphService"],function(d,h){const g={initializeLayersFromClientData:async(b,c)=>{c||=[...b.layers,...b.tables].map(e=>e.graphTypeName);if(0!==c?.length){var a=new Map;for(const e of c)a.set(e,f(b,e));c=await h.fetchClientDataAtKeys(b.dataManager.knowledgeGraph,Array.from(a.values()));for(const e of[...b.layers,...b.tables])if(a=e.objectType.name,null!==a&&(a=c.get(f(b,a))))a=JSON.parse(a),null===a||"object"!==typeof a||a.hasOwnProperty("showLabels")||(a.showLabels=
+!1),e.read(a,{origin:"service"})}}},f=(b,c)=>"knowledge-graph"===b.type?`${c}/Map`:`${c}/LinkChart/LinkChartSubLayer`;d.initializeLayersFromClientData=async function(b,c){return g.initializeLayersFromClientData(b,c)};d.layerUtils=g;d.systemAggregationCountFieldName="ESRI__AggregationCount";d.systemDestinationIdFieldName="ESRI__DestID";d.systemIsSpatialFieldName="LC.ESRI__IsSpatial";d.systemLayoutGeometryFieldName="ESRI__LayoutGeometry";d.systemOidFieldName="ESRI__ID";d.systemOriginIdFieldName="ESRI__OriginID";
+Object.defineProperty(d,Symbol.toStringTag,{value:"Module"})});

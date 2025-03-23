@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("../../chunks/tslib.es6 ../../core/Collection ../../core/accessorSupport/decorators/property ../../core/has ../../core/Logger ../../core/RandomLCG ../../core/accessorSupport/decorators/subclass".split(" "),function(b,e,d,g,h,k,f){return a=>{a=class extends a{constructor(...c){super(...c);this.layerViews=new e}get dynamicGroupLayerView(){return this.layerViews.find(c=>c.layer===this.layer?.dynamicGroupLayer)}get footprintLayerView(){return this.layerViews.find(c=>c.layer===this.layer?.footprintLayer)}isUpdating(){return!this.dynamicGroupLayerView||
+!this.footprintLayerView||this.dynamicGroupLayerView.updating||this.footprintLayerView.updating}};b.__decorate([d.property()],a.prototype,"layer",void 0);b.__decorate([d.property()],a.prototype,"layerViews",void 0);b.__decorate([d.property({readOnly:!0})],a.prototype,"dynamicGroupLayerView",null);b.__decorate([d.property({readOnly:!0})],a.prototype,"footprintLayerView",null);return a=b.__decorate([f.subclass("esri.views.layers.CatalogLayerView")],a)}});

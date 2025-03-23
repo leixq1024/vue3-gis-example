@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("require exports ../../../chunks/Precipitation.glsl ../webgl-engine/core/shaderModules/interfaces ../webgl-engine/core/shaderTechnique/ReloadableShaderModule ../webgl-engine/core/shaderTechnique/ShaderTechnique ../webgl-engine/lib/VertexAttribute ../../webgl/enums ../../webgl/renderState".split(" "),function(d,a,e,f,g,h,c,k,b){class l extends f.NoParameters{constructor(){super(...arguments);this.time=0;this.radius=1;this.width=500;this.opacity=0}}class m extends h.ShaderTechnique{constructor(n,
+p,q){super(n,p,new g.ReloadableShaderModule(e.Precipitation,()=>new Promise((r,t)=>d(["./Precipitation.glsl"],r,t))),q,new Map([[c.VertexAttribute.POSITION,0],[c.VertexAttribute.INSTANCEFEATUREATTRIBUTE,1]]))}initializePipeline(){return b.makePipelineState({blending:b.blendWithPremultipliedAlpha,depthTest:{func:k.CompareFunction.LEQUAL},colorWrite:b.defaultColorWrite})}}a.PrecipitationPassParameters=l;a.PrecipitationTechnique=m;Object.defineProperty(a,Symbol.toStringTag,{value:"Module"})});

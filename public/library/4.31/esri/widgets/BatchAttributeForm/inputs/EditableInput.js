@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("exports ../../../chunks/tslib.es6 ../../../core/accessorSupport/decorators/property ../../../core/has ../../../core/Logger ../../../core/RandomLCG ../../../core/accessorSupport/decorators/subclass ./InputBase".split(" "),function(a,b,c,f,g,h,d,e){a.EditableInput=class extends e.InputBase{constructor(){super(...arguments);this.editType="NA"}get editable(){return this._evaluatedEditableExpression??!0}get _evaluatedEditableExpression(){return null}};b.__decorate([c.property()],a.EditableInput.prototype,
+"editable",null);b.__decorate([c.property()],a.EditableInput.prototype,"editType",void 0);b.__decorate([c.property()],a.EditableInput.prototype,"_evaluatedEditableExpression",null);a.EditableInput=b.__decorate([d.subclass("esri.widgets.BatchAttributeForm.inputs.EditableInput")],a.EditableInput);Object.defineProperty(a,Symbol.toStringTag,{value:"Module"})});

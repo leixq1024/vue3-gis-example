@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("../../../chunks/tslib.es6 ../../../core/Accessor ../../../core/accessorSupport/decorators/property ../../../core/has ../../../core/Logger ../../../core/RandomLCG ../../../core/accessorSupport/decorators/subclass".split(" "),function(b,a,c,g,h,k,f){a=class extends a{constructor(d){super(d);this.title=this.description=null}get elementsInCommon(){const d=this.layers.length;return this.elements.filter(e=>e.layers.length===d)}get layers(){const d=new Set(this.elements.flatMap(e=>e.layers));return Array.from(d)}};
+b.__decorate([c.property()],a.prototype,"description",void 0);b.__decorate([c.property()],a.prototype,"elements",void 0);b.__decorate([c.property()],a.prototype,"elementsInCommon",null);b.__decorate([c.property()],a.prototype,"layers",null);b.__decorate([c.property()],a.prototype,"title",void 0);return a=b.__decorate([f.subclass("esri.widgets.BatchAttributeForm.templates.BatchFormTemplate")],a)});

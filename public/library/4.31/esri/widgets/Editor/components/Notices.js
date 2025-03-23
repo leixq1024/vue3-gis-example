@@ -1,0 +1,6 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("require exports ../../../chunks/componentsUtils ../../support/iconUtils ../../support/widgetUtils ../../support/jsxFactory".split(" "),function(h,d,k,l,m,b){function e(a){const c=a.kind??"brand";return b.tsx("calcite-notice",{class:g.notice,icon:l.iconByKind[c],key:a.key,kind:c,open:!0,scale:"s"},a.title?b.tsx("div",{slot:"title"},a.title):null,b.tsx("div",{slot:"message"},a.message))}const g={notice:"esri-editor__notice"};d.Notice=e;d.Notices=function({workflow:a,messages:c}){const f=[];
+a?.reliesOnOwnerAdminPrivileges&&f.push(b.tsx(e,{key:"owner-admin-notice",message:c.ownerAdminNotice,slot:"content-start"}));a?.hasInvalidFormTemplate&&f.push(b.tsx(e,{key:"form-field-error",kind:"warning",message:c.formFieldUpdateError,slot:"content-start"}));"create-features"===a?.type&&"georeferenced-reprojected"===a.data.upload?.result?.type&&f.push(b.tsx(e,{key:"mesh-reprojected",kind:"warning",message:c.helpMessages3d.meshReprojected,slot:"content-start"}));return b.tsx(b.tsxFragment,null,f)};
+d.css=g;d.loadNoticesComponents=()=>k.loadCalciteComponents({notice:()=>new Promise((a,c)=>h(["../../../chunks/calcite-notice"],a,c))});Object.defineProperty(d,Symbol.toStringTag,{value:"Module"})});

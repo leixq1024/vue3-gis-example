@@ -1,0 +1,5 @@
+/*
+All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+*/
+import{_ as s}from"./tslib.es6.js";import{property as t}from"../core/accessorSupport/decorators/property.js";import"../core/lang.js";import"./Logger.js";import{subclass as i}from"../core/accessorSupport/decorators/subclass.js";import e from"../support/actions/ActionBase.js";var o;let a=o=class extends e{constructor(s){super(s),this.displayValueEnabled=!1,this.max=1,this.min=0,this.step=.1,this.type="slider",this.value=null}clone(){return new o({active:this.active,className:this.className,disabled:this.disabled,id:this.id,indicator:this.indicator,title:this.title,visible:this.visible,displayValueEnabled:this.displayValueEnabled,max:this.max,min:this.min,step:this.step,value:this.value})}};s([t()],a.prototype,"displayValueEnabled",void 0),s([t()],a.prototype,"max",void 0),s([t()],a.prototype,"min",void 0),s([t()],a.prototype,"step",void 0),s([t()],a.prototype,"value",void 0),a=o=s([i("esri.support.actions.ActionSlider")],a);const r=a;export{r as A};

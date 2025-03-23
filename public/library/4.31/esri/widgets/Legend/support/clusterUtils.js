@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../renderers/visualVariables/SizeVariable"],function(f,g){f.getEffectiveClusterSizeVariable=function(e,c,d){var a=e.effectiveClusterRenderer;if(!(a&&"visualVariables"in a&&a.visualVariables))return null;a=a.visualVariables.find(b=>"size"===b.type);if(!("stops"in a&&a.stops))return null;const h=a.stops.find(b=>b.useMinValue),k=a.stops.find(b=>b.useMaxValue);if(null==h||null==k)return null;d=d.featuresTilingScheme.getClosestInfoForScale(d.scale).level;return(c=c.getDisplayStatistics(d,
+a.field))?new g({field:a.field,minSize:e.clusterMinSize,minDataValue:c.minValue,maxSize:e.clusterMaxSize,maxDataValue:c.maxValue}):null};Object.defineProperty(f,Symbol.toStringTag,{value:"Module"})});

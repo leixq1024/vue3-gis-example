@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports","./TileAgent"],function(a,b){class c extends b.TileAgent{constructor(){super(...arguments);this.type="elevation";this._scaleRangeEnabled=!1}get _desiredMinLevelDelta(){return this.tile.elevationLevelDelta-(this.tile.elevationLevel-this.tile.level)}get _progressiveLevelModulo(){return 0}}a.ElevationTileAgent=c;a.isElevationTileAgent=function(d){return"elevation"===d.type};Object.defineProperty(a,Symbol.toStringTag,{value:"Module"})});

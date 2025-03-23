@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports"],function(b){b.TechniqueType=void 0;var a=b.TechniqueType||(b.TechniqueType={});a[a.AnimatedMarker=0]="AnimatedMarker";a[a.Blend=1]="Blend";a[a.ComplexFill=2]="ComplexFill";a[a.ComplexOutlineFill=3]="ComplexOutlineFill";a[a.DotDensity=4]="DotDensity";a[a.Fill=5]="Fill";a[a.Grid=6]="Grid";a[a.Heatmap=7]="Heatmap";a[a.Label=8]="Label";a[a.Line=9]="Line";a[a.Magnifier=10]="Magnifier";a[a.Marker=11]="Marker";a[a.OutlineFill=12]="OutlineFill";a[a.Overlay=13]="Overlay";a[a.PatternFill=
+14]="PatternFill";a[a.PatternOutlineFill=15]="PatternOutlineFill";a[a.PieChart=16]="PieChart";a[a.Test=17]="Test";a[a.Text=18]="Text";a[a.TexturedLine=19]="TexturedLine";Object.defineProperty(b,Symbol.toStringTag,{value:"Module"})});

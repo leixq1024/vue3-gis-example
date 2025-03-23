@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports","./tslib.es6","./Geometry","./GeodeticDistanceCalculator-CJvEB3vc"],function(f,n,g,d){class u{getOperatorType(){return 10316}supportsCurves(){return!0}accelerateGeometry(a,b,c){return!1}canAccelerateGeometry(a){return!1}execute(a,b,c,h,k){return this.executeEx(a,b,c,h,k,null,null,Number.NaN)}executeEx(a,b,c,h,k,p,q,l){const e={stack:[],error:void 0,hasError:!1};try{0===c.getCoordinateSystemType()&&g.throwInvalidArgumentException("");g.throwIfMesh(a);g.throwIfMesh(b);if(a.isEmpty()||
+b.isEmpty())return Number.NaN;Number.isNaN(l)&&(l=Number.MAX_VALUE);const m=n.__addDisposableResource(e,new d.GeodeticDistanceCalculator(c,h,k,l,1),!1),r=d.makeOutput(),t=d.makeOutput(),v=m.calculate(a,b,r,t);p&&p.outPoint.assign(r.outPoint);q&&q.outPoint.assign(t.outPoint);return v}catch(m){e.error=m,e.hasError=!0}finally{n.__disposeResources(e)}}}f.makeOutput=d.makeOutput;f.OperatorGeodeticDistance=u;Object.defineProperty(f,Symbol.toStringTag,{value:"Module"})});

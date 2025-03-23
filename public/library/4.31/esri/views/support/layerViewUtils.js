@@ -1,0 +1,6 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports","../../core/Error"],function(c,h){function e(a,b,d){return null==a||a>=d&&(0===b||a<=b)}function f(a,b){return null!=a&&0<a||null!=b&&0<b}c.extractSafeScaleBounds=function(a){a=a.effectiveScaleRange;return{minScale:a?.minScale??0,maxScale:a?.maxScale??0}};c.highlightsSupported=function(a){return a&&"function"===typeof a.highlight};c.isInEffectiveScaleRange=function(a,b){if(b&&a){const {minScale:d,maxScale:g}=a;if(f(d,g))return e(b,d,g)}return!0};c.isScaleRangeActive=f;c.isSelectableLayerView2D=
+function(a){return null!=a&&"object"===typeof a&&"createQuery"in a&&"queryFeatures"in a&&"layer"in a&&"view"in a};c.occludeesSupported=function(a){return a&&"function"===typeof a.maskOccludee};c.scaleBoundsPredicate=e;c.spatialReferenceIncompatibleError=function(a,b,d){return new h("layerview:spatial-reference-incompatible",`The spatial reference of this ${a}${b?`(wkid:${b})`:""} is incompatible with the spatial reference of the view${d?`(wkid:${d})`:""}.`,{})};c.validateScaleRange=function(a){return!a?.minScale||
+!a.maxScale||a.minScale>=a.maxScale};Object.defineProperty(c,Symbol.toStringTag,{value:"Module"})});

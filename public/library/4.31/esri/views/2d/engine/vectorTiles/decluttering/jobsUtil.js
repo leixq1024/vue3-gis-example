@@ -1,0 +1,6 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("exports ../../../../../core/libs/gl-matrix-2/math/mat3 ../../../../../core/libs/gl-matrix-2/factories/mat3f32 ../../../../../core/libs/gl-matrix-2/math/common ./core ./jobs ./SymbolDeclutterer ./SymbolRepository ./util ../style/StyleDefinition".split(" "),function(k,e,n,p,q,r,t,u,v,w){const a=n.create();k.declutterSingleTile=function(b,l){const x=b.transforms.tileUnitsToPixels;var c=p.toRadian(l);const f=Math.ceil(512*(Math.abs(Math.sin(c))+Math.abs(Math.cos(c))));e.identity(a);e.translate(a,
+a,[f/2,f/2]);e.rotate(a,a,c);e.translate(a,a,[-256,-256]);e.scale(a,a,[.125,.125,1]);b.transforms.tileUnitsToPixels=a;c=[];const g=new u.SymbolRepository(4096,c,()=>new q.VTLUniqueSymbol),m=new t.SymbolDeclutterer(c,g,(d,h,y)=>new r.CollisionJob(d,h,y,b.styleRepository,b.key.level,l),(d,h)=>{v.writeOpacityToBuffers(d,h,!1)},()=>0,d=>(d=b.styleRepository.getStyleLayerByUID(d).getLayoutProperty("visibility"))&&d.getValue()===w.Visibility.NONE?!1:!0);c.push(b);g.add(b);m.setScreenSize(f,f);m.continue(Infinity);
+g.removeTile(b);b.transforms.tileUnitsToPixels=x};Object.defineProperty(k,Symbol.toStringTag,{value:"Module"})});

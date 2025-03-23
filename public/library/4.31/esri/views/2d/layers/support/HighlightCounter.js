@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports"],function(e){const f=new Set;class g{constructor(){this._idToCounters=new Map}get empty(){return 0===this._idToCounters.size}addGroup(a,b){for(const c of a)a=this._idToCounters.get(c),a||(a=new Map,this._idToCounters.set(c,a)),a.set(b,(a.get(b)||0)+1)}deleteGroup(a,b){for(const c of a){a=this._idToCounters.get(c);if(!a)continue;let d=a.get(b);if(null==d)break;d--;0<d?a.set(b,d):a.delete(b);0===a.size&&this._idToCounters.delete(c)}}getHighlightGroups(a){a=this._idToCounters.get(a);
+if(!a)return f;const b=new Set;for(const [c,d]of a)0<d&&b.add(c);return b}ids(){return this._idToCounters.keys()}}e.HighlightCounter=g;Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

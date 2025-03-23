@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("../../chunks/tslib.es6 ../../core/Accessor ../../core/accessorSupport/decorators/property ../../core/has ../../core/Logger ../../core/RandomLCG ../../core/accessorSupport/decorators/subclass".split(" "),function(b,a,c,f,g,h,d){a=class extends a{constructor(e){super(e);this.headerKeys=[];this.outSpatialReference=null;this.exceededTransferLimit=!1}};b.__decorate([c.property()],a.prototype,"headerKeys",void 0);b.__decorate([c.property()],a.prototype,"outSpatialReference",void 0);b.__decorate([c.property()],
+a.prototype,"exceededTransferLimit",void 0);return a=b.__decorate([d.subclass("esri.rest.knowledgeGraph.GraphQueryResultHeader")],a)});

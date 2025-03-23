@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports","./OptimizedGeometry"],function(c,g){class b{constructor(a=null,d={},e,f){this.geometry=a;this.attributes=d;this.centroid=e;this.objectId=f;this.geohashY=this.geohashX=this.displayId=0}static fromJSON(a,d){const e=a.geometry?g.fromJSON(a.geometry):null,f=a.centroid?g.fromJSON(a.centroid):null;return new b(e,a.attributes,f,a.attributes[d])}weakClone(){const a=new b(this.geometry,this.attributes,this.centroid,this.objectId);a.displayId=this.displayId;a.geohashX=this.geohashX;a.geohashY=
+this.geohashY;return a}clone(){var a=this.geometry?.clone();a=new b(a,{...this.attributes},this.centroid?.clone(),this.objectId);a.displayId=this.displayId;a.geohashX=this.geohashX;a.geohashY=this.geohashY;return a}}class h extends b{}c.OptimizedFeature=b;c.OptimizedFeatureWithGeometry=h;c.hasGeometry=function(a){return!!a.geometry?.coords?.length};Object.defineProperty(c,Symbol.toStringTag,{value:"Module"})});

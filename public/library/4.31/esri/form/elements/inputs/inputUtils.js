@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports"],function(b){b.isBarcodeScannerInput=function(a){return"barcode-scanner"===a.type};b.isComboBoxInput=function(a){return"combo-box"===a.type};b.isDatePickerInput=function(a){return"date-picker"===a.type};b.isDateTimeOffsetPickerInput=function(a){return"datetimeoffset-picker"===a.type};b.isDateTimePickerInput=function(a){return"datetime-picker"===a.type};b.isRadioButtonsInput=function(a){return"radio-buttons"===a.type};b.isSwitchInput=function(a){return"switch"===a.type};b.isTextAreaInput=
+function(a){return"text-area"===a.type};b.isTextBoxInput=function(a){return"text-box"===a.type};b.isTimePickerInput=function(a){return"time-picker"===a.type};Object.defineProperty(b,Symbol.toStringTag,{value:"Module"})});

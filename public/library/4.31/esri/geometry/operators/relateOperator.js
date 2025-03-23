@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports","../../chunks/QuadraticBezier","./support/converterAPI"],function(d,f,c){class h{supportsCurves(){return!0}getOperatorType(){return 1}execute(a,b,e,k,l){return f.relate$1(a,b,e,k,l)}isValidDE9IM(a){return 0===f.validateSclString(a)}accelerateGeometry(a,b,e){return f.accelerateGeometry(a,b,e)}canAccelerateGeometry(a){return f.canAccelerateGeometry(a)}}const g=new h;d.accelerateGeometry=function(a){const b=c.getSpatialReference(a);return g.accelerateGeometry(c.fromGeometry(a),c.fromSpatialReference(b),
+1)};d.execute=function(a,b,e){return g.execute(c.fromGeometry(a),c.fromGeometry(b),c.fromSpatialReference(a.spatialReference),e,null)};d.isValidDE9IM=function(a){return g.isValidDE9IM(a)};d.supportsCurves=function(){return g.supportsCurves()};Object.defineProperty(d,Symbol.toStringTag,{value:"Module"})});

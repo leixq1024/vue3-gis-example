@@ -1,0 +1,6 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../../core/has","../../../input/InputHandler"],function(g,n,h){class k extends h.InputHandler{constructor(a,b,e){super(!0);this.view=a;this.pointerType=b;this.registerIncoming("double-tap-drag",e,f=>this._handleDoubleTapDrag(f))}_handleDoubleTapDrag(a){var {data:b}=a;const {pointerType:e}=b;if(e===this.pointerType){a.stopPropagation();var {action:f,delta:c}=b;({view:a}=this);var {mapViewNavigation:d}=a;switch(f){case "begin":({scale:a}=a);this._currentScale=this._startScale=
+a;this._previousDelta=c;d.begin();break;case "update":if(this._previousDelta.y===c.y)break;this._previousDelta=c;a=this._startScale*1.015**c.y;d.setViewpointImmediate(a/this._currentScale);this._currentScale=a;break;case "end":({constraints:b}=a);const {effectiveLODs:l,snapToZoom:m}=b;m&&l?(a=b.snapScale(this._currentScale),a=(0<c.y?Math.max(a,b.snapToPreviousScale(this._startScale)):Math.min(a,b.snapToNextScale(this._startScale)))/this._currentScale,d.zoom(a).then(()=>{d.end()})):d.end()}}}}g.DoubleTapDragZoom=
+k;Object.defineProperty(g,Symbol.toStringTag,{value:"Module"})});

@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("exports ../../core/arrayUtils ../../core/mathUtils ../../core/unitUtils ./gx/operatorDensify ./support/converterAPI".split(" "),function(g,p,n,h,k,e){g.execute=function(f,b,a={}){let {maxAngleInDegrees:l=0,maxDeviation:c=0,unit:d}=a;a=e.getSpatialReference(f);d&&(b=h.convertToSpatialReferenceUnit(b,d,a),c&&=h.convertToSpatialReferenceUnit(c,d,a));return e.toGeometry(k.execute(e.fromGeometry(f),b,c,n.deg2rad(l)),a)};g.executeMany=function(f,b,a={}){let {maxAngleInDegrees:l=0,maxDeviation:c=
+0,unit:d}=a;a=f.map(e.fromGeometry);const m=e.getSpatialReference(f);d&&(b=h.convertToSpatialReferenceUnit(b,d,m),c&&=h.convertToSpatialReferenceUnit(c,d,m));return k.executeMany(a,b,c,n.deg2rad(l)).map(q=>e.toGeometry(q,m)).filter(p.isSome)};g.supportsCurves=function(){return k.supportsCurves()};Object.defineProperty(g,Symbol.toStringTag,{value:"Module"})});

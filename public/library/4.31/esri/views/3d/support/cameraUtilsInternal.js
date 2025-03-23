@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("exports ../../../core/mathUtils ../../../chunks/vec32 ../../../core/libs/gl-matrix-2/factories/vec3f64 ../../../geometry/support/lineSegment ../../../geometry/support/plane".split(" "),function(k,l,a,h,q,r){const t=h.create(),m=h.create(),p=h.create();k.clampLineSegmentToPlane=function(d,c,e,f){a.subtract(p,e,c);r.intersectLineSegment(f,q.wrap(c,p),d)||d===e||a.copy(d,e)};k.createDirectionUp=function(){return{direction:h.create(),up:h.create()}};k.directionToHeadingTilt=function(d,c,e,f,n){let b=
+a.normalize(t,d),g=a.dot(b,f);const u=0<g;g=Math.abs(g);.99<g&&(g=Math.abs(a.dot(c,f)),.99>g?(a.copy(b,c),u&&a.scale(b,b,-1)):b=null);c=0;b&&(a.scale(m,f,a.dot(f,b)),a.subtract(b,b,m),c=a.dot(b,n)/(a.length(b)*a.length(n)),a.cross(m,b,n),c=(0<a.dot(m,f)?1:-1)*l.rad2deg(l.acosClamped(c)));d=l.rad2deg(l.acosClamped(-a.dot(f,d)/a.length(d)));if(!e)return{heading:c,tilt:d};e.heading=c;e.tilt=d;return e};Object.defineProperty(k,Symbol.toStringTag,{value:"Module"})});

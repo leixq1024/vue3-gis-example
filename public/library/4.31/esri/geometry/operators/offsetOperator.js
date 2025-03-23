@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports","../../core/arrayUtils","../../core/unitUtils","./gx/operatorOffset","./support/converterAPI"],function(f,q,n,g,b){const p={round:0,bevel:1,miter:2,square:3};f.execute=function(d,c,a={}){const {miterLimit:h=10,flattenError:k=0,joins:l="round",unit:e}=a;a=b.getSpatialReference(d);e&&(c=n.convertToSpatialReferenceUnit(c,e,a));return b.toGeometry(g.execute(b.fromGeometry(d),b.fromSpatialReference(a),c,p[l],h,k),a)};f.executeMany=function(d,c,a={}){const {miterLimit:h=10,flattenError:k=
+0,joins:l="round",unit:e}=a;a=d.map(b.fromGeometry);const m=b.getSpatialReference(d);e&&(c=n.convertToSpatialReferenceUnit(c,e,m));return g.executeMany(a,b.fromSpatialReference(m),c,p[l],h,k).map(r=>b.toGeometry(r,m)).filter(q.isSome)};f.supportsCurves=function(){return g.supportsCurves()};Object.defineProperty(f,Symbol.toStringTag,{value:"Module"})});

@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("../../chunks/tslib.es6 ../../core/Accessor ../../core/accessorSupport/decorators/property ../../core/has ../../core/Logger ../../core/RandomLCG ../../core/accessorSupport/decorators/subclass".split(" "),function(b,a,c,f,g,h,d){a=class extends a{constructor(e){super(e);this.options=this.relationshipDeletes=this.relationshipUpdates=this.relationshipAdds=this.entityDeletes=this.entityUpdates=this.entityAdds=void 0}};b.__decorate([c.property()],a.prototype,"entityAdds",void 0);b.__decorate([c.property()],
+a.prototype,"entityUpdates",void 0);b.__decorate([c.property()],a.prototype,"entityDeletes",void 0);b.__decorate([c.property()],a.prototype,"relationshipAdds",void 0);b.__decorate([c.property()],a.prototype,"relationshipUpdates",void 0);b.__decorate([c.property()],a.prototype,"relationshipDeletes",void 0);b.__decorate([c.property()],a.prototype,"options",void 0);return a=b.__decorate([d.subclass("esri.rest.knowledgeGraph.GraphApplyEdits")],a)});

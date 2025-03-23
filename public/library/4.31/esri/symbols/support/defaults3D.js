@@ -1,0 +1,6 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("exports ../../Color ../../symbols ../../core/Collection ../../core/has ../../core/screenUtils ../FillSymbol3DLayer ../LineSymbol3D ../MeshSymbol3D ../PointSymbol3D ../PolygonSymbol3D ../edges/SolidEdges3D ./defaults ./defaultsJSON ../LineSymbol3DLayer".split(" "),function(b,a,f,c,x,d,g,h,n,p,k,q,e,l,r){const t=p.fromSimpleMarkerSymbol(e.defaultPointSymbol2D),u=h.fromSimpleLineSymbol(e.defaultPolylineSymbol2D),v=k.fromSimpleFillSymbol(e.defaultPolygonSymbol2D),w=new n({symbolLayers:new c([new g({material:{color:l.defaultColor},
+edges:new q({size:d.px2pt(1),color:new a(l.defaultOutlineColor)})})])});f=new h({symbolLayers:new c([new r({material:{color:new a([0,0,0])},size:d.px2pt(1)})])});a=new k({symbolLayers:new c([new g({outline:{color:new a([0,0,0]),size:d.px2pt(1)}})])});b.defaultRendererPolygonSymbol3D=a;b.defaultRendererPolylineSymbol3D=f;b.getDefaultSymbol3D=function(m){if(null==m)return null;switch(m.type){case "mesh":return w;case "point":case "multipoint":return t;case "polyline":return u;case "polygon":case "extent":return v}return null};
+Object.defineProperty(b,Symbol.toStringTag,{value:"Module"})});

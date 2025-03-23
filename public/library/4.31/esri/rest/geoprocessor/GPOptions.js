@@ -1,0 +1,6 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("../../chunks/tslib.es6 ../../core/Accessor ../../core/accessorSupport/decorators/property ../../core/accessorSupport/ensureType ../../core/RandomLCG ../../core/has ../../core/accessorSupport/decorators/subclass ../../geometry/Extent ../../geometry/SpatialReference".split(" "),function(b,a,c,g,l,m,h,k,f){var d;a=d=class extends a{constructor(e){super(e);this.processSpatialReference=this.processExtent=this.outSpatialReference=null;this.returnZ=this.returnM=this.returnFeatureCollection=this.returnColumnName=
+!1}static from(e){return g.ensureClass(d,e)}};b.__decorate([c.property({type:f})],a.prototype,"outSpatialReference",void 0);b.__decorate([c.property({type:k})],a.prototype,"processExtent",void 0);b.__decorate([c.property({type:f})],a.prototype,"processSpatialReference",void 0);b.__decorate([c.property({nonNullable:!0})],a.prototype,"returnColumnName",void 0);b.__decorate([c.property({nonNullable:!0})],a.prototype,"returnFeatureCollection",void 0);b.__decorate([c.property({nonNullable:!0})],a.prototype,
+"returnM",void 0);b.__decorate([c.property({nonNullable:!0})],a.prototype,"returnZ",void 0);return a=d=b.__decorate([h.subclass("esri.rest.geoprocessor.GPOptions")],a)});

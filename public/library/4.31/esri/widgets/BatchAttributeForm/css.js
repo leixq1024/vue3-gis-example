@@ -1,0 +1,6 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports"],function(a){a.css={base:"esri-batch-attribute-form",form:"esri-batch-attribute-form__form",formHeader:"esri-batch-attribute-form__form-header",label:"esri-batch-attribute-form__label",labelTextContent:"esri-batch-attribute-form__label-text-content",fieldInput:"esri-batch-attribute-form__input",inputRadio:"esri-batch-attribute-form__input--radio",inputRadioGroup:"esri-batch-attribute-form__input--radio-group",inputRadioLabel:"esri-batch-attribute-form__input--radio-label",inputDisabled:"esri-batch-attribute-form__input--disabled",
+inputSwitch:"esri-batch-attribute-form__input--switch",centeredButton:"esri-batch-attribute-form__centered-button",description:"esri-batch-attribute-form__description-text",dateInputContainer:"esri-batch-attribute-form__date-input-container",block:"esri-batch-attribute-form__block",group:"esri-batch-attribute-form__group",groupSequential:"esri-batch-attribute-form__group--sequential",individualElement:"esri-batch-attribute-form__group__individual-element"};Object.defineProperty(a,Symbol.toStringTag,
+{value:"Module"})});

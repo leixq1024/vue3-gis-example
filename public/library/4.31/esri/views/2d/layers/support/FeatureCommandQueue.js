@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["../../../../core/promiseUtils","./UpdateTracking2D","../../../support/QueueProcessor"],function(c,d,e){class f{constructor(a){this.updateTracking=new d.UpdateTracking2D({debugName:"FeatureCommandQueue"});this._queueProcessor=new e.QueueProcessor({concurrency:1,process:a.process})}destroy(){this.updateTracking.destroy();this._queueProcessor.destroy();this.clear()}clear(){this._queueProcessor.clear()}async push(a){return c.ignoreAbortErrors(this.updateTracking.addPromise(this._doPush(a)))}async _doPush(a){const b=
+this._queueProcessor,g=b.last();switch(a.type){case "update":case "highlight":if(g?.type===a.type)break;return b.push(a);case "edit-by-id":case "edit-by-feature":return b.push(a)}}}return f});

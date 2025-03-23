@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("exports ../../../../chunks/tslib.es6 ../../../../core/accessorSupport/decorators/property ../../../../core/has ../../../../core/Logger ../../../../core/RandomLCG ../../../../core/accessorSupport/decorators/subclass ../../webgl ./OpaqueEnvironment ../lib/basicInterfaces".split(" "),function(a,b,d,k,l,m,e,c,f,g){a.TransparentEnvironment=class extends f.OpaqueEnvironment{constructor(h){super(h);this.consumes={required:[c.InternalRenderCategory.TRANSPARENT_ENVIRONMENT]}}_enable(){this.produces=
+c.InternalRenderCategory.TRANSPARENT_ENVIRONMENT;this.requestRender(g.RenderRequestType.UPDATE)}};b.__decorate([d.property()],a.TransparentEnvironment.prototype,"consumes",void 0);a.TransparentEnvironment=b.__decorate([e.subclass("esri.views.3d.webgl-engine.effects.TransparentEnvironment")],a.TransparentEnvironment);Object.defineProperty(a,Symbol.toStringTag,{value:"Module"})});

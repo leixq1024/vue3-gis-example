@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../../../../core/libs/gl-matrix-2/math/mat4","../../../../../../core/libs/gl-matrix-2/factories/mat4f64"],function(k,g,l){class p{constructor(b){this._bufferWriter=null;this._bufferWriter=b.createBufferWriter()}createBuffer(b,c){const d=this._bufferWriter;let e=null;if(b.transformation&&c)g.copy(a,b.transformation),a[12]-=c[0],a[13]-=c[1],a[14]-=c[2],e=a;else{if(c)throw Error("not implemented");b.transformation&&(e=b.transformation)}c=null;e&&(g.invert(f,a),g.transpose(f,
+f),c=f);const m=b.attributes,h=d.elementCount(m);h>Math.floor(4194304/(d.vertexBufferLayout.stride/4))&&console.warn("geometry with very large number of elements encountered");const n=d.vertexBufferLayout.createBuffer(h);d.write(e,c,m,b.objectAndLayerIdColor,n,0);return{data:n.buffer,elementCount:h}}}const a=l.create(),f=l.create();k.RenderGeometryBufferWriter=p;Object.defineProperty(k,Symbol.toStringTag,{value:"Module"})});

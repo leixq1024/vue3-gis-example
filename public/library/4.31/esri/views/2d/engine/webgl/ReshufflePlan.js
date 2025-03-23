@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports"],function(c){class f{constructor(a){this._indexOnly=a;this.vertex={count:0,operations:[]};this.index={count:0,operations:[]}}copyRecord(a){let d=0;this._indexOnly||(d=this.vertex.count-a.vertexStart,this.vertex.operations.push({srcFrom:a.vertexStart,dstFrom:this.vertex.count,count:a.vertexCount,mutate:0}),a.vertexStart=this.vertex.count,this.vertex.count+=a.vertexCount);let e=!1;if(this._indexOnly&&1<=this.index.operations.length){const b=this.index.operations[this.index.operations.length-
+1];b.srcFrom+b.count===a.indexStart&&(b.count+=a.indexCount,e=!0)}e||this.index.operations.push({srcFrom:a.indexStart,dstFrom:this.index.count,count:a.indexCount,mutate:d});a.indexStart=this.index.count;this.index.count+=a.indexCount}}c.ReshufflePlan=f;Object.defineProperty(c,Symbol.toStringTag,{value:"Module"})});

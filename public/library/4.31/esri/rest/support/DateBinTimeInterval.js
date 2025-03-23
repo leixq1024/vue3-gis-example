@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("../../chunks/tslib.es6 ../../core/Clonable ../../core/jsonMap ../../core/JSONSupport ../../core/accessorSupport/decorators/property ../../core/accessorSupport/ensureType ../../core/RandomLCG ../../core/has ../../core/accessorSupport/decorators/enumeration ../../core/accessorSupport/decorators/subclass".split(" "),function(b,a,c,d,e,f,l,m,g,h){c=c.strict()({year:"years",quarter:"quarters",month:"months",week:"weeks",day:"days",hour:"hours",minute:"minutes",second:"seconds"});a=class extends a.ClonableMixin(d.JSONSupport){constructor(k){super(k);
+this.units=this.value=null}};b.__decorate([e.property({type:Number,json:{name:"number",write:!0}})],a.prototype,"value",void 0);b.__decorate([g.enumeration(c,{name:"unit"})],a.prototype,"units",void 0);b=a=b.__decorate([h.subclass("esri.rest.support.DateBinTimeInterval")],a);a.from=f.ensureType(a);return b});

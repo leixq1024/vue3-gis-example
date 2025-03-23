@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["require","exports","../core/shaderTechnique/ReloadableShaderModule","../core/shaderTechnique/ShaderTechnique","../../../../chunks/OverlayCompositing.glsl"],function(b,a,c,d,e){class f extends d.ShaderTechnique{constructor(g,h,k){super(g,h,new c.ReloadableShaderModule(e.OverlayCompositing,()=>new Promise((l,m)=>b(["./OverlayCompositing.glsl"],l,m))),k)}}a.OverlayCompositingTechnique=f;Object.defineProperty(a,Symbol.toStringTag,{value:"Module"})});

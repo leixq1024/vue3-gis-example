@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("exports ../../chunks/tslib.es6 ../../core/accessorSupport/decorators/property ../../core/has ../../core/Logger ../../core/RandomLCG ../../core/accessorSupport/decorators/subclass ../../renderers/support/RasterPresetRenderer".split(" "),function(c,b,d,g,h,k,e,f){c.RasterPresetRendererMixin=a=>{a=class extends a{constructor(){super(...arguments);this.presetRenderers=this.activePresetRendererName=null}};b.__decorate([d.property({type:String,json:{name:"layerDefinition.activePresetRendererName",
+write:{allowNull:!0}}})],a.prototype,"activePresetRendererName",void 0);b.__decorate([d.property({type:[f],json:{name:"layerDefinition.presetRenderers",write:!0}})],a.prototype,"presetRenderers",void 0);return a=b.__decorate([e.subclass("esri.layers.mixins.RasterPresetRendererMixin")],a)};Object.defineProperty(c,Symbol.toStringTag,{value:"Module"})});

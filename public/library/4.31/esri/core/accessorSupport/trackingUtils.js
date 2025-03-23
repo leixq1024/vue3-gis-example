@@ -1,0 +1,6 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports","../handleUtils","./tracking","./tracking/SimpleTrackingTarget"],function(m,n,k,p){let h=!1;const e=[];m.autorun=function(f,l){function c(){b=!1;if(d&&!a)if(h)e.includes(c)||e.unshift(c);else for(d.clear(),a=h=!0,k.runTracked(d,f),h=a=!1;e.length;)e.pop()()}let a=!1,b=!1;const g=!!l?.sync;let d=new p.SimpleTrackingTarget(()=>{a||b||(b=!0,g?c():queueMicrotask(c))});a=!0;k.runTracked(d,f);a=!1;return n.makeHandle(function(){d&&(d.destroy(),d=null)})};m.reaction=function(f,l){function c(){if(a&&
+!g)if(h)e.includes(c)||e.unshift(c);else{var d=b;a.clear();g=h=!0;b=k.runTracked(a,f);h=g=!1;for(l(b,d);e.length;)e.pop()()}}let a=new p.SimpleTrackingTarget(c),b=null,g=!1;g=!0;b=k.runTracked(a,f);g=!1;return n.makeHandle(function(){a&&(a.destroy(),b=a=null)})};m.reactionDeferred=function(f,l){function c(){if(!a)return null;a.clear();return b=k.runTracked(a,f)}let a=new p.SimpleTrackingTarget(function(){l(b,c)}),b=null;c();return n.makeHandle(function(){a&&(a.destroy(),a=null);b=null})};Object.defineProperty(m,
+Symbol.toStringTag,{value:"Module"})});

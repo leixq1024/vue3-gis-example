@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../renderers/support/rasterRendererHelper","../support/utils"],function(d,e,p){d.createRenderer=async function(a){a=await p.processRasterRendererParameters(a);const f=[a.bandId||0];var b={bandIds:f,variableName:a.variableName,stretchType:a.stretchType,includeStatisticsInStretch:a.includeStatisticsInStretch};const g=a.layer,{rasterInfo:h}=g;var c=e.createStretchRenderer(h,b);a.estimateStatistics&&(a.includeStatisticsInStretch=!0,c=h.clone(),await g.updateRasterInfoWithEstimatedStats(c,
+{rasterFunction:a.rasterFunction,signal:a.signal}),c=e.createStretchRenderer(c,b));b=c;const {gamma:k,useGamma:l,dynamicRangeAdjustment:m,colorRamp:n}=a;null!=k&&(b.gamma=[k]);null!=l&&(b.useGamma=l);null!=m&&(b.dynamicRangeAdjustment=m);void 0!==n&&(b.colorRamp=n);return{renderer:c,bandId:f[0]}};Object.defineProperty(d,Symbol.toStringTag,{value:"Module"})});

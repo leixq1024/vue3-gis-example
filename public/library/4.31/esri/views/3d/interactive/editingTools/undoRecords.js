@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../../core/libs/gl-matrix-2/factories/vec3f64","../../../../geometry/support/meshVertexSpaceUtils"],function(f,e,l){function m(a){let d=a,b=null;return{undo(c){b=c.geometry;c.geometry=d},redo(c){d=c.geometry;c.geometry=b}}}function n(a,d,b){let c=d?.clone(),g=e.clone(b.origin),h=null,k=null;return{undo:()=>{h=a.transform?.clone();k=e.clone(b.origin);a.transform=c;a.vertexSpace.origin=g},redo:()=>{c=a.transform?.clone();g=e.clone(b.origin);a.transform=h;a.vertexSpace.origin=
+k}}}function p(a){let d=a.vertexAttributes.clonePositional(),b;return{undo:()=>{b=a.vertexAttributes.clonePositional();a.vertexAttributes=d},redo:()=>{d=a.vertexAttributes.clonePositional();a.vertexAttributes=b}}}f.createGraphicGeometryUndoRecord=function(a){return null!=a&&"mesh"===a.type?l.isRelativeVertexSpace(a.vertexSpace)?n(a,a.transform,a.vertexSpace):p(a):m(a)};Object.defineProperty(f,Symbol.toStringTag,{value:"Module"})});

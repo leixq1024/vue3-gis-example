@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["./utils"],function(c){const e={vsPath:"raster/rfx/vs",fsPath:"raster/rfx/colormap2rgb",attributes:new Map([["a_position",0],["a_texcoord",1]])};return{createProgram:function(a){({painter:a}=a);return a.materialManager.getProgram(e,[])},bindTextureAndUniforms:function(a,b,f){const {indexedColormap:d,offset:g}=a.rasterFunction.parameters;c.setSingleImageTextures(a,b,f,d);c.setCoordsAndTransforms(b);b.setUniform1f("u_colormapOffset",g);b.setUniform1f("u_colormapMaxIndex",d.length/4-1)}}});

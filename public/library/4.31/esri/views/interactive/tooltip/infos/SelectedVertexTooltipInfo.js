@@ -1,0 +1,6 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("exports ../../../../chunks/tslib.es6 ../../../../core/accessorSupport/decorators/property ../../../../core/has ../../../../core/Logger ../../../../core/RandomLCG ../../../../core/accessorSupport/decorators/subclass ../fields/fields ./SketchTooltipInfo ./TooltipInfoWithCoordinates".split(" "),function(a,b,c,l,m,n,f,d,g,h){a.SelectedVertexTooltipInfo=class extends h.TooltipInfoWithCoordinates(g.SketchTooltipInfo){constructor(k){super(k);this.type="selected-vertex";this.area=d.makeAreaField();
+this.totalLength=d.makeTotalLengthField();this.geometryType="polyline";this.allFields.forEach(e=>{e.lockable=!1;e.setActual(null)})}get allFields(){return[this.longitude,this.latitude,this.x,this.y,this.elevation,"polygon"===this.geometryType?this.area:this.totalLength]}};b.__decorate([c.property()],a.SelectedVertexTooltipInfo.prototype,"geometryType",void 0);b.__decorate([c.property()],a.SelectedVertexTooltipInfo.prototype,"allFields",null);a.SelectedVertexTooltipInfo=b.__decorate([f.subclass("esri.views.interactive.tooltip.infos.SelectedVertexTooltipInfo")],
+a.SelectedVertexTooltipInfo);Object.defineProperty(a,Symbol.toStringTag,{value:"Module"})});

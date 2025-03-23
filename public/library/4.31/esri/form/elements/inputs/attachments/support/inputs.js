@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("exports ../../../../../core/accessorSupport/ensureType ../AudioInput ../DocumentInput ../ImageInput ../Input ../SignatureInput ../VideoInput".split(" "),function(e,p,g,h,k,l,m,n){e.buildTypeMaps=function(a){return{nestableTypes:{base:l,key:"type",typeMap:{audio:g,document:h,image:k,signature:m,video:n}},allTypes:{base:l,key:"type",typeMap:{attachment:a,audio:g,document:h,image:k,signature:m,video:n}}}};e.ensureType=function(a,b,f){return a?a.map(d=>p.ensureOneOfType(f?b.nestableTypes:b.allTypes,
+d)):null};e.fromJSON=function(a,b,f){if(!a)return null;const d=f?b.nestableTypes.typeMap:b.allTypes.typeMap;return a.filter(c=>d[c.type]).map(c=>d[c.type].fromJSON(c))};e.toJSON=function(a,b,f){if(!a)return null;const d=f?b.nestableTypes.typeMap:b.allTypes.typeMap;return a.filter(c=>d[c.type]).map(c=>c.toJSON())};Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

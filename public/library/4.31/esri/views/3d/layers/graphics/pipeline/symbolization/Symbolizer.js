@@ -1,0 +1,6 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports","../featureData/FeatureData","./UniqueValueFeatureRenderer","../../../../support/RenderCoordsHelper"],function(d,e,f,g){class h{constructor(a){this._tileFeatureData=new Map;this._context={viewSpatialReference:a.viewSpatialReference,renderSpatialReference:a.renderSpatialReference,renderCoordsHelper:g.RenderCoordsHelper.create(a.viewingMode,a.renderSpatialReference)}}async add(a,b){this._featureRenderer||(this._featureRenderer=new f.UniqueValueFeatureRenderer(this._context),await this._featureRenderer.load());
+a=this._addTileFeatureData(a);await this._featureRenderer.add(a,b)}async remove(a,b){const c=this._getFeatureSetFromTileId(a);c&&(this._featureRenderer&&this._featureRenderer.remove(c,b),this._removeTileFeatureData(a))}_getFeatureSetFromTileId(a){return this._tileFeatureData.get(a)}_addTileFeatureData(a){const b=a.descriptor.id,c=a.pages.reduce((k,{featureCount:l})=>k+l,0);a=new e.FeatureData(a,c);this._tileFeatureData.set(b,a);return a}_removeTileFeatureData(a){const b=this._tileFeatureData.get(a);
+b&&(b.dispose(),this._tileFeatureData.delete(a))}}d.Symbolizer=h;Object.defineProperty(d,Symbol.toStringTag,{value:"Module"})});

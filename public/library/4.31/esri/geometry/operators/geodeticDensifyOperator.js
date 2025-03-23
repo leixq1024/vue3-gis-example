@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports","../../core/unitUtils","./gx/operatorGeodeticDensify","./support/converterAPI","./support/geodeticCurveType"],function(d,k,e,a,l){d.execute=function(f,c,b={}){const {curveType:h="geodesic",unit:g}=b;g&&(c=k.convertUnit(c,g,"meters"));b=a.getSpatialReference(f);return a.toGeometry(e.execute(a.fromGeometry(f),c,a.fromSpatialReference(b),l.geodeticCurveType[h]),b)};d.executeMany=function(f,c,b={}){const {curveType:h="geodesic",unit:g}=b;g&&(c=k.convertUnit(c,g,"meters"));b=f.map(a.fromGeometry);
+const m=a.getSpatialReference(f);return e.executeMany(b,c,a.fromSpatialReference(m),l.geodeticCurveType[h]).map(n=>a.toGeometry(n,m))};d.isLoaded=function(){return e.isLoaded()};d.load=function(){return e.load()};d.supportsCurves=function(){return e.supportsCurves()};Object.defineProperty(d,Symbol.toStringTag,{value:"Module"})});

@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports","../../core/arrayUtils","../../core/unitUtils","./gx/operatorGeneralize","./support/converterAPI"],function(f,m,k,g,c){f.execute=function(d,b,a={}){const {removeDegenerateParts:h=!1,unit:e}=a;a=c.getSpatialReference(d);e&&(b=k.convertToSpatialReferenceUnit(b,e,a));return c.toGeometry(g.execute(c.fromGeometry(d),b,h),a)};f.executeMany=function(d,b,a={}){const {removeDegenerateParts:h=!1,unit:e}=a;a=d.map(c.fromGeometry);const l=c.getSpatialReference(d);e&&(b=k.convertToSpatialReferenceUnit(b,
+e,l));return g.executeMany(a,b,h).map(n=>c.toGeometry(n,l)).filter(m.isSome)};f.supportsCurves=function(){return g.supportsCurves()};Object.defineProperty(f,Symbol.toStringTag,{value:"Module"})});

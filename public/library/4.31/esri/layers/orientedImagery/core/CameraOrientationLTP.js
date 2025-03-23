@@ -1,0 +1,6 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("../../../chunks/tslib.es6 ../../../core/Clonable ../../../core/JSONSupport ../../../core/accessorSupport/decorators/property ../../../core/has ../../../core/Logger ../../../core/RandomLCG ../../../core/accessorSupport/decorators/subclass ./CameraOrientation".split(" "),function(b,a,e,c,q,r,t,f,g){a=class extends a.ClonableMixin(e.JSONSupportMixin(g)){constructor(){super(...arguments);this.type=4}toString(){const {type:h,latitude:k,longitude:l,ellipsoidRadius:m,squaredEccentricity:n,properties:p}=
+this,d=`${p}`.split("|");d.splice(1,1);return`${h}|${k}|${l}|${m}|${n}|${d.join("|")}`}};b.__decorate([c.property({json:{write:!0}})],a.prototype,"type",void 0);b.__decorate([c.property({json:{write:!0},type:Number})],a.prototype,"latitude",void 0);b.__decorate([c.property({json:{write:!0},type:Number})],a.prototype,"longitude",void 0);b.__decorate([c.property({json:{write:!0},type:Number})],a.prototype,"ellipsoidRadius",void 0);b.__decorate([c.property({json:{write:!0},type:Number})],a.prototype,
+"squaredEccentricity",void 0);b.__decorate([c.property({json:{write:!0}})],a.prototype,"properties",void 0);return a=b.__decorate([f.subclass("esri.layers.orientedImagery.core.CameraOrientationLTP")],a)});

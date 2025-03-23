@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("exports ../../../../core/Collection ../../../../core/Error ../BatchFormInputs ../FieldInput ../GroupInput ../../templates/support/templateUtils".split(" "),function(e,h,k,l,m,n,f){function g(a,b){const c=new Set(a.layers);b=b.filter(d=>c.has(d.layer));if(f.isFieldElementTemplate(a))return new m.FieldInput({features:b,template:a});if(f.isGroupElementTemplate(a))return p(a,b);throw new k("batch-attribute-form:unsupported-element-template","The type of form element template provided is not supported");
+}function p(a,b){const c=a.elements.map(d=>g(d,b));return new n.GroupInput({features:b,inputs:c,template:a})}e.createBatchFormInputsFromBatchFormTemplate=function(a,b){const c=new h(a.elements.map(d=>g(d,b)));return new l.BatchFormInputs({inputs:c,template:a})};Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

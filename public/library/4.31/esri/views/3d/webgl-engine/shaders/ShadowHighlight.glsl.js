@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("exports ../../../../core/libs/gl-matrix-2/math/mat4 ../../../../core/libs/gl-matrix-2/factories/mat4f64 ../../../../chunks/vec32 ../../../../core/libs/gl-matrix-2/factories/vec3f64 ../core/shaderLibrary/NormalFromDepth.glsl ../core/shaderLibrary/ScreenSpacePass.glsl ../core/shaderLibrary/shading/ReadShadowMap.glsl ../core/shaderLibrary/util/RgbaFloatEncoding.glsl ../core/shaderModules/Float3PassUniform ../core/shaderModules/Float4PassUniform ../core/shaderModules/FloatPassUniform ../core/shaderModules/interfaces ../core/shaderModules/Matrix4PassUniform ../core/shaderModules/ShaderBuilder ../core/shaderModules/Texture2DPassUniform ../lib/ShadowMap ./ReadShadowMapConfiguration ../../../../chunks/ShadowHighlight.glsl".split(" "),
+function(a,c,d,e,f,g,h,k,l,m,n,p,q,r,t,u,v,w,b){a.build=b.build;Object.defineProperty(a,Symbol.toStringTag,{value:"Module"})});

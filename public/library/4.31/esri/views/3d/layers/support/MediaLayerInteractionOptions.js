@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("exports ../../../../chunks/tslib.es6 ../../../../core/Accessor ../../../../core/accessorSupport/decorators/property ../../../../core/has ../../../../core/Logger ../../../../core/RandomLCG ../../../../core/accessorSupport/decorators/subclass".split(" "),function(a,b,c,d,f,g,h,e){a.MediaLayerInteractionOptions=class extends c{constructor(){super(...arguments);this.tool="transform"}};b.__decorate([d.property()],a.MediaLayerInteractionOptions.prototype,"tool",void 0);a.MediaLayerInteractionOptions=
+b.__decorate([e.subclass("esri.views.3d.layers.support.MediaLayerInteractionOptions")],a.MediaLayerInteractionOptions);Object.defineProperty(a,Symbol.toStringTag,{value:"Module"})});

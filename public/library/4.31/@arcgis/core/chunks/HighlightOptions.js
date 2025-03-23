@@ -1,0 +1,5 @@
+/*
+All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+*/
+import{_ as o}from"./tslib.es6.js";import r from"../Color.js";import t from"../core/Accessor.js";import{property as s}from"../core/accessorSupport/decorators/property.js";import"../core/lang.js";import"./Logger.js";import{subclass as i}from"../core/accessorSupport/decorators/subclass.js";import{d as l,a as p,b as a}from"./HighlightDefaults.js";let c=class extends t{constructor(o){super(o),this.color=l.clone(),this.haloOpacity=p,this.fillOpacity=a}equals(o){return this.color.equals(o.color)&&(this.haloColor||this.color).equals(o.haloColor||o.color)&&this.haloOpacity===o.haloOpacity&&this.fillOpacity===o.fillOpacity}};o([s({type:r})],c.prototype,"color",void 0),o([s({type:r})],c.prototype,"haloColor",void 0),o([s()],c.prototype,"haloOpacity",void 0),o([s()],c.prototype,"fillOpacity",void 0),c=o([i("esri.views.support.HighlightOptions")],c);const e=c;export{e as V};

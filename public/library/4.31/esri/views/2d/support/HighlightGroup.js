@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("exports ../../../chunks/tslib.es6 ../../../core/Accessor ../../../core/accessorSupport/decorators/property ../../../core/has ../../../core/Logger ../../../core/RandomLCG ../../../core/accessorSupport/decorators/subclass ./HighlightOptions".split(" "),function(a,b,f,d,k,l,m,g,e){var c;a.HighlightGroup=c=class extends f{constructor(...h){super(...h);this.name="default";this.options=new e}clone(){return new c({name:this.name,options:this.options.clone()})}};b.__decorate([d.property({type:String})],
+a.HighlightGroup.prototype,"name",void 0);b.__decorate([d.property({type:e})],a.HighlightGroup.prototype,"options",void 0);a.HighlightGroup=c=b.__decorate([g.subclass("esri.views.2d.support.HighlightGroup")],a.HighlightGroup);Object.defineProperty(a,Symbol.toStringTag,{value:"Module"})});

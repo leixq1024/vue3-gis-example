@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("exports ../../../../chunks/tslib.es6 ../core/shaderLibrary/ShaderOutput ../core/shaderLibrary/attributes/InstancedDoubleConfiguration ../core/shaderTechnique/BindType ../core/shaderTechnique/ShaderTechniqueConfiguration ../lib/OITPass".split(" "),function(b,c,d,g,h,e,f){class a extends g.InstancedDoubleConfiguration{constructor(){super(...arguments);this.output=d.ShaderOutput.Color;this.oitPass=f.OITPass.NONE;this.hasSliceHighlight=!0;this.hasSliceInVertexProgram=!1;this.bindType=h.BindType.Pass;
+this.writeDepth=!0}}c.__decorate([e.parameter({count:d.ShaderOutput.COUNT})],a.prototype,"output",void 0);c.__decorate([e.parameter({count:f.OITPass.COUNT})],a.prototype,"oitPass",void 0);b.DefaultTechniqueConfiguration=a;Object.defineProperty(b,Symbol.toStringTag,{value:"Module"})});

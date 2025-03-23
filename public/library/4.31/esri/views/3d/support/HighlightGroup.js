@@ -1,0 +1,6 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("exports ../../../chunks/tslib.es6 ../../../core/Accessor ../../../core/Collection ../../../core/has ../../../core/accessorSupport/decorators/property ../../../core/accessorSupport/decorators/subclass ./HighlightOptions ../../support/HighlightDefaults".split(" "),function(a,d,h,k,l,f,m,b,c){var e;a.HighlightGroup=e=class extends h{constructor(n){super(n)}clone(){return new e({name:this.name,options:this.options.clone()})}};d.__decorate([f.property({type:String,constructOnly:!0})],a.HighlightGroup.prototype,
+"name",void 0);d.__decorate([f.property({type:b})],a.HighlightGroup.prototype,"options",void 0);a.HighlightGroup=e=d.__decorate([m.subclass("esri.views.3d.support.HighlightGroup")],a.HighlightGroup);const g=k.ofType(a.HighlightGroup);a.makeDefaultHighlightGroups=function(){return l("enable-feature:multiple-highlights")?new g([new a.HighlightGroup({name:c.defaultHighlightName,options:new b}),new a.HighlightGroup({name:c.temporaryHighlightName,options:new b({color:c.temporaryHighlightColor})})]):new g([new a.HighlightGroup({name:c.defaultHighlightName,
+options:new b})])};Object.defineProperty(a,Symbol.toStringTag,{value:"Module"})});

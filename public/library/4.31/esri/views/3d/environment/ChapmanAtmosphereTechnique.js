@@ -1,0 +1,6 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("require exports ../../../core/libs/gl-matrix-2/factories/vec3f64 ./ChapmanApproximation.glsl ../../../chunks/ChapmanAtmosphere.glsl ../webgl-engine/core/shaderTechnique/ReloadableShaderModule ../webgl-engine/core/shaderTechnique/ShaderTechnique ../../webgl/enums ../../webgl/renderState".split(" "),function(e,d,f,g,h,k,l,a,b){class m extends g.ChapmanApproximationParameters{constructor(){super(...arguments);this.altitudeFade=this.innerFadeDistance=0;this.backgroundColor=f.create()}}class n extends l.ShaderTechnique{constructor(c,
+p,q){super(c,p,new k.ReloadableShaderModule(h.ChapmanAtmosphere,()=>new Promise((r,t)=>e(["./ChapmanAtmosphere.glsl"],r,t))),q)}initializePipeline(c){return b.makePipelineState({blending:c.reduced?b.keepSourceValues:b.simpleBlendingParams(a.BlendFactor.SRC_ALPHA,a.BlendFactor.ONE_MINUS_SRC_ALPHA),depthTest:{func:c.reduced?a.CompareFunction.ALWAYS:a.CompareFunction.LEQUAL},colorWrite:b.defaultColorWrite})}}d.ChapmanAtmospherePassParameters=m;d.ChapmanAtmosphereTechnique=n;Object.defineProperty(d,Symbol.toStringTag,
+{value:"Module"})});

@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports"],function(b){b.FieldInputDataTypes=void 0;(function(a){a.Text="text";a.Number="number";a.Date="date";a.Unsupported="unsupported"})(b.FieldInputDataTypes||(b.FieldInputDataTypes={}));b.capabilitiesAllowEditType=(a,c)=>{if(!a)return!0;({operations:a}=a);switch(c){case "INSERT":return a.supportsAdd;case "UPDATE":case "DELETE":return a.supportsUpdate;default:return!0}};Object.defineProperty(b,Symbol.toStringTag,{value:"Module"})});

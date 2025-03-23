@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports","../../core/jsonMap","./locationUtils","../../libs/parquet/parquet"],function(d,e,g,h){function f(b){var a=b.tryReadGeoMetadata();if(null!=a){b=a.primary_column;const {geometry_types:c,encoding:k,orientation:l,crs:m}=a.columns[b];a=m?.id?.code;return{type:"geometry",format:k,geometryType:1===c.length&&"Point"===c[0]?"point":null,orientation:l??null,primaryFieldName:b,spatialReference:a&&"number"===typeof a?{wkid:a}:null}}a=g.inferLocationInfo(b.fields.map(c=>c.name));return{type:"location",
+latitudeFieldName:a.latitudeFieldName,longitudeFieldName:a.longitudeFieldName,spatialReference:{wkid:4326}}}e=new e.JSONMap({esriGeometryPoint:"point"});d.inferGeometrySource=f;d.inferParquetLoadOptions=async function(b){const a=await h.ParquetMetadata.create(b,()=>null),c=f(a);return{objectIdField:null,url:b,geometrySourceInfo:c,metadata:a}};d.parquetGeometryTypeKebabDict=e;Object.defineProperty(d,Symbol.toStringTag,{value:"Module"})});

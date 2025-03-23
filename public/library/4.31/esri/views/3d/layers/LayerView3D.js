@@ -1,0 +1,6 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("exports ../../../chunks/tslib.es6 ../../../core/handleUtils ../../../core/promiseUtils ../../../core/reactiveUtils ../../../core/accessorSupport/decorators/property ../../../core/has ../../../core/Logger ../../../core/RandomLCG ../../../core/accessorSupport/decorators/subclass ../../../geometry/support/heightModelInfoUtils".split(" "),function(d,c,h,k,l,e,n,p,q,m,f){d.LayerView3D=a=>{a=class extends a{constructor(){super(...arguments);this.supportsHeightUnitConversion=this.slicePlaneEnabled=
+!1}postscript(){super.postscript();f.supportsHeightModelInfo(this.layer)&&this.addResolvingPromise(this._validateHeightModelInfo())}async _validateHeightModelInfo(){const g=new AbortController;var b=g.signal;this.addHandles(h.makeHandle(()=>g.abort()));await l.whenOnce(()=>this.view.defaultsFromMap?.heightModelInfoReady,b);k.throwIfAborted(b);if(b=f.rejectLayerError(this.layer,this.view.heightModelInfo,this.supportsHeightUnitConversion))throw b;}};c.__decorate([e.property()],a.prototype,"view",void 0);
+c.__decorate([e.property()],a.prototype,"slicePlaneEnabled",void 0);return a=c.__decorate([m.subclass("esri.views.3d.layers.LayerView3D")],a)};Object.defineProperty(d,Symbol.toStringTag,{value:"Module"})});

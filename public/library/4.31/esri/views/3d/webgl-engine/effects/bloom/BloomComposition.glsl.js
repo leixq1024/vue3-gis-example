@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("exports ../../../../../core/mathUtils ../../core/shaderLibrary/ScreenSpacePass.glsl ../../core/shaderLibrary/shading/Gamma.glsl ../../core/shaderModules/FloatPassUniform ../../core/shaderModules/IntegerPassUniform ../../core/shaderModules/interfaces ../../core/shaderModules/ShaderBuilder ../../core/shaderModules/Texture2DPassUniform ../../../../../chunks/BloomComposition.glsl".split(" "),function(a,c,d,e,f,g,h,k,l,b){Object.defineProperty(a,"BloomCompositionPass",{enumerable:!0,get:()=>b.BloomCompositionPass});
+a.BloomCompositionPassParameters=b.BloomCompositionPassParameters;a.build=b.build;Object.defineProperty(a,Symbol.toStringTag,{value:"Module"})});

@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("../../chunks/tslib.es6 ../../core/Clonable ../../core/accessorSupport/decorators/property ../../core/has ../../core/Logger ../../core/RandomLCG ../../core/accessorSupport/decorators/enumeration ../../core/accessorSupport/decorators/subclass ./Content ../support/UtilityNetworkAssociationType".split(" "),function(b,a,c,k,l,m,d,e,f,g){a=class extends a.ClonableMixin(f){constructor(h){super(h);this.title=this.description=null;this.associationTypes=[];this.type="utility-network-associations"}};
+b.__decorate([c.property({type:String,json:{write:!0}})],a.prototype,"description",void 0);b.__decorate([c.property({type:String,json:{write:!0}})],a.prototype,"title",void 0);b.__decorate([c.property({type:[g],json:{write:!0}})],a.prototype,"associationTypes",void 0);b.__decorate([d.enumeration({utilityNetworkAssociations:"utility-network-associations"})],a.prototype,"type",void 0);return a=b.__decorate([e.subclass("esri.popup.content.UtilityNetworkAssociationsContent")],a)});

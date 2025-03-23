@@ -1,0 +1,6 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("exports ../../core/quantityUtils ../../core/libs/gl-matrix-2/factories/vec3f64 ../../geometry/geometryEngine ../../geometry/support/geodesicUtils ../../geometry/support/spatialReferenceUtils ./geodesicMeasurementUtils".split(" "),function(d,e,k,l,h,p,m){function n(a,b,c){return m.geodesicMeasure(c,q,r,a,b,c)}function q(a,b,c){return e.createLength(h.inverseGeodeticSolver(t,a,b,c).distance,"meters")}function r(a,b,c){return e.createLength(l.geodesicLength({type:"polyline",spatialReference:c,
+paths:[[[...a],[...b]]]},"meters"),"meters")}function u(a){return e.createLength(h.geodesicLengths([a],"meters")[0],"meters")}function v(a){return e.createLength(l.geodesicLength(a,"meters"),"meters")}const t=new h.InverseGeodeticSolverResult,f=k.create(),g=k.create();d.geodesicDistance=n;d.geodesicDistanceBetweenPoints=function(a,b){if(!p.equals(a.spatialReference,b.spatialReference))return null;const {spatialReference:c}=a;f[0]=a.x;f[1]=a.y;f[2]=a.hasZ?a.z:0;g[0]=b.x;g[1]=b.y;g[2]=b.hasZ?b.z:0;
+return n(f,g,c)};d.geodesicLength=function(a){const {spatialReference:b}=a;return m.geodesicMeasure(b,u,v,a)};Object.defineProperty(d,Symbol.toStringTag,{value:"Module"})});

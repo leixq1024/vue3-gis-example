@@ -1,0 +1,6 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports"],function(a){function e(){return[0,0,0,0]}function n(b){return[b[0],b[1],b[2],b[3]]}function p(b,c,f,d){return[b,c,f,d]}function q(b,c,f,d){return[b,c,f,d]}function r(b,c=e()){const f=Math.min(4,b.length);for(let d=0;d<f;++d)c[d]=b[d];return c}function t(b,c){return new Float64Array(b,c,4)}function u(){return e()}function g(){return[1,1,1,1]}function h(){return[1,0,0,0]}function k(){return[0,1,0,0]}function l(){return[0,0,1,0]}function m(){return[0,0,0,1]}const v=e(),w=g(),x=h(),
+y=k(),z=l(),A=m(),B=Object.freeze(Object.defineProperty({__proto__:null,ONES:w,UNIT_W:A,UNIT_X:x,UNIT_Y:y,UNIT_Z:z,ZEROS:v,clone:n,create:e,createView:t,freeze:q,fromArray:r,fromValues:p,ones:g,unitW:m,unitX:h,unitY:k,unitZ:l,zeros:u},Symbol.toStringTag,{value:"Module"}));a.ONES=w;a.UNIT_W=A;a.UNIT_X=x;a.UNIT_Y=y;a.UNIT_Z=z;a.ZEROS=v;a.clone=n;a.create=e;a.createView=t;a.freeze=q;a.fromArray=r;a.fromValues=p;a.ones=g;a.unitW=m;a.unitX=h;a.unitY=k;a.unitZ=l;a.vec4f64=B;a.zeros=u;Object.defineProperty(a,
+Symbol.toStringTag,{value:"Module"})});

@@ -1,0 +1,6 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("exports ../../chunks/tslib.es6 ../../core/Accessor ../../core/proxy ../../core/accessorSupport/decorators/property ../../core/has ../../core/Logger ../../core/RandomLCG ../../core/accessorSupport/decorators/subclass".split(" "),function(a,c,e,f,d,k,l,m,g){a.ReactiveGraphic=class extends e{constructor(b){super(b);this.attributes=f.createObservableProxy({...(b.original.attributes??{})})}get geometry(){return this.original.geometry}get layer(){return this.original.sourceLayer??this.original.layer}getAttribute(b){return this.attributes[b]??
+null}setAttribute(b,h){this.attributes[b]=h}};c.__decorate([d.property()],a.ReactiveGraphic.prototype,"attributes",void 0);c.__decorate([d.property()],a.ReactiveGraphic.prototype,"geometry",null);c.__decorate([d.property()],a.ReactiveGraphic.prototype,"layer",null);c.__decorate([d.property({constructOnly:!0})],a.ReactiveGraphic.prototype,"original",void 0);a.ReactiveGraphic=c.__decorate([g.subclass("esri.widgets.BatchAttributeForm.ReactiveGraphic")],a.ReactiveGraphic);Object.defineProperty(a,Symbol.toStringTag,
+{value:"Module"})});

@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../engine/webgl/definitions"],function(f,g){class l{constructor(a){this._options=a}insert(a,d){a=a.getCursor();const b={$view:{scale:this._options.scale,timeZone:this._options.timeZone}};for(;a.next();)this._insertFeature(a,b,d)}_insertFeature(a,d,b){var {featureFilter:c}=this._options;if(null===c||c.check(a)){var e=c=0;if("esriGeometryPoint"===a.geometryType)c=a.readXWorldSpace(),e=a.readYWorldSpace();else{if(b){b=a.readCentroidForDisplay();if(null==b)return;const [h,k]=
+b.coords;if(0>h||h>g.tileSize||0>k||k>g.tileSize)return}b=a.readCentroidWorldSpace();if(null==b)return;c=b.coords[0];e=b.coords[1]}this._insert(a,c,e,d)}}}f.AAggregateSpatialIndex=l;Object.defineProperty(f,Symbol.toStringTag,{value:"Module"})});

@@ -1,0 +1,6 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("../../chunks/tslib.es6 ../../core/Accessor ../../core/reactiveUtils ../../core/accessorSupport/decorators/property ../../core/has ../../core/Logger ../../core/RandomLCG ../../core/accessorSupport/decorators/subclass".split(" "),function(b,a,d,c,g,h,k,e){a=class extends a{constructor(f){super(f);this.state="pending";this.url=""}initialize(){this.addHandles(d.watch(()=>[this.extension,this.name],()=>this._setFormattedFileName(),d.initial))}_setFormattedFileName(){this.name&&this.extension&&
+(this.formattedName=this.count?`${this.name}(${this.count}).${this.extension}`:`${this.name}.${this.extension}`)}};b.__decorate([c.property()],a.prototype,"count",void 0);b.__decorate([c.property()],a.prototype,"error",void 0);b.__decorate([c.property()],a.prototype,"extension",void 0);b.__decorate([c.property()],a.prototype,"formattedName",void 0);b.__decorate([c.property()],a.prototype,"name",void 0);b.__decorate([c.property()],a.prototype,"portalItem",void 0);b.__decorate([c.property()],a.prototype,
+"state",void 0);b.__decorate([c.property()],a.prototype,"url",void 0);return a=b.__decorate([e.subclass("esri.widgets.Print.FileLink")],a)});

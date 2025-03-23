@@ -1,0 +1,6 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports","../../core/unitUtils","./gx/operatorPolygonSlicer","./support/converterAPI"],function(e,h,k,c){e.findSlicesByArea=function(d,f,a,b={}){const {transform:g,unit:l}=b;b=c.getSpatialReference(d);if(a&&l){if(b.isGeographic)throw Error("Unable to convert from an angular area unit to a linear area unit.");const m=h.areaUnitFromSpatialReference(b);m!==l&&(m?a=h.convertUnit(a,l,m):(a=h.convertUnit(a,l,"square-meters"),a=Math.sqrt(a),a/=h.getMetersPerUnitForSR(b),a**=2))}return k.findSlicesByArea(c.fromPolygon(d),
+c.fromSpatialReference(b),f,a,g?.transform??null)};e.recursiveSliceEqualArea=function(d,f,a={}){({transform:a}=a);const b=c.getSpatialReference(d);return k.recursiveSliceEqualArea(c.fromPolygon(d),c.fromSpatialReference(b),f,a?.transform??null).map(g=>c.toPolygon(g,b))};e.sliceIntoStrips=function(d,f,a={}){({transform:a}=a);const b=c.getSpatialReference(d);return k.sliceIntoStrips(c.fromPolygon(d),c.fromSpatialReference(b),f,a?.transform??null).map(g=>c.toPolygon(g,b))};e.supportsCurves=function(){return k.supportsCurves()};
+Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports","../../request","../../core/Error","../../core/urlUtils"],function(e,h,c,k){e.fetchStatistics=async function({fieldName:a,statisticsInfo:f,errorContext:b,fieldsIndex:l,path:m,customParameters:d,apiKey:n,signal:p}){if(null==f)throw new c(`${b}:no-cached-statistics`,"Cached statistics are not available for this layer");const g=l.get(a);if(null==g)throw new c(`${b}:field-unexisting`,`Field '${a}' does not exist on the layer`);a=f.find(q=>q.name===g.name);if(null==a)throw new c(`${b}:no-cached-statistics`,
+"Cached statistics for this attribute are not available");b=k.join(m,a.href);({data:d}=await h(b,{query:{f:"json",...d,token:n},responseType:"json",signal:p}));return d};Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

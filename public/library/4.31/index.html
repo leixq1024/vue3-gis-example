@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>Test local installation of ArcGIS Maps SDK for JavaScript</title>
+    <style>
+      html,
+      body,
+      #viewDiv {
+        padding: 0;
+        margin: 0;
+        height: 93%;
+        width: 100%;
+      }
+    </style>
+
+    <link rel="stylesheet" href="./esri/themes/light/main.css" />
+    <script src="./init.js"></script>
+
+    <script>
+      require(["esri/Basemap", "esri/layers/TileLayer", "esri/Map", "esri/views/SceneView"], function (
+        Basemap,
+        TileLayer,
+        Map,
+        SceneView
+      ) {
+        // --------------------------------------------------------------------
+        // If you do not have public internet access, change the layer URL to
+        // point to your own locally accessible cached service.
+        // --------------------------------------------------------------------
+        const layer = new TileLayer({
+          url: "https://services.arcgisonline.com/arcgis/rest/services/World_Street_Map/MapServer"
+        });
+        const customBasemap = new Basemap({
+          baseLayers: [layer],
+          title: "My Basemap"
+        });
+        const myMap = new Map({
+          basemap: customBasemap
+        });
+        const view = new SceneView({
+          container: "viewDiv",
+          map: myMap
+        });
+
+        checkThisOne("./esri/views/3d/environment/resources/stars.wsv", "wsv mimetype");
+        checkThisOne("./esri/t9n/basemaps.json", "json mimetype");
+        checkThisOne("./esri/themes/base/icons/fonts/CalciteWebCoreIcons.ttf", "ttf mimetype");
+        checkThisOne("./esri/themes/base/icons/fonts/CalciteWebCoreIcons.woff", "woff mimetype");
+
+        function checkThisOne(url, desc) {
+          fetch(url, {
+            method: "HEAD"
+          })
+            .then(function (response) {
+              if (response.ok) {
+                logDiv.innerHTML += "* OK: " + desc + "<br/>";
+                if (response.status !== 200) {
+                  logDiv.innerHTML += "&nbsp;&nbsp;&nbsp;&nbsp;status: " + response.status + "<br/>";
+                }
+                return response.blob();
+              } else {
+                // response not ok
+                logDiv.innerHTML +=
+                  "* HTTP error " + response.status + ' for <a href="' + url + '">' + url + "</a><br/>";
+                alert("Problem accessing " + desc);
+              }
+            })
+            .catch(function (error) {
+              logDiv.innerHTML += '* BAD: <a href="' + url + '">' + url + "</a><br/>";
+            });
+        }
+      });
+    </script>
+  </head>
+
+  <body>
+    <div id="viewDiv"></div>
+    <div id="logDiv"></div>
+  </body>
+</html>

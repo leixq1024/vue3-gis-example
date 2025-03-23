@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../request","../../../core/Error","../../utils","./serverVersionUtils"],function(e,k,h,f,l){const c=new Map;e.inspectConflicts=async function(a,b,d,m){c.has(a)||await l.addServerVersion(c,a);if(11.1>=(c.get(a)?.serverVersion??0))throw new h("inspectConflicts:enterprise-version","versioning API requires ArcGIS Enterprise version 11.2 or higher");if(!b)throw new h("inspectConflicts:missing-guid","guid for version is missing");a=f.parseUrl(a);const g=d.toJSON();g.conflicts&&
+(g.conflicts=JSON.stringify(d.conflicts));d=f.asValidOptions(a.query,{query:f.encode({...g,f:"json"}),...m,method:"post"});b.startsWith("{")&&(b=b.slice(1,-1));({data:b}=await k(`${a.path}/versions/${b}/inspectConflicts`,d));return b.success};e.serverVersionCacheMap=c;Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

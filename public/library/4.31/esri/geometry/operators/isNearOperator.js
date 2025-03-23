@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports","../../chunks/Geometry","../../chunks/Distance2DCalculator-BX0Ep7eP","../../core/unitUtils","./support/converterAPI"],function(e,f,k,l,g){class m{getOperatorType(){return 10}accelerateGeometry(b,c,a){return!1}canAccelerateGeometry(b){return!1}supportsCurves(){return!0}execute(b,c,a,d){if(b.isEmpty()||c.isEmpty())return!1;0>a&&f.throwInvalidArgumentException("distance");f.throwIfMesh(b);f.throwIfMesh(c);Number.isNaN(a)&&(a=Number.POSITIVE_INFINITY);return(new k.DistanceCalculator(a,
+d)).isNear(b,c)}}const h=new m;e.execute=function(b,c,a,d={}){({unit:d}=d);if(d){const n=g.getSpatialReference(b);a=l.convertToSpatialReferenceUnit(a,d,n)}return h.execute(g.fromGeometry(b),g.fromGeometry(c),a,null)};e.supportsCurves=function(){return h.supportsCurves()};Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

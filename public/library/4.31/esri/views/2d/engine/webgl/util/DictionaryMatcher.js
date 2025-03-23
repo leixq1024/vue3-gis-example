@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports","./Matcher"],function(d,f){class e extends f.FeatureMatcher{static async fromDictionaryRenderer(b,a){return new e(b,a)}constructor(b,a){super();this._context=b;this._schema=a;this._hashToGroup=new Map}get fieldMap(){return this._schema.fieldMap}async fetchResources(b,a){a=a.getCursor();const c=[];for(;a.next();)c.push(this._updateMeshWriterGroup(b,a));await Promise.all(c)}match(b,a){b=b.getAttributeHash();return this._hashToGroup.get(b)}async _updateMeshWriterGroup(b,a){const c=
+a.readLegacyFeatureForDisplay();a=a.getAttributeHash();!this._hashToGroup.has(a)&&(this._hashToGroup.set(a,null),b=await b.fetchDictionaryResourceImmediate({type:"dictionary-request",feature:c}))&&(b=await this._context.createMeshWriters(b.meshes),this._hashToGroup.set(a,b))}}d.DictionaryMatcher=e;Object.defineProperty(d,Symbol.toStringTag,{value:"Module"})});

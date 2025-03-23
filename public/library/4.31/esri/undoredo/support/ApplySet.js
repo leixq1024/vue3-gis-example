@@ -1,0 +1,6 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports","./ApplySetItem"],function(d,c){class e{constructor(){this.applyItems=new Map;this.featureState=null}get items(){return[...this.applyItems.values()]}get deleteItems(){return this.items.filter(c.isDeleteItem)}_add(a){this.applyItems.set(a.featureChangeId,a)}revert(){this.featureState?.clearAll();this.applyItems.clear()}push(a){if(c.isAddAttachmentItem(a)||c.isDeleteAttachmentItem(a))this._add(a);else{var b=this.applyItems.get(a.featureChangeId);b?(c.isAddItem(b)&&c.isDeleteItem(a)&&
+(this.applyItems.delete(b.featureChangeId),this.featureState?.removeLocalState(b)),c.isAddItem(b)&&c.isModifyItem(a)&&(b.graphic=a.graphic,this.featureState?.updateLocalState(b)),c.isModifyItem(b)&&c.isDeleteItem(a)&&(this.applyItems.delete(b.featureChangeId),a.graphic=b.revertGraphic,this._add(a),this.featureState?.removeLocalState(b),this.featureState?.applyLocalState(a)),c.isModifyItem(b)&&c.isModifyItem(a)&&(b.graphic=a.graphic,this.featureState?.updateLocalState(b))):(this._add(a),this.featureState?.applyLocalState(a))}}}
+d.ApplySet=e;Object.defineProperty(d,Symbol.toStringTag,{value:"Module"})});

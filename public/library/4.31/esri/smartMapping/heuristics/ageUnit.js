@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["../../core/Error","../statistics/summaryStatisticsForAge","../statistics/support/ageUtils","../support/utils"],function(d,e,h,f){function k(a){const b=Math.abs(a.avg);let c=null;h.supportedAgeUnits.some(g=>{b>2*f.unitValueInDays[g]&&(c=g);return!!c});return c}return async function(a){var b={...a,outStatisticTypes:f.defaultStatisticTypes,unit:"days"};const c=await e(b);if(null==c.avg)throw new d("age-unit:insufficient-info","'avg' statistics is invalid");a=k({...c,avg:c.avg});if("days"===
+a)return{unit:a,statistics:c};b.unit=a;b=await e(b);if(null==b.avg)throw new d("age-unit:insufficient-info","'avg' statistics is invalid");return{unit:a,statistics:b}}});

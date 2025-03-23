@@ -1,0 +1,6 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("exports ../Extent ../Geometry ../Multipoint ../Point ../Polygon ../Polyline".split(" "),function(b,k,p,l,m,c,n){function d(a){return void 0!==a.xmin&&void 0!==a.ymin&&void 0!==a.xmax&&void 0!==a.ymax}function e(a){return void 0!==a.points}function f(a){return void 0!==a.x&&void 0!==a.y}function g(a){return void 0!==a.paths}function h(a){return void 0!==a.rings}const q={esriGeometryPoint:m,esriGeometryPolyline:n,esriGeometryPolygon:c,esriGeometryEnvelope:k,esriGeometryMultipoint:l,esriGeometryMultiPatch:c};
+b.fromJSON=function(a){return null==a?null:a instanceof p?a:f(a)?m.fromJSON(a):g(a)?n.fromJSON(a):h(a)?c.fromJSON(a):e(a)?l.fromJSON(a):d(a)?k.fromJSON(a):null};b.getGeometryType=function(a){return a&&q[a]||null};b.getJsonType=function(a){return a?f(a)?"esriGeometryPoint":g(a)?"esriGeometryPolyline":h(a)?"esriGeometryPolygon":d(a)?"esriGeometryEnvelope":e(a)?"esriGeometryMultipoint":null:null};b.isExtent=d;b.isMultipoint=e;b.isPoint=f;b.isPolygon=h;b.isPolyline=g;Object.defineProperty(b,Symbol.toStringTag,
+{value:"Module"})});

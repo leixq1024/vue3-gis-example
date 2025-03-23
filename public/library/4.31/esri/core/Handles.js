@@ -1,0 +1,6 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["./iteratorUtils"],function(e){function f(a){for(const b of a)b instanceof d?b.removeAll():b.remove()}class d{constructor(){this._groups=new Map}destroy(){this.removeAll()}get size(){let a=0;this._groups.forEach(b=>{a+=b.length});return a}add(a,b){if(e.isIterable(a)){b=this._getOrCreateGroup(b);for(const c of a)null!=c&&(c.remove||c instanceof d)&&b.push(c)}else null!=a&&(a.remove||a instanceof d)&&this._getOrCreateGroup(b).push(a);return this}forEach(a,b){if("function"===typeof a)this._groups.forEach(c=>
+c.forEach(a));else{const c=this._getGroup(a);c&&b&&c.forEach(b)}}has(a){return this._groups.has(a||"_default_")}remove(a){if("string"!==typeof a&&e.isIterable(a)){for(const b of a)this.remove(b);return this}if(!this.has(a))return this;f(this._getGroup(a));this._groups.delete(a||"_default_");return this}removeAll(){this._groups.forEach(f);this._groups.clear();return this}removeReference(a){this._groups.delete(a);return this}_getOrCreateGroup(a){if(this.has(a))return this._getGroup(a);const b=[];this._groups.set(a||
+"_default_",b);return b}_getGroup(a){return this._groups.get(a||"_default_")}}return d});

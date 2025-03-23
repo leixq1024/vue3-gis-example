@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../../../../core/mathUtils","../../../../../interactive/dragEventPipeline"],function(c,d,e){class f{constructor(){this._next=this._lastDragEvent=null;this.incrementRadians=d.deg2rad(5);this._enabled=!1}get enabled(){return this._enabled}set enabled(a){if(this._enabled!==a&&null!=this._lastDragEvent&&null!=this._next){const b={...this._lastDragEvent,action:"update"};a&&this._adjustRotation(b);this._next.execute(b)}this._enabled=a}createDragEventPipelineStep(){this._lastDragEvent=
+null;const a=new e.EventPipeline;this._next=a;return[b=>{this._lastDragEvent="end"!==b.action?{...b}:null;this._enabled&&this._adjustRotation(b);return b},a]}_adjustRotation(a){a.rotateAngle=Math.round(a.rotateAngle/this.incrementRadians)*this.incrementRadians}}c.SnapRotation=f;Object.defineProperty(c,Symbol.toStringTag,{value:"Module"})});

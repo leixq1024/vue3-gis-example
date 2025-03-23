@@ -1,0 +1,6 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("require exports ../../../../../core/mathUtils ../../../../../core/libs/gl-matrix-2/factories/vec3f64 ../../../../../geometry/support/lineSegment ../../core/shaderModules/interfaces ../../core/shaderTechnique/ReloadableShaderModule ../../core/shaderTechnique/ShaderTechnique ../../../../../chunks/Laserlines.glsl".split(" "),function(d,b,e,a,c,f,g,h,k){class l extends f.NoParameters{constructor(){super(...arguments);this.innerColor=a.fromValues(1,1,1);this.innerWidth=1;this.glowColor=a.fromValues(1,
+.5,0);this.glowFalloff=this.glowWidth=8;this.globalAlpha=.75;this.globalAlphaContrastBoost=2;this.angleCutoff=e.deg2rad(6);this.pointDistanceOrigin=a.create();this.pointDistanceTarget=a.create();this.lineVerticalPlaneSegment=c.create();this.intersectsLineSegment=c.create();this.intersectsLineRadius=3;this.heightManifoldTarget=a.create();this.lineStartWorld=a.create();this.lineEndWorld=a.create()}}class m extends h.ShaderTechnique{constructor(n,p,q){super(n,p,new g.ReloadableShaderModule(k.Laserlines,
+()=>new Promise((r,t)=>d(["../../shaders/Laserlines.glsl"],r,t))),q)}}b.LaserlinePassParameters=l;b.LaserlineTechnique=m;Object.defineProperty(b,Symbol.toStringTag,{value:"Module"})});

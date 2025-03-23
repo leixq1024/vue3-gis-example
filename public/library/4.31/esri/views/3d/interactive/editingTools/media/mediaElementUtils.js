@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../../../layers/support/ImageElement","../../../../../layers/support/VideoElement"],function(c,e,f){function d(a,b){return!a||"media-3d"!==a.type||a.suspended?!1:(a=a.layer.source)?a instanceof e||a instanceof f?a===b:"hasElement"in a&&a.hasElement(b):!1}c.isMediaElementVisibleLayerView=d;c.isMediaElementVisibleView=function(a,b,g){return d(a.allLayerViews.find(h=>h.layer===b),g)};Object.defineProperty(c,Symbol.toStringTag,{value:"Module"})});

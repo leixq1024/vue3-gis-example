@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../../../geohash/GeohashTree","../../../../../geohash/geohashUtils","./AAggregateSpatialIndex"],function(g,k,h,l){class m extends l.AAggregateSpatialIndex{constructor(b){super(b);this._tree=new k.GeohashTree(this._options.fields)}put(b){throw Error("Geohash tree does not support put");}putBounded(b,a,c){const {geohashLevel:e,spatialReference:d}=this._options;a=h.getGeohashBounds(a,c,e,d);null!=a&&this._tree.putBins(b,a)}_insert(b,a,c,e){const {geohashLevel:d,spatialReference:n}=
+this._options,f=h.getGeohash(a,c,d,n);f&&this._tree.insert(b,a,c,f[0],f[1],d,e)}}g.GeohashSpatialIndex=m;Object.defineProperty(g,Symbol.toStringTag,{value:"Module"})});

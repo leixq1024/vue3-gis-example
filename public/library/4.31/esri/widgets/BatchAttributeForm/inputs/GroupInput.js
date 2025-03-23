@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("exports ../../../chunks/tslib.es6 ../../../core/accessorSupport/decorators/property ../../../core/has ../../../core/Logger ../../../core/RandomLCG ../../../core/accessorSupport/decorators/subclass ./InputBase".split(" "),function(a,c,d,g,h,k,e,f){a.GroupInput=class extends f.InputBase{constructor(b){super(b);this.inputs=[];this.type="group"}initialize(){for(const b of this.inputs)b.group=this}get valid(){return this.inputs.every(b=>b.valid)}get visible(){return!1!==this._evaluatedVisibilityExpression&&
+this.inputs.some(b=>b.visible)}};c.__decorate([d.property()],a.GroupInput.prototype,"inputs",void 0);c.__decorate([d.property({readOnly:!0})],a.GroupInput.prototype,"type",void 0);c.__decorate([d.property()],a.GroupInput.prototype,"valid",null);c.__decorate([d.property()],a.GroupInput.prototype,"visible",null);a.GroupInput=c.__decorate([e.subclass("esri.widgets.BatchAttributeForm.inputs.GroupInput")],a.GroupInput);Object.defineProperty(a,Symbol.toStringTag,{value:"Module"})});

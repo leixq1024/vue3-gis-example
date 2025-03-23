@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("../../../chunks/tslib.es6 ../../../core/accessorSupport/decorators/property ../../../core/has ../../../core/Logger ../../../core/RandomLCG ../../../core/accessorSupport/decorators/subclass ../../support/HighlightOptions".split(" "),function(c,e,a,h,k,f,g){var d;a=d=class extends g{constructor(b){super(b);this.haloWidth=2.1;this.haloBlur=.8/this.haloWidth}equals(b){return super.equals(b)&&this.haloWidth===b.haloWidth&&this.haloBlur===b.haloBlur}get optionsKey(){return`${this.color};${this.haloColor};${this.haloOpacity};${this.fillOpacity};${this.haloWidth};${this.haloBlur}`}clone(){return new d({color:this.color.clone(),
+haloColor:this.haloColor?.clone(),haloOpacity:this.haloOpacity,fillOpacity:this.fillOpacity,haloWidth:this.haloWidth,haloBlur:this.haloBlur})}};c.__decorate([e.property()],a.prototype,"haloWidth",void 0);c.__decorate([e.property()],a.prototype,"haloBlur",void 0);return a=d=c.__decorate([f.subclass("esri.views.2d.support.HighlightOptions")],a)});

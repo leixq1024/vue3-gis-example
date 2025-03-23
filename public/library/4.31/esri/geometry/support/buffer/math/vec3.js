@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../../core/has","../../../../core/Logger","../../../../chunks/vec3"],function(a,c,d,b){a.normalize=b.normalize;a.normalizeView=b.normalizeView;a.scale=b.scale;a.scaleView=b.scaleView;a.shiftRight=b.shiftRight;a.transformMat3=b.transformMat3;a.transformMat3View=b.transformMat3View;a.transformMat4=b.transformMat4;a.transformMat4View=b.transformMat4View;a.translate=b.translate;Object.defineProperty(a,Symbol.toStringTag,{value:"Module"})});

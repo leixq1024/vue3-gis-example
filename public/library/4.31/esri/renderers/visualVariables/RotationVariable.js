@@ -1,0 +1,6 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("../../chunks/tslib.es6 ../../core/accessorSupport/decorators/property ../../core/has ../../core/Logger ../../core/RandomLCG ../../core/accessorSupport/decorators/subclass ./VisualVariable".split(" "),function(b,c,a,h,k,e,f){var d;a=d=class extends f{constructor(g){super(g);this.axis=null;this.type="rotation";this.rotationType="geographic"}get cache(){return{hasExpression:!!this.valueExpression,compiledFunc:null}}clone(){return new d({axis:this.axis,rotationType:this.rotationType,field:this.field,
+valueExpression:this.valueExpression,valueExpressionTitle:this.valueExpressionTitle,legendOptions:this.legendOptions?.clone()})}};b.__decorate([c.property({readOnly:!0})],a.prototype,"cache",null);b.__decorate([c.property({type:["heading","tilt","roll"],json:{origins:{"web-scene":{default:"heading",write:!0}}}})],a.prototype,"axis",void 0);b.__decorate([c.property({type:["rotation"],json:{type:["rotationInfo"]}})],a.prototype,"type",void 0);b.__decorate([c.property({type:["geographic","arithmetic"],
+json:{write:!0,origins:{"web-document":{write:!0,default:"geographic"}}}})],a.prototype,"rotationType",void 0);return a=d=b.__decorate([e.subclass("esri.renderers.visualVariables.RotationVariable")],a)});

@@ -1,0 +1,6 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("require exports ../core/shaderLibrary/ShaderOutput ../core/shaderLibrary/shading/WaterDistortion.glsl ../core/shaderTechnique/ReloadableShaderModule ../core/shaderTechnique/ShaderTechnique ../lib/OITPass ../lib/OrderIndependentTransparency ../../../../chunks/WaterSurface.glsl ../../../webgl/renderState".split(" "),function(m,e,f,n,p,q,k,c,r,l){class t extends n.WaterDistortionPassParameters{}class u extends q.ShaderTechnique{constructor(d,a,b){super(d,a,new p.ReloadableShaderModule(r.WaterSurface,
+()=>new Promise((g,h)=>m(["../shaders/WaterSurface.glsl"],g,h))),b)}initializePipeline(d){const {oitPass:a,output:b,transparent:g,draped:h,enableOffset:v}=d,w=a===k.OITPass.NONE,x=a===k.OITPass.FrontFace;return l.makePipelineState({blending:b!==f.ShaderOutput.Normal&&b!==f.ShaderOutput.Highlight&&b!==f.ShaderOutput.ObjectAndLayerIdColor&&g?c.blending(a):null,depthTest:h?null:{func:c.oitDepthTest(a)},depthWrite:c.depthWrite(d),drawBuffers:c.getDrawBuffers(a,b),colorWrite:l.defaultColorWrite,polygonOffset:w||
+x?null:c.getOITPolygonOffset(v)})}}e.WaterMaterialPassParameters=t;e.WaterTechnique=u;Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

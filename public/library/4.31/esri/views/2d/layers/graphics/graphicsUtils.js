@@ -1,0 +1,6 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("exports ../../../../core/screenUtils ../../../../geometry/Polygon ../../../../geometry/support/aaBoundingRect ../../../../geometry/support/spatialReferenceUtils ../../engine/webgl/definitions".split(" "),function(d,f,l,g,m,h){d.getLineWidth=function(a){const c=f.px2pt(h.minTextLineWidth),b=f.px2pt(h.maxTextLineWidth);return Math.max(c,Math.min(a||b,b))};d.intersectingInternationalDateline=function(a,c){c=m.getInfo(c);if(!c)return null;const [b,e]=c.valid;return a[2]>e?[g.create([a[0],a[1],
+e,a[3]]),g.create([b,a[1],b+a[2]-e,a[3]])]:a[0]<b?[g.create([b,a[1],a[2],a[3]]),g.create([e-(b-a[0]),a[1],e,a[3]])]:null};d.isMarkerSymbol=function(a){return"simple-marker"===a||"picture-marker"===a||"esriSMS"===a||"esriPMS"===a};d.isTextSymbol=function(a){return"text"===a||"esriTS"===a};d.pixelBuffer=50;d.polygonFromExtent=function(a){if(!a)return null;const {xmin:c,ymin:b,xmax:e,ymax:k,spatialReference:n}=a;return new l({rings:[[[c,b],[c,k],[e,k],[e,b],[c,b]]],spatialReference:n})};d.roundPtToWholePixel=
+function(a){return f.px2pt(Math.round(f.pt2px(a)))};d.tileSize=512;Object.defineProperty(d,Symbol.toStringTag,{value:"Module"})});

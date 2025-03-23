@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../../../core/has","../../../../../support/elevationInfoUtils","../isSupportedObjectUtils"],function(c,f,e,a){c.isSupportedObject=function(b){if(b.graphic&&"graphics"!==b.graphic.layer?.type)return a.SupportedObjectResult.GRAPHICS_LAYER_MISSING;const d=b.operations?.data.type;if(!d)return a.SupportedObjectResult.GEOMETRY_TYPE_UNSUPPORTED;switch(d){case "polygon":case "point":case "polyline":case "mesh":break;default:return a.SupportedObjectResult.GEOMETRY_TYPE_UNSUPPORTED}return e.hasEffectiveFeatureExpressionInfo(b.elevationInfo)?
+a.SupportedObjectResult.ELEVATION_MODE_UNSUPPORTED:a.SupportedObjectResult.SUPPORTED};Object.defineProperty(c,Symbol.toStringTag,{value:"Module"})});

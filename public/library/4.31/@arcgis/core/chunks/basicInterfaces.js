@@ -1,0 +1,5 @@
+/*
+All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+*/
+var a,e,n,s,O,t,i,u;!function(a){a[a.None=0]="None",a[a.Front=1]="Front",a[a.Back=2]="Back",a[a.COUNT=3]="COUNT"}(a||(a={})),function(a){a[a.Less=0]="Less",a[a.Lequal=1]="Lequal",a[a.COUNT=2]="COUNT"}(e||(e={})),function(a){a[a.BACKGROUND=0]="BACKGROUND",a[a.UPDATE=1]="UPDATE"}(n||(n={})),function(a){a[a.NOT_LOADED=0]="NOT_LOADED",a[a.LOADING=1]="LOADING",a[a.LOADED=2]="LOADED"}(s||(s={})),function(a){a[a.IntegratedMeshMaskExcluded=1]="IntegratedMeshMaskExcluded",a[a.OutlineVisualElementMask=2]="OutlineVisualElementMask"}(O||(O={})),function(a){a[a.Highlight=0]="Highlight",a[a.MaskOccludee=1]="MaskOccludee"}(t||(t={})),function(a){a[a.Blend=0]="Blend",a[a.Opaque=1]="Opaque",a[a.Mask=2]="Mask",a[a.MaskBlend=3]="MaskBlend",a[a.COUNT=4]="COUNT"}(i||(i={})),function(a){a.DDS_ENCODING="image/vnd-ms.dds",a.KTX2_ENCODING="image/ktx2",a.BASIS_ENCODING="image/x.basis"}(u||(u={}));export{i as A,a as C,e as D,t as O,n as R,O as S,u as T,s as a};

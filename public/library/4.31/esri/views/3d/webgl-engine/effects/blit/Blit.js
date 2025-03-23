@@ -1,0 +1,6 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../../../chunks/Compositing.glsl","../../shaders/CompositingTechnique","../../shaders/CompositingTechniqueConfiguration","../../../../webgl/enums"],function(g,l,d,h,m){class n{constructor(a,b=h.BlitMode.None){this._techniques=a;this._parameters=new l.CompositingPassParameters;this._configuration=new h.CompositingTechniqueConfiguration;this._configuration.blitMode=b;a.precompile(d.CompositingTechnique,this._configuration)}blit(a,b,e,f){a.bindFramebuffer(e.fbo);a.setClearColor(0,
+0,0,1);a.clear(m.FramebufferBit.COLOR);this._parameters.texture=b.getTexture();b=this._techniques.acquire(d.CompositingTechnique,this._configuration);a.bindTechnique(b,f,this._parameters);a.screen.draw();b.release()}blend(a,b,e,f,k=1){this._configuration.hasOpacityFactor=1>k;const c=this._techniques.acquire(d.CompositingTechnique,this._configuration);if(!c.compiled)return c.release(),!1;a.bindFramebuffer(e.fbo);this._parameters.texture=b.getTexture();this._parameters.opacity=k;a.bindTechnique(c,f,
+this._parameters);a.screen.draw();c.release();return!0}}g.Blit=n;Object.defineProperty(g,Symbol.toStringTag,{value:"Module"})});

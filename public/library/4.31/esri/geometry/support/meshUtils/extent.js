@@ -1,0 +1,6 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("exports ../../../core/libs/gl-matrix-2/factories/mat4f64 ../../Extent ../../projection ../../spatialReferenceEllipsoidUtils ../../projection/computeTranslationToOriginAndRotation ../../projection/projectBuffer ../aaBoundingBox ../DoubleArray ../meshVertexSpaceUtils ../../../chunks/vec3".split(" "),function(g,p,q,r,t,u,v,d,w,x,f){const h=p.create(),y=w.newDoubleArray(24);g.computeMeshExtent=function(b){const {spatialReference:c,vertexSpace:e,untransformedBounds:z}=b,a=d.toCorners(z,y);x.isRelativeVertexSpace(e)&&
+b.transform&&f.transformMat4(a,a,b.transform.localMatrix);if("georeferenced"===e.type)return(b=e.origin)&&f.translate(a,a,b),d.toExtent(d.fromBuffer(a),c);b=t.getSphericalPCPF(c);const k=e.origin;if(!r.canProjectWithoutEngine(b,c)){const [l,m,n]=k;return new q({xmin:l,ymin:m,zmin:n,xmax:l,ymax:m,zmax:n,spatialReference:c})}u.computeTranslationToOriginAndRotation(c,k,h,b);f.transformMat4(a,a,h);v.projectBuffer(a,b,0,a,c,0);return d.toExtent(d.fromBuffer(a),c)};Object.defineProperty(g,Symbol.toStringTag,
+{value:"Module"})});

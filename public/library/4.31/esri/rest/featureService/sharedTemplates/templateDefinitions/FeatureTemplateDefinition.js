@@ -1,0 +1,6 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("exports ../../../../chunks/tslib.es6 ../../../../core/Accessor ../../../../core/Collection ../../../../core/accessorSupport/decorators/property ../../../../core/has ../../../../core/Logger ../../../../core/RandomLCG ../../../../core/accessorSupport/decorators/subclass".split(" "),function(a,b,e,d,c,h,k,l,f){a.FeatureTemplateDefinition=class extends e{constructor(g){super(g);this.type="feature";this.prototype=null;this.excludedTools=new d;this.relationships=new d}};b.__decorate([c.property({readOnly:!0})],
+a.FeatureTemplateDefinition.prototype,"type",void 0);b.__decorate([c.property()],a.FeatureTemplateDefinition.prototype,"prototype",void 0);b.__decorate([c.property()],a.FeatureTemplateDefinition.prototype,"excludedTools",void 0);b.__decorate([c.property()],a.FeatureTemplateDefinition.prototype,"relationships",void 0);a.FeatureTemplateDefinition=b.__decorate([f.subclass("esri.rest.featureService.sharedTemplates.templateDefinitions.FeatureTemplateDefinition")],a.FeatureTemplateDefinition);Object.defineProperty(a,
+Symbol.toStringTag,{value:"Module"})});

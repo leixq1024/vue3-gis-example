@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("exports ../../core/arrayUtils ../../core/unitUtils ./gx/operatorGeodesicBuffer ./support/converterAPI ./support/geodeticCurveType".split(" "),function(e,r,k,f,a,p){e.execute=function(g,c,b={}){let {curveType:l="geodesic",maxDeviation:d=NaN,unit:h}=b;h&&(c=k.convertUnit(c,h,"meters"),d&&=k.convertUnit(d,h,"meters"));b=a.getSpatialReference(g);return a.toGeometry(f.execute(a.fromGeometry(g),a.fromSpatialReference(b),p.geodeticCurveType[l],c,d),b)};e.executeMany=function(g,c,b={}){let {curveType:l=
+"geodesic",maxDeviation:d=NaN,union:h=!1,unit:m}=b;m&&(c=c.map(n=>k.convertUnit(n,m,"meters")),d&&=k.convertUnit(d,m,"meters"));b=g.map(a.fromGeometry);const q=a.getSpatialReference(g);return f.executeMany(b,a.fromSpatialReference(q),p.geodeticCurveType[l],c,d,h).map(n=>a.toGeometry(n,q)).filter(r.isSome)};e.isLoaded=function(){return f.isLoaded()};e.load=function(){return f.load()};e.supportsCurves=function(){return f.supportsCurves()};Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

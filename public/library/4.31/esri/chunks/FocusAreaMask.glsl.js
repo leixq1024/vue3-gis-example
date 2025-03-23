@@ -1,0 +1,6 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("exports ../core/libs/gl-matrix-2/math/mat4 ../core/libs/gl-matrix-2/factories/mat4f64 ../core/libs/gl-matrix-2/factories/vec3f64 ../views/3d/webgl-engine/core/shaderModules/interfaces ../views/3d/webgl-engine/core/shaderModules/Matrix4PassUniform ../views/3d/webgl-engine/core/shaderModules/ShaderBuilder ../views/3d/webgl-engine/lib/VertexAttribute".split(" "),function(b,l,c,m,d,f,n,p){function g(){const a=new n.ShaderBuilder;a.attributes.add(p.VertexAttribute.POSITION,"vec3");a.outputs.add("fragColor",
+"vec4",0);a.vertex.uniforms.add(new f.Matrix4PassUniform("proj",(h,e)=>e.camera.projectionMatrix),new f.Matrix4PassUniform("view",(h,e)=>l.translate(q,e.camera.viewMatrix,h.origin))).main.add(d.glsl`gl_Position = proj * view * vec4(position, 1.0);`);a.fragment.main.add(d.glsl`fragColor = vec4(1., 0., 0., 1.);`);return a}class k extends d.NoParameters{constructor(){super(...arguments);this.origin=m.ZEROS}}const q=c.create();c=Object.freeze(Object.defineProperty({__proto__:null,FocusAreaMaskPassParameters:k,
+build:g},Symbol.toStringTag,{value:"Module"}));b.FocusAreaMask=c;b.FocusAreaMaskPassParameters=k;b.build=g});

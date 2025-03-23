@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["./basicInterfaces"],function(b){class c{constructor(a){this._material=a.material;this._techniques=a.techniques;this._output=a.output}dispose(){}get _stippleTextures(){return this._techniques.context.stippleTextures}get _markerTextures(){return this._techniques.context.markerTextures}acquireTechnique(a,d){return this._techniques.acquire(a,this._material.getConfiguration(this._output,d))}ensureResources(a){return b.ResourceState.LOADED}}return c});

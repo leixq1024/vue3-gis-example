@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports","./Geometry"],function(g,d){g.clean=function(a,b){b=a.getGeometryType();if(b!==d.GeometryType.enumPoint){if(d.isMultiPath(b)){b:{for(let c=0,e=a.getPathCount();c<e;c++)if(b=a.getPathSize(c),0===b||1===b&&(0===a.getSegmentCountPath(c)||a.getSegmentType(a.getPathStart(c))===d.GeometryType.enumLine||!a.isClosedPath(c))){b=!1;break b}b=!0}if(!b){b=a.createInstance();for(let c=0,e=a.getPathCount();c<e;c++){const f=a.getPathSize(c);if(0!==f){if(1===f){if(0===a.getSegmentCountPath(c))continue;
+if(a.getSegmentType(a.getPathStart(c))===d.GeometryType.enumLine)continue;if(!a.isClosedPath(c))continue}b.addPath(a,c,!0)}}a=b}return a}b!==d.GeometryType.enumMultiPoint&&b!==d.GeometryType.enumEnvelope&&b===d.GeometryType.enumMultipatch&&d.geometryReleaseAssert(0)}return a}});

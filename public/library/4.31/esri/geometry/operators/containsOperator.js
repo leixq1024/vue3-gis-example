@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports","../../chunks/QuadraticBezier","./support/converterAPI"],function(c,f,a){const d=new f.OperatorContains;c.accelerateGeometry=function(b){const e=a.getSpatialReference(b);return d.accelerateGeometry(a.fromGeometry(b),a.fromSpatialReference(e),1)};c.execute=function(b,e){return d.execute(a.fromGeometry(b),a.fromGeometry(e),a.fromSpatialReference(b.spatialReference),null)};c.supportsCurves=function(){return d.supportsCurves()};Object.defineProperty(c,Symbol.toStringTag,{value:"Module"})});

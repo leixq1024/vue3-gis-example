@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports","./Manipulation"],function(b,d){class e extends d.Manipulation{constructor(){super(...arguments);this._interactive=!0}get interactive(){return this._interactive}set interactive(a){this._interactive!==a&&(this._interactive=a);this._updateManipulatorInteractivity()}_updateManipulatorInteractivity(){const a=!this.grabbing&&this._interactive;this.forEachManipulator(c=>{c.interactive=a||c.grabbing})}}b.InteractiveManipulation=e;Object.defineProperty(b,Symbol.toStringTag,{value:"Module"})});

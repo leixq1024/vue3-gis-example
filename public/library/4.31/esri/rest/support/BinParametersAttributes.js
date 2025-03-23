@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("../../chunks/tslib.es6 ../../core/Clonable ../../core/JSONSupport ../../core/accessorSupport/decorators/property ../../core/accessorSupport/ensureType ../../core/RandomLCG ../../core/has ../../core/accessorSupport/decorators/subclass".split(" "),function(b,a,d,c,e,h,k,f){a=class extends a.ClonableMixin(d.JSONSupport){constructor(g){super(g);this.responseType=this.field=this.expression=this.alias=null}};b.__decorate([c.property({type:String,json:{write:!0}})],a.prototype,"alias",void 0);b.__decorate([c.property({type:String,
+json:{write:!0}})],a.prototype,"expression",void 0);b.__decorate([c.property({type:String,json:{write:!0}})],a.prototype,"field",void 0);b.__decorate([c.property({type:String,json:{write:!0}})],a.prototype,"responseType",void 0);b=a=b.__decorate([f.subclass("esri.rest.support.BinParametersAttributes")],a);a.from=e.ensureType(a);return b});

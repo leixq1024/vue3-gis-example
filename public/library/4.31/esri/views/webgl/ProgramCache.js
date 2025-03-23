@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports","../../core/has","../../core/NestedMap","./Program"],function(e,l,f,g){class h{constructor(a){this._rctx=a;this._store=new f.NestedMap}dispose(){this._store.forAll(a=>a.dispose());this._store.clear()}acquire(a,c,b,k){const d=this._store.get(a,c);if(null!=d)return d.ref(),d;b=new g.Program(this._rctx,a,c,b,k);b.ref();this._store.set(a,c,b);return b}get test(){}}e.ProgramCache=h;Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

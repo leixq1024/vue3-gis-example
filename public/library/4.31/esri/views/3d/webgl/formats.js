@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports"],function(b){b.ColorFormat=void 0;(function(a){a[a.RED=0]="RED";a[a.RG=1]="RG";a[a.RGBA4=2]="RGBA4";a[a.RGBA=3]="RGBA";a[a.RGBA_MIPMAP=4]="RGBA_MIPMAP";a[a.R16F=5]="R16F";a[a.RGBA16F=6]="RGBA16F"})(b.ColorFormat||(b.ColorFormat={}));b.DepthFormat=void 0;(function(a){a[a.DEPTH_STENCIL_TEXTURE=0]="DEPTH_STENCIL_TEXTURE";a[a.DEPTH16_BUFFER=1]="DEPTH16_BUFFER"})(b.DepthFormat||(b.DepthFormat={}));Object.defineProperty(b,Symbol.toStringTag,{value:"Module"})});

@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("exports ../../../../chunks/tslib.es6 ../../../../core/accessorSupport/decorators/property ../../../../core/has ../../../../core/Logger ../../../../core/RandomLCG ../../../../core/accessorSupport/decorators/subclass ./SketchTooltipInfo".split(" "),function(a,b,c,g,h,k,d,e){a.ExtentRotateTooltipInfo=class extends e.SketchTooltipInfo{constructor(f){super(f);this.type="extent-rotate";this.angle=0}};b.__decorate([c.property()],a.ExtentRotateTooltipInfo.prototype,"type",void 0);b.__decorate([c.property()],
+a.ExtentRotateTooltipInfo.prototype,"angle",void 0);a.ExtentRotateTooltipInfo=b.__decorate([d.subclass("esri.views.interactive.tooltip.infos.ExtentRotateTooltipInfo")],a.ExtentRotateTooltipInfo);Object.defineProperty(a,Symbol.toStringTag,{value:"Module"})});

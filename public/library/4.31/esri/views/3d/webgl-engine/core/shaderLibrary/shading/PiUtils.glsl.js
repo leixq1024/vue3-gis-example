@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports"],function(b){b.PiUtils=function(a){a.vertex.constants.add("PI","float",3.141592653589793);a.fragment.constants.add("PI","float",3.141592653589793);a.fragment.constants.add("LIGHT_NORMALIZATION","float",.3183098861837907);a.fragment.constants.add("INV_PI","float",.3183098861837907);a.fragment.constants.add("HALF_PI","float",1.570796326794897);a.fragment.constants.add("TWO_PI","float",6.28318530717958)};Object.defineProperty(b,Symbol.toStringTag,{value:"Module"})});

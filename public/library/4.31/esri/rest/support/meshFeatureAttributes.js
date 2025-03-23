@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports","../../geometry","../../geometry/support/MeshTransform","../../geometry/Point"],function(c,h,f,g){const e={originX:"originX",originY:"originY",originZ:"originZ",translationX:"translationX",translationY:"translationY",translationZ:"translationZ",scaleX:"scaleX",scaleY:"scaleY",scaleZ:"scaleZ",rotationX:"rotationX",rotationY:"rotationY",rotationZ:"rotationZ",rotationDeg:"rotationDeg"};c.extractMeshFeatureOrigin=function(a,b,d=e){return new g({x:a[d.originX],y:a[d.originY],z:a[d.originZ],
+spatialReference:b})};c.extractMeshFeatureTransform=function(a,b=e){return new f({translation:[a[b.translationX],-a[b.translationZ],a[b.translationY]],rotationAxis:[a[b.rotationX],-a[b.rotationZ],a[b.rotationY]],rotationAngle:a[b.rotationDeg],scale:[a[b.scaleX],a[b.scaleZ],a[b.scaleY]]})};Object.defineProperty(c,Symbol.toStringTag,{value:"Module"})});

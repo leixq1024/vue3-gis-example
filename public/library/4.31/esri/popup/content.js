@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("exports ./content/AttachmentsContent ./content/Content ./content/CustomContent ./content/ExpressionContent ./content/FieldsContent ./content/MediaContent ./content/RelationshipContent ./content/TextContent ./content/UtilityNetworkAssociationsContent".split(" "),function(a,b,h,l,c,d,e,f,g,k){const m={base:null,key:"type",typeMap:{attachment:b,media:e,text:g,expression:c,field:d,relationship:f,utilityNetworkAssociations:k}},n={base:null,key:"type",typeMap:{attachment:b,media:e,text:g,expression:c,
+field:d,relationship:f}};a.AttachmentsContent=b;a.BaseContent=h;a.CustomContent=l;a.ExpressionContent=c;a.FieldsContent=d;a.MediaContent=e;a.RelationshipContent=f;a.TextContent=g;a.UtilityNetworkAssociationsContent=k;a.isContent=function(p){return p instanceof h};a.persistableTypes=m;a.persistableWebSceneTypes=n;Object.defineProperty(a,Symbol.toStringTag,{value:"Module"})});

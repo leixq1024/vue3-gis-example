@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports"],function(d){d.findInMap=function(c,b){for(const a of c.values())if(b(a))return a;return null};d.getOrCreateMapValue=function(c,b,a){const e=c.get(b);if(void 0!==e)return e;a=a();c.set(b,a);return a};d.memoize=function(c){const b=new Map;return a=>{b.has(a)||b.set(a,c(a));return b.get(a)}};d.someMap=function(c,b){for(const a of c.values())if(b(a))return!0;return!1};Object.defineProperty(d,Symbol.toStringTag,{value:"Module"})});

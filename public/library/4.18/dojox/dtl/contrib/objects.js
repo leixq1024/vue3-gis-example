@@ -1,2 +1,0 @@
-//>>built
-define(["dojo/_base/lang","../_base"],function(a,b){var c=a.getObject("contrib.objects",!0,b);a.mixin(c,{key:function(d,e){return d[e]}});b.register.filters("dojox.dtl.contrib",{objects:["key"]});return c});

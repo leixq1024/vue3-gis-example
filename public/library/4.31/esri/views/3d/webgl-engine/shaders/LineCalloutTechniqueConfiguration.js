@@ -1,0 +1,6 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../../chunks/tslib.es6","../core/shaderTechnique/ShaderTechniqueConfiguration","../materials/DefaultTechniqueConfiguration"],function(d,b,c,e){class a extends e.DefaultTechniqueConfiguration{constructor(f){super();this.spherical=f;this.screenCenterOffsetUnitsEnabled=!1;this.occlusionTestEnabled=!0;this.terrainDepthTest=this.hasSlicePlane=this.hudDepthAlignStart=this.hudDepth=this.hasScreenSizePerspective=this.hasVerticalOffset=!1;this.hasSliceInVertexProgram=!0;this.draped=
+!1}}b.__decorate([c.parameter()],a.prototype,"screenCenterOffsetUnitsEnabled",void 0);b.__decorate([c.parameter()],a.prototype,"occlusionTestEnabled",void 0);b.__decorate([c.parameter()],a.prototype,"hasVerticalOffset",void 0);b.__decorate([c.parameter()],a.prototype,"hasScreenSizePerspective",void 0);b.__decorate([c.parameter()],a.prototype,"hudDepth",void 0);b.__decorate([c.parameter()],a.prototype,"hudDepthAlignStart",void 0);b.__decorate([c.parameter()],a.prototype,"hasSlicePlane",void 0);b.__decorate([c.parameter()],
+a.prototype,"terrainDepthTest",void 0);d.LineCalloutTechniqueConfiguration=a;Object.defineProperty(d,Symbol.toStringTag,{value:"Module"})});

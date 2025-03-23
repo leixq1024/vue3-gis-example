@@ -1,0 +1,6 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("../../chunks/tslib.es6 ../../core/Error ../../core/accessorSupport/decorators/property ../../core/has ../../core/Logger ../../core/RandomLCG ../../core/accessorSupport/decorators/subclass ../../views/interactive/sketch/SketchOptions ./UpdateRecordWorkflowData ./workflowUtils".split(" "),function(c,g,f,a,t,u,h,k,l,m){var d;a=d=class extends l{constructor(b){super(b);this.snappingManager=this.sketchOptions=null}static async create(b){const {feature:n,snappingManager:p,viewModel:q}=b,r=b.sketchOptions??
+new k;var {view:e}=q;if(!e)throw new g("editor:cannot-create-workflow-data","The provided EditorViewModel does not have an associated view");e=await m.whenEditorLayerView(e,n.layer);return new d({...d._makeConstructorProps(b),layerView:e,sketchOptions:r,snappingManager:p})}};c.__decorate([f.property()],a.prototype,"layerView",void 0);c.__decorate([f.property({constructOnly:!0})],a.prototype,"sketchOptions",void 0);c.__decorate([f.property()],a.prototype,"snappingManager",void 0);return a=d=c.__decorate([h.subclass("esri.widgets.Editor.UpdateFeatureWorkflowData")],
+a)});

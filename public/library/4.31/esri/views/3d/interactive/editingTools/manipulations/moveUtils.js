@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../../interactive/dragEventPipeline"],function(g,k){g.axisConstrainedDragSign=function(b){if(null==b?.axis)return 1;const {mapStart:e,mapEnd:f,axis:c}=b;b=[f.x-e.x,f.y-e.y];return 0<b[0]*c[0]+b[1]*c[1]?1:-1};g.createManipulatedMoveDragPipeline=function(b,e,f){const c=(l,d)=>{e({action:l,object:b,dxScreen:d.screenDeltaX,dyScreen:d.screenDeltaY})};return f((l,d,h)=>{d.next(a=>{"start"===a.action&&c("start",a);return a}).next(k.dragManipulatedObject(b)).next(a=>{switch(a.action){case "start":case "update":(a.translationX||
+a.translationY||a.translationZ)&&c("update",a);break;case "end":c("end",a)}return a});h=h.next(k.resetManipulatedObject(b)).next(a=>{c("end",{screenDeltaX:0,screenDeltaY:0});return a});return{steps:d,cancel:h}})};Object.defineProperty(g,Symbol.toStringTag,{value:"Module"})});

@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("../../../chunks/tslib.es6 ../../../core/Accessor ../../../core/accessorSupport/decorators/property ../../../core/has ../../../core/Logger ../../../core/RandomLCG ../../../core/accessorSupport/decorators/subclass".split(" "),function(b,a,c,f,g,h,d){a=class extends a{constructor(e){super(e);this.elevationAlignedTargetLocation=this.intersectedLocation=this.intersectedGraphic=this.target=null;this.visible=void 0}};b.__decorate([c.property()],a.prototype,"target",void 0);b.__decorate([c.property()],
+a.prototype,"intersectedGraphic",void 0);b.__decorate([c.property()],a.prototype,"intersectedLocation",void 0);b.__decorate([c.property()],a.prototype,"elevationAlignedTargetLocation",void 0);b.__decorate([c.property({type:Boolean})],a.prototype,"visible",void 0);return a=b.__decorate([d.subclass("esri.views.3d.analysis.LineOfSightAnalysisResult")],a)});

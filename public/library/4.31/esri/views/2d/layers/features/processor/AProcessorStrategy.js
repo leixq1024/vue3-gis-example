@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports"],function(c){class d{constructor(a){this.subscription=a;this.handledChunks=new Set}destroy(){}}class e{constructor(a,b){this._source=a;this._attributeStore=b;this._sendStates=new Map}destroy(){}get enablePixelBuffering(){return!0}onSubscribe(a){const b=this.createState(a);this._sendStates.set(a.key.id,b);this.updateChunks()}onUnsubscribe(a){this._sendStates.get(a.key.id)?.destroy();this._sendStates.delete(a.key.id)}invalidate(){const a=Array.from(this._sendStates.values());this._sendStates.clear();
+for(const b of a)b.destroy(),this.onSubscribe(b.subscription)}invalidateAttributeData(){}getFeatureObjectIdsForAggregate(a){throw Error("InternalError: AggregateId lookup not supported");}getDisplayIds(a){return this.displayMap(a,b=>b,b=>b)}getDisplayAndObjectIds(a){return this.displayMap(a,b=>b,(b,g,f)=>[b,f])}beforeUpdateChunks(){}afterUpdateChunks(){}}c.AProcessorStrategy=e;c.ASendState=d;Object.defineProperty(c,Symbol.toStringTag,{value:"Module"})});

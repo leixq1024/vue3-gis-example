@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define("exports ./DefaultVertexAttributeLocations ./DefaultVertexBufferLayouts ./VertexArrayObject ../../../webgl/BufferObject ../../../webgl/enums ../../../webgl/Texture ../../../webgl/TextureDescriptor".split(" "),function(a,h,f,k,l,g,m,n){a.Layout=void 0;(function(c){c[c.Pos2=0]="Pos2";c[c.Pos2Tex=1]="Pos2Tex"})(a.Layout||(a.Layout={}));const p=new Map([[a.Layout.Pos2,f.Pos2],[a.Layout.Pos2Tex,f.Pos2Tex]]);a.createEmptyTexture=function(c){const e=new n.TextureDescriptor(4);e.samplingMode=g.TextureSamplingMode.NEAREST;
+return new m.Texture(c,e)};a.createQuadVAO=function(c,e=a.Layout.Pos2,q=h.Default3D,b=-1,d=1){b=e===a.Layout.Pos2?new Float32Array([b,b,d,b,b,d,d,d]):new Float32Array([b,b,0,0,d,b,1,0,b,d,0,1,d,d,1,1]);return new k.VertexArrayObject(c,q,new Map([["geometry",p.get(e)]]),new Map([["geometry",l.BufferObject.createVertex(c,g.Usage.STATIC_DRAW,b)]]))};Object.defineProperty(a,Symbol.toStringTag,{value:"Module"})});

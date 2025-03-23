@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../core/deprecate","../meshVertexSpaceUtils"],function(e,f,g){e.isGlobal=function(b,a){return b.isGeographic||b.isWebMercator&&(a??!0)};e.performGlobalOperation=function(b,a,c,d){if(void 0!==d){f.deprecated(b(),"option: geographic",{replacement:"Use mesh `vertexSpace` and spatial reference to control how operations are performed instead.",version:"4.30",warnOnce:!0});const h="local"===a.type;if(g.isRelativeVertexSpace(a)&&d!==h)b().warnOnce(`Specifying the 'geographic' parameter (${d}) for a Mesh vertex space of type "${a.type}" is not supported. This parameter will be ignored.`);
+else return c.isGeographic||c.isWebMercator&&d}switch(a.type){case "georeferenced":return c.isGeographic;case "local":return c.isGeographic||c.isWebMercator}};Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});
