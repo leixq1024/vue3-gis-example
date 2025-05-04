@@ -11,7 +11,7 @@ export const create3dView = async (contentId: string = '#sceneView') => {
   const [Map, SceneView] = await getModules([
     'esri/Map', // 地图模块
     'esri/views/SceneView' // 3D场景视图模块
-    ])
+  ])
 
   // 场景视图配置参数
   const mapConfig: any = {
@@ -31,7 +31,7 @@ export const create3dView = async (contentId: string = '#sceneView') => {
     isPinchZoom: true,
     operator: 1,
     ground: {
-      surfaceColor: '#000',
+      surfaceColor: '#868b7e',
       opacity: 1
     },
     layers: [],

@@ -1,0 +1,22 @@
+:deep .ant-menu {
+  height: 100%;
+  background: #1e1f2b;
+  color: #dcd75a;
+  &-item {
+    background: #282a3a;
+    &-active {
+      color: #dcd75a !important;
+      background: rgba(#fff, 0.3) !important;
+      &::after {
+        display: none;
+      }
+    }
+  }
+  .ant-menu-item-selected {
+    color: #dcd75a !important;
+    background: rgba(#fff, 0.3) !important;
+    &::after {
+      display: none;
+    }
+  }
+}

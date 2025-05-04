@@ -18,7 +18,7 @@ const onMenuClick = (item: { key: string }) => {
   const functionDict: {
     [x: string]: () => {}
   } = {
-    'roadStreamers': loadRoadStreamers
+    'roadStreamers': loadRoadStreamers // 道路流光
   }
   functionDict[item['key']]()
   if (curMenu.value[0] === item['key']) return (curMenu.value = [])
@@ -27,11 +27,10 @@ const onMenuClick = (item: { key: string }) => {
 </script>
 
 <style lang="scss" scoped>
+@import '@/styles/menu.scss';
 .menu {
   width: 240px;
   height: 100%;
-  .ant-menu {
-    height: 100%;
-  }
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 </style>

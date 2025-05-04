@@ -10,7 +10,7 @@
 
 <script setup lang="ts">
 import { onMounted } from 'vue'
-import leftMenu from './components/leftMenu.vue'
+import leftMenu from '@/components/arcgisLeftMenu.vue'
 import { initApi } from '@/utils/esri/arcgisApi.ts'
 import { create3dView } from '@/utils/esri/arcgisUtils.ts'
 onMounted(async () => {
@@ -26,9 +26,17 @@ onMounted(async () => {
   width: 100%;
   display: flex;
 }
-.arcgis-container {
+::v-deep .arcgis-container {
   position: relative;
   flex: 1;
+  .esri-attribution {
+    display: none;
+  }
+  .esri-view-surface {
+    &::after {
+      display: none;
+    }
+  }
 }
 .btn {
   position: absolute;

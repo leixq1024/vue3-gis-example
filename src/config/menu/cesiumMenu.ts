@@ -1,0 +1,11 @@
+export const cesiumMenu: {
+  key: string
+  label: string
+  title: string
+}[] = [
+  {
+    key: 'pointLineAndSurface',
+    label: '点线面操作',
+    title: '点线面操作'
+  }
+]

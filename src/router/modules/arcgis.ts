@@ -1,8 +1,8 @@
 import type { RouteRecordRaw } from 'vue-router'
 
-const openlayerRouter: RouteRecordRaw = {
+const arcgisRouter: RouteRecordRaw = {
   path: '/arcgis',
   component: () => import('@/pages/arcgis/index.vue'),
   children: []
 }
-export default openlayerRouter
+export default arcgisRouter
