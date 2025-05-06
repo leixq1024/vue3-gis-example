@@ -1,4 +1,4 @@
-declare module '*.js' {
+declare module 'RoadStreamers.js' {
   // 定义 GeoJSON 数据结构
   interface GeoJSONFeature {
     geometry: {

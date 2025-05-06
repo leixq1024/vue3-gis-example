@@ -43,7 +43,7 @@ import {
 } from '@/utils/cesium/pointLineAndSurface'
 import { getMap } from '@/utils/cesium/map'
 
-import { ref } from 'vue'
+import { ref, onBeforeUnmount } from 'vue'
 const entity = ref<any>([])
 
 // 显示普通点
@@ -116,6 +116,9 @@ const removeAllEntity = () => {
   const view: any = getMap()
   view.entities.removeAll()
 }
+onBeforeUnmount(() => {
+  removeAllEntity()
+})
 </script>
 
 <style lang="scss" scoped>

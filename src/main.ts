@@ -5,5 +5,6 @@ import 'normalize.css'
 import Antd from 'ant-design-vue'
 import router from './router'
 import App from './App.vue'
-
-createApp(App).use(Antd).use(router).mount('#app')
+import { createPinia  } from 'pinia'
+const pinia = createPinia()
+createApp(App).use(pinia).use(Antd).use(router).mount('#app')

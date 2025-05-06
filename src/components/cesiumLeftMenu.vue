@@ -8,18 +8,19 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { cesiumMenu } from '@/config/menu/cesiumMenu.ts'
+import { usePanelStore } from '@/store/panel'
 const curMenu = ref<string[]>([])
+const panelStore: any = usePanelStore()
 /**
  * @function 菜单点击事件
  * @param item 选中的菜单对象
  */
 const onMenuClick = (item: { key: string }) => {
-  const functionDict: {
-    [x: string]: () => {}
-  } = {}
-  functionDict[item['key']]()
   if (curMenu.value[0] === item['key']) return (curMenu.value = [])
-  else curMenu.value = [item['key']]
+  else {
+    panelStore.updatePanelName(item['key'])
+    curMenu.value = [item['key']]
+  }
 }
 </script>
 

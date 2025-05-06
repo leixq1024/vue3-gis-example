@@ -29,18 +29,11 @@ export const addPoint = () => {
   const point = Viewer.entities.add({
     position: Cesium.Cartesian3.fromDegrees(118.107358, 24.47745, 10),
     point: {
-      // 点的大小（像素）
-      pixelSize: 5,
-      // 点位颜色，fromCssColorString 可以直接使用CSS颜色
-      color: Cesium.Color.fromCssColorString('#ee0000'),
-      // 边框颜色
-      outlineColor: Cesium.Color.fromCssColorString('#fff'),
-      // 边框宽度(像素)
-      outlineWidth: 2,
-      // 显示在距相机的距离处的属性，多少区间内是可以显示的
-      // distanceDisplayCondition: new DistanceDisplayCondition(0, 1500),
-      // 是否显示
-      show: true
+      pixelSize: 10, // 点的大小（像素）
+      color: Cesium.Color.RED, // 填充颜色
+      outlineColor: Cesium.Color.WHITE, // 描边颜色
+      outlineWidth: 2, // 描边宽度
+      heightReference: Cesium.HeightReference.CLAMP_TO_GROUND // 贴地模式
     }
   })
   return point
@@ -49,44 +42,35 @@ export const addPoint = () => {
 export const addTextPoint = () => {
   const Viewer: any = getMap()
   const point = Viewer.entities.add({
-    position: Cesium.Cartesian3.fromDegrees(118.107358, 24.47745, 10),
-    // 点
+    // 实体位置（WGS84坐标系）
+    position: Cesium.Cartesian3.fromDegrees(
+      118.107358, // 经度（东经）
+      24.47745, // 纬度（北纬）
+      50 // 高程（米，相对于椭球体高度）
+    ),
+    // 点样式配置
     point: {
-      color: Cesium.Color.RED, // 点位颜色
-      pixelSize: 10 // 像素点大小
+      pixelSize: 12, // 点直径（像素单位，建议8-20）
+      color: Cesium.Color.fromCssColorString('#ff3d3d'), // 点填充色（支持CSS颜色）
+      outlineColor: Cesium.Color.WHITE, // 点描边颜色
+      outlineWidth: 2, // 点描边宽度（像素）
+      heightReference: Cesium.HeightReference.CLAMP_TO_GROUND // 高度参考模式（贴地）
     },
-    // 文字
+
+    // 文字标签配置
     label: {
-      // 文本。支持显式换行符“ \ n”
-      text: '文字点',
-      // 字体样式，以CSS语法指定字体
-      font: '14pt Source Han Sans CN',
-      // 字体颜色
-      fillColor: Cesium.Color.BLACK,
-      // 背景颜色
-      backgroundColor: Cesium.Color.AQUA,
-      // 是否显示背景颜色
-      showBackground: true,
-      // 字体边框
-      outline: true,
-      // 字体边框颜色
-      outlineColor: Cesium.Color.WHITE,
-      // 字体边框尺寸
-      outlineWidth: 10,
-      // 应用于图像的统一比例。比例大于会1.0放大标签，而比例小于会1.0缩小标签。
-      scale: 1.0,
-      // 设置样式：FILL：填写标签的文本，但不要勾勒轮廓；OUTLINE：概述标签的文本，但不要填写；FILL_AND_OUTLINE：填写并概述标签文本。
-      style: Cesium.LabelStyle.FILL_AND_OUTLINE,
-      // 相对于坐标的水平位置
-      verticalOrigin: Cesium.VerticalOrigin.CENTER,
-      // 相对于坐标的水平位置
-      horizontalOrigin: Cesium.HorizontalOrigin.LEFT,
-      // 该属性指定标签在屏幕空间中距此标签原点的像素偏移量
-      pixelOffset: new Cesium.Cartesian2(10, 0),
-      // 显示在距相机的距离处的属性，多少区间内是可以显示的
-      // distanceDisplayCondition: new DistanceDisplayCondition(0, 1500),
-      // 是否显示
-      show: true
+      text: '气象观测站\n（在线）', // 显示文本（支持换行符）
+      font: 'bold 14px "Microsoft YaHei", sans-serif', // 字体设置（必须指定中文字体）
+      fillColor: Cesium.Color.BLACK, // 文字颜色
+      backgroundColor: Cesium.Color.AQUA.withAlpha(0.7), // 背景色（带透明度）
+      showBackground: true, // 显示文字背景
+      style: Cesium.LabelStyle.FILL_AND_OUTLINE, // 文字渲染样式（填充+描边）
+      outlineColor: Cesium.Color.WHITE, // 文字描边颜色
+      outlineWidth: 2, // 文字描边宽度（像素）
+      horizontalOrigin: Cesium.HorizontalOrigin.LEFT, // 水平定位基准点（左侧对齐）
+      verticalOrigin: Cesium.VerticalOrigin.CENTER, // 垂直定位基准点（中心对齐）
+      pixelOffset: new Cesium.Cartesian2(25, 0), // 屏幕像素偏移（X右/Y下为正方向）
+      eyeOffset: new Cesium.Cartesian3(0, 0, -100) // 视角偏移（防止被地形遮挡）
     }
   })
   return point
@@ -95,32 +79,34 @@ export const addTextPoint = () => {
 export const addImgPoint = () => {
   const Viewer: any = getMap()
   const point = Viewer.entities.add({
-    position: Cesium.Cartesian3.fromDegrees(118.107358, 24.47745, 10),
+    // 实体位置（使用WGS84经纬度坐标）
+    position: Cesium.Cartesian3.fromDegrees(
+      118.107358, // 经度 (东经)
+      24.47745, // 纬度 (北纬)
+      10 // 高度（米，相对于椭球面）
+    ),
+    // 广告牌配置（用于显示2D图像标记）
     billboard: {
-      // 图像地址，URI或Canvas的属性
-      image: '/img/poi.png',
-      // 高度（以像素为单位）
-      height: 50,
-      // 宽度（以像素为单位）
-      width: 50,
-      // 逆时针旋转
-      rotation: 0,
-      // 大小是否以米为单位
-      sizeInMeters: false,
-      // 相对于坐标的垂直位置
-      verticalOrigin: Cesium.VerticalOrigin.CENTER,
-      // 相对于坐标的水平位置
-      horizontalOrigin: Cesium.HorizontalOrigin.CENTER,
-      // 该属性指定标签在屏幕空间中距此标签原点的像素偏移量
-      pixelOffset: new Cesium.Cartesian2(10, 0),
-      // 应用于图像的统一比例。比例大于会1.0放大标签，而比例小于会1.0缩小标签。
-      scale: 1.0,
-      // 显示在距相机的距离处的属性，多少区间内是可以显示的
-      // distanceDisplayCondition: new DistanceDisplayCondition(0, 30000),
-      // 是否显示
-      show: true
+      image: '/img/poi.png', // 图像路径（支持URI、Canvas或资源对象）
+      // 推荐使用绝对路径，注意跨域问题
+      // 尺寸配置
+      width: 50, // 宽度（像素，当sizeInMeters=false时）
+      height: 50, // 高度（像素，当sizeInMeters=false时）
+      // 高级显示配置
+      rotation: Cesium.Math.toRadians(0), // 旋转角度（弧度制，顺时针方向）
+      // 建议使用Cesium.Math.toRadians()进行角度转换
+      sizeInMeters: false, // true时尺寸单位为米（适合精确测量场景）
+      // false时使用像素单位（适合UI标记）
+      // 对齐方式配置
+      verticalOrigin: Cesium.VerticalOrigin.CENTER, // 垂直对齐（CENTER|TOP|BOTTOM）
+      horizontalOrigin: Cesium.HorizontalOrigin.CENTER, // 水平对齐（CENTER|LEFT|RIGHT）
+      // 像素偏移（用于微调显示位置）
+      pixelOffset: new Cesium.Cartesian2(10, 0), // X向右为正，Y向上为正
+      // 可选性能优化参数
+      disableDepthTestDistance: Number.POSITIVE_INFINITY // 始终显示在最前（避免被地形遮挡）
     }
   })
+
   return point
 }
 
@@ -129,6 +115,7 @@ export const addPolygon = () => {
   const Viewer: any = getMap()
   const polygon: any = Viewer.entities.add({
     polygon: {
+      height: 1,
       hierarchy: {
         positions: Cesium.Cartesian3.fromDegreesArray([120.9677706, 30.7985748, 110.2, 34.55, 120.2, 50.55])
       },
@@ -141,15 +128,7 @@ export const addPolygon = () => {
       // 填充的颜色，withAlpha透明度
       material: Cesium.Color.GREEN.withAlpha(0.5),
       // 是否被提供的材质填充
-      fill: true,
-      // 恒定高度
-      height: 5000,
-      // 显示在距相机的距离处的属性，多少区间内是可以显示的
-      // distanceDisplayCondition: new DistanceDisplayCondition(1000, 10000000),
-      // 是否显示
-      show: true,
-      // 顺序,仅当`clampToGround`为true并且支持地形上的折线时才有效。
-      zIndex: 10
+      fill: true
     }
   })
   return polygon
@@ -191,19 +170,15 @@ export const addLine = () => {
   const line = Viewer.entities.add({
     polyline: {
       // 线的坐标
-      positions: Cesium.Cartesian3.fromDegreesArray([120.9677706, 30.7985748, 110.2, 34.55, 120.2, 50.55]),
+      positions: Cesium.Cartesian3.fromDegreesArray([
+        120.9677706, 30.7985748, 110.2, 34.55, 100.2, 34.55, 90.2, 34.55, 100.2, 34.55
+      ]),
       // 线的颜色
-      material: Cesium.Color.RED,
+      material: Cesium.Color.WHITE,
       // 线的宽度
       width: 5,
       // 恒定高度
-      height: 5000,
-      // 显示在距相机的距离处的属性，多少区间内是可以显示的
-      // distanceDisplayCondition: new DistanceDisplayCondition(1000, 10000000),
-      // 是否显示
-      show: true,
-      // 顺序,仅当`clampToGround`为true并且支持地形上的折线时才有效。
-      zIndex: 10
+      height: 5000
     }
   })
   return line
