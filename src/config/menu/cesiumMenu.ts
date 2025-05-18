@@ -12,5 +12,10 @@ export const cesiumMenu: {
     key: 'flyingLineDiagrams',
     label: '飞线图',
     title: '飞线图'
+  },
+  {
+    key: 'loadAnimatedImage',
+    label: '动图加载',
+    title: '动图加载'
   }
 ]

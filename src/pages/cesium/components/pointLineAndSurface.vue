@@ -80,35 +80,35 @@ const showLine = () => {
 // 绘制点
 const drawPoint = () => {
   const view: any = getMap()
-  draw(view, 'Point', { continueDraw: false, removeLast: false }, (entity: any) => {
+  draw(view, 'Point', { removeLast: true }, (entity: any) => {
     console.log('👉 ~ 点实体:', entity)
   })
 }
 // 绘制线
 const drawLine = () => {
   const view: any = getMap()
-  draw(view, 'Polyline', { continueDraw: false, removeLast: false }, (entity: any) => {
+  draw(view, 'Polyline', { removeLast: false }, (entity: any) => {
     console.log('👉 ~ 线实体:', entity)
   })
 }
 // 绘制面
 const drawPolygon = () => {
   const view: any = getMap()
-  draw(view, 'Polygon', { continueDraw: false, removeLast: false }, (entity: any) => {
+  draw(view, 'Polygon', { removeLast: true }, (entity: any) => {
     console.log('👉 ~ 面实体:', entity)
   })
 }
 // 绘制圆
 const drawCircle = () => {
   const view: any = getMap()
-  draw(view, 'Circle', { continueDraw: false, removeLast: false }, (entity: any) => {
+  draw(view, 'Circle', { removeLast: true }, (entity: any) => {
     console.log('👉 ~ 圆实体:', entity)
   })
 }
 // 绘制矩形
 const drawRect = () => {
   const view: any = getMap()
-  draw(view, 'Rectangle', { continueDraw: false, removeLast: false }, (entity: any) => {
+  draw(view, 'Rectangle', { removeLast: true }, (entity: any) => {
     console.log('👉 ~ 矩形实体:', entity)
   })
 }

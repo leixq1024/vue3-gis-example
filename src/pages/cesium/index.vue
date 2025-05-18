@@ -5,7 +5,6 @@
     <leftMenu />
     <!-- 显示页面 -->
     <div class="cesium-container" id="cesiumMap"></div>
-    <!--  点线面面板 -->
     <component :is="componentName"></component>
   </div>
 </template>
@@ -17,10 +16,12 @@ import { usePanelStore } from '@/store/panel'
 import leftMenu from '@/components/cesiumLeftMenu.vue'
 import pointLineAndSurface from './components/pointLineAndSurface.vue'
 import flyingLineDiagrams from './components/flyingLineDiagrams.vue'
+import loadAnimatedImage from './components/loadAnimatedImage.vue'
 defineOptions({
   components: {
     pointLineAndSurface,
-    flyingLineDiagrams
+    flyingLineDiagrams,
+    loadAnimatedImage
   }
 })
 const panelStore: any = usePanelStore()
