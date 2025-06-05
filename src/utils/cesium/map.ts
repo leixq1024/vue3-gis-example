@@ -1,5 +1,5 @@
 // 地图相关操作
-import { Viewer } from 'cesium'
+import * as Cesium from 'cesium'
 let map: any = null
 /**
  * @function 初始化场景
@@ -19,8 +19,9 @@ export const createMap = (id: string) => {
     infoBox: false, // 信息框控件不显示，点击要素后不弹出信息栏
     selectionIndicator: false // 选择跟踪控件不显示，点击要素后不弹出锁定框
   }
-
-  map = new Viewer(id, options)
+  Cesium.Ion.defaultAccessToken =
+    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJmOGQ2ZWFlOS0xNjY5LTRjOTYtYjQ3MC05YWQzNDZmMDUzZDgiLCJpZCI6MjEyNDQ4LCJpYXQiOjE3MTQ1NzQ0MDR9.1P5SUSGALfQLxQPg-6LUmC0WplUrdjK8CaowVKVwHT0'
+  map = new Cesium.Viewer(id, options)
 }
 // 返回地图对象
 export const getMap = () => {
