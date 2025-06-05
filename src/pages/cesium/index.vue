@@ -17,11 +17,14 @@ import leftMenu from '@/components/cesiumLeftMenu.vue'
 import pointLineAndSurface from './components/pointLineAndSurface.vue'
 import flyingLineDiagrams from './components/flyingLineDiagrams.vue'
 import loadAnimatedImage from './components/loadAnimatedImage.vue'
+import heatmap from './components/heatmap.vue'
+
 defineOptions({
   components: {
     pointLineAndSurface,
     flyingLineDiagrams,
-    loadAnimatedImage
+    loadAnimatedImage,
+    heatmap
   }
 })
 const panelStore: any = usePanelStore()
@@ -53,4 +56,5 @@ onMounted(() => {
     display: none;
   }
 }
+
 </style>

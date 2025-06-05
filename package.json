@@ -2,7 +2,6 @@
   "name": "vue3-gis",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
@@ -20,6 +19,7 @@
     "eslint-plugin-vue": "^10.0.0",
     "esri-loader": "^3.7.0",
     "globals": "^16.0.0",
+    "heatmap.js": "^2.0.5",
     "install": "^0.13.0",
     "jquery": "^3.7.1",
     "normalize.css": "^8.0.1",

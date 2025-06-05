@@ -8,7 +8,7 @@ export const cesiumMenu: {
     label: '点线面操作',
     title: '点线面操作'
   },
-   {
+  {
     key: 'flyingLineDiagrams',
     label: '飞线图',
     title: '飞线图'
@@ -17,5 +17,10 @@ export const cesiumMenu: {
     key: 'loadAnimatedImage',
     label: '动图加载',
     title: '动图加载'
+  },
+  {
+    key: 'heatmap',
+    label: '热力图',
+    title: '热力图'
   }
 ]
